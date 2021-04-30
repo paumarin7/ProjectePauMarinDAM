@@ -4,9 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Wall
-  - MidWall
   - Bullet
   layers:
   - Default
@@ -17,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - PlayerIcon
+  - 
   - 
   - 
   - 
