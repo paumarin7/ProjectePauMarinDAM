@@ -28,6 +28,7 @@ public class EnemyShooterStates : MonoBehaviour, IEnemyStates
         Stats = GetComponent<Stats>();
         enemyShooterAnimations = GetComponent<EnemyShooterAnimations>();
         enemyShooterMovement = GetComponent<EnemyShooterMovement>();
+       
         movementManager = GetComponent<MovementManager>();
         delay = new Delay(Stats.FireRate);
         canShoot = false;
@@ -70,6 +71,7 @@ public class EnemyShooterStates : MonoBehaviour, IEnemyStates
     // Update is called once per frame
     void Update()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         shooterStateMachine.Tick();
     }
 
@@ -84,7 +86,7 @@ public class EnemyShooterStates : MonoBehaviour, IEnemyStates
             bullet.Attack();
 
         }
-        canShoot = false;
+      
 
         yield return new WaitForSeconds(Stats.FireRate);
         canShoot = true;

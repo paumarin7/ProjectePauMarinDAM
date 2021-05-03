@@ -42,11 +42,11 @@ public class PlayerJoystickMovement : MonoBehaviour
 
         if(rotation == Vector3.zero)
         {
-            playerManager.playerMovementManager.setQuaternionRotation(lastRotation);
+            playerManager.playerAnimations.setQuaternionRotation(lastRotation);
         }
         else
         {
-            playerManager.playerMovementManager.setQuaternionRotation(rotation);
+            playerManager.playerAnimations.setQuaternionRotation(rotation);
         }
         
         if(moveDirection == Vector3.zero)

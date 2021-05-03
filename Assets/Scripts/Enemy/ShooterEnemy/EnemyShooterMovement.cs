@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyShooterMovement : MonoBehaviour
 {
+
+    [SerializeField]
     EnemyShooterStates enemyShooterStates;
     [SerializeField]
     private Vector3 lastPosition;
@@ -35,10 +37,7 @@ public class EnemyShooterMovement : MonoBehaviour
     void Awake()
     {
 
-        InitialPosition = transform.position;
-        controller = GetComponent<CharacterController>();
-
-        enemyShooterStates = GetComponent<EnemyShooterStates>();
+     
 
     }
 
@@ -52,8 +51,11 @@ public class EnemyShooterMovement : MonoBehaviour
     }
     void Start()
     {
-        SetMinRange(enemyShooterStates.Stats.Distance);
-        SetMaxRange(enemyShooterStates.Stats.Distance + 2);
+        InitialPosition = new Vector3(transform.position.x, 0, transform.position.z);
+        controller = GetComponent<CharacterController>();
+        enemyShooterStates = GetComponent<EnemyShooterStates>();
+        
+        
     }
 
     void FixedUpdate()
@@ -73,9 +75,10 @@ public class EnemyShooterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SetMinRange(enemyShooterStates.Stats.Distance);
+        SetMaxRange(enemyShooterStates.Stats.Distance+7);
         transform.LookAt(enemyShooterStates.Player.transform.position);
-        playerDirection = new Vector3(enemyShooterStates.Player.transform.position.x - transform.position.x, transform.position.y, enemyShooterStates.Player.transform.position.z - transform.position.z);
-
-
+       
+        playerDirection = new Vector3(enemyShooterStates.Player.transform.position.x - transform.position.x, enemyShooterStates.Player.transform.position.y, enemyShooterStates.Player.transform.position.z - transform.position.z);
     }
 }

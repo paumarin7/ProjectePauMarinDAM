@@ -8,14 +8,11 @@ public class MovementManager : MonoBehaviour
 
     private float Speed = 10;
     private Vector3 moveDirection;
-    private Vector3 rotation;
-    private Vector3 attackRotation;
     private CharacterController controller;
 
-    private bool shooting;
+    
 
-    public bool Shooting { get => shooting; set => shooting = value; }
-    public Vector3 AttackRotation { get => attackRotation; set => attackRotation = value; }
+   
 
 
     // Start is called before the first frame update
@@ -29,10 +26,6 @@ public class MovementManager : MonoBehaviour
         
     }
 
-    public void setQuaternionRotation(Vector3 rotation)
-    {
-        this.rotation = rotation;
-    }
     
     public void setSpeedMovement(float speed)
     {
@@ -44,13 +37,6 @@ public class MovementManager : MonoBehaviour
         return moveDirection;
     }
 
-    public Vector3 getRotation() {
-        return rotation;
-    }
-        
-
-
-
     // Update is called once per frame
     private void FixedUpdate()
     {
@@ -59,24 +45,14 @@ public class MovementManager : MonoBehaviour
             moveDirection = (moveDirection) * Speed;
 
             controller.Move(moveDirection * Time.deltaTime);
-
-           
-
         }
         else
         {
-            moveDirection.y -= 1f;
+            moveDirection.y -= 5f;
         }
         //animations
 
-        if (shooting)
-        {
-            this.transform.rotation = Quaternion.Euler(attackRotation);
-        }
-        else
-        {
-            this.transform.rotation = Quaternion.Euler(rotation);
-        }
+     
       
 
         controller.Move(moveDirection * Time.deltaTime);

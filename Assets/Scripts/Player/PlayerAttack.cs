@@ -52,13 +52,13 @@ public class PlayerAttack : MonoBehaviour
         {
 
             rotation = new Vector3(0, Mathf.Atan2(horizontalMove, verticalMove) * 180 / Mathf.PI, 0);
-            playerManager.playerMovementManager.Shooting = true;
-            playerManager.playerMovementManager.AttackRotation=rotation ;
+            playerManager.playerAnimations.Shooting = true;
+            playerManager.playerAnimations.AttackRotation=rotation ;
             Attacking();
         }
         else
         {
-            playerManager.playerMovementManager.Shooting = false;
+            playerManager.playerAnimations.Shooting = false;
         }
         //    GetComponent<IWeapon>().SetNearestEnemy(nearestEnemy);
 

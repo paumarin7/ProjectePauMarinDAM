@@ -33,6 +33,5 @@ internal class ShooterMoveToPlayer:IState
         enemyShooterStates.enemyShooterMovement.controller.Move(enemyShooterStates.enemyShooterMovement.followPlayer * Time.deltaTime);
         enemyShooterStates.enemyShooterMovement.LastPosition = new Vector3(enemyShooterStates.Player.transform.position.x, enemyShooterStates.transform.position.y, enemyShooterStates.Player.transform.position.z);
         enemyShooterStates.enemyShooterMovement.FirstPosition = enemyShooterStates.transform.position;
-
     }
 }

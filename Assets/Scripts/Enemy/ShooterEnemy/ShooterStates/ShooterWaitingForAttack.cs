@@ -15,7 +15,7 @@ internal class ShooterWaitingForAttack:IState
     public void OnEnter()
     {
         var num = 3f;
-        mov= new Vector3(Random.Range(enemyShooterStates.transform.position.x - num, enemyShooterStates.transform.position.x + num) , enemyShooterStates.transform.position.y, Random.Range(enemyShooterStates.transform.position.z - num, enemyShooterStates.transform.position.z + num));
+        mov= new Vector3(Random.Range(enemyShooterStates.transform.position.x - num, enemyShooterStates.transform.position.x + num) ,0, Random.Range(enemyShooterStates.transform.position.z - num, enemyShooterStates.transform.position.z + num));
 
     }
 
