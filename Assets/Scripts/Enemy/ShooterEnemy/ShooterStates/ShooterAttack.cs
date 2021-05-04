@@ -3,12 +3,10 @@
 internal class ShooterAttack:IState
 {
     private EnemyShooterStates enemyShooterStates;
-    private Delay delay;
 
-    public ShooterAttack(EnemyShooterStates enemyShooterStates, Delay delay)
+    public ShooterAttack(EnemyShooterStates enemyShooterStates)
     {
         this.enemyShooterStates = enemyShooterStates;
-        this.delay = delay;
     }
 
     public void OnEnter()

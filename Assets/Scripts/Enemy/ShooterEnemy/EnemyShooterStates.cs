@@ -42,7 +42,7 @@ public class EnemyShooterStates : MonoBehaviour, IEnemyStates
         var moveToPlayer = new ShooterMoveToPlayer(this);
         var returnToFirstPosition = new ShooterReturnToFirstPosition(this);
         var returnToSecondPosition = new ShooterReturnToSecondPosition(this);
-        var attack = new ShooterAttack(this, delay);
+        var attack = new ShooterAttack(this);
         var waitingForAttack = new ShooterWaitingForAttack(this, delay);
         var death = new ShooterDeath(this);
 
