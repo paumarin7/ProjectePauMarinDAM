@@ -44,8 +44,7 @@ public class EnemyMoleStates : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(moleMovement.playerDirection.magnitude);
-        Debug.Log(isAttacking);
+      
         if (moleMovement.playerDirection.magnitude < 4 && moleMovement.playerDirection.magnitude != 0)
         {
             isAttacking = true;
