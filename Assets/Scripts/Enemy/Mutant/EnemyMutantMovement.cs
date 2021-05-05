@@ -28,15 +28,20 @@ public class EnemyMutantMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        minRange= enemyMutantStates.stats.Distance;
-        maxRange= enemyMutantStates.stats.Distance + 7;
-        if (!enemyMutantStates.jumping)
+
+        if (enemyMutantStates.stats.IsAlive)
         {
-            transform.LookAt(enemyMutantStates.Player.transform.position);
-          
+            minRange = enemyMutantStates.stats.Distance;
+            maxRange = enemyMutantStates.stats.Distance + 7;
+            if (!enemyMutantStates.jumping)
+            {
+                transform.LookAt(enemyMutantStates.Player.transform.position);
+
+            }
+
+
+            playerDirection = new Vector3(enemyMutantStates.Player.transform.position.x - transform.position.x, enemyMutantStates.Player.transform.position.y, enemyMutantStates.Player.transform.position.z - transform.position.z);
+
         }
-      
-      
-        playerDirection = new Vector3(enemyMutantStates.Player.transform.position.x - transform.position.x, enemyMutantStates.Player.transform.position.y, enemyMutantStates.Player.transform.position.z - transform.position.z);
     }
 }

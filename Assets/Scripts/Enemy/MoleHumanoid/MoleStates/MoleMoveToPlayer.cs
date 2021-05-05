@@ -15,11 +15,13 @@ public class MoleMoveToPlayer : IState
     public void OnEnter()
     {
         enemyMoleStates.moleMovement.playerDirection = new Vector3(enemyMoleStates.Player.transform.position.x - enemyMoleStates.transform.position.x, enemyMoleStates.transform.position.y, enemyMoleStates.Player.transform.position.z - enemyMoleStates.transform.position.z);
+        enemyMoleStates.moleMovement.controller.detectCollisions = false;
+    
     }
 
     public void OnExit()
     {
-
+        enemyMoleStates.moleMovement.controller.detectCollisions = true;
     }
 
     public void Tick()

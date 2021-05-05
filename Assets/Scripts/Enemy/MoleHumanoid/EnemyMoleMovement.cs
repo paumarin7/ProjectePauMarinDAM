@@ -20,9 +20,12 @@ public class EnemyMoleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        transform.LookAt(moleStates.Player.transform.position);
+        if (moleStates.Stats.IsAlive)
+        {
+            transform.LookAt(moleStates.Player.transform.position);
 
-        playerDirection = new Vector3(moleStates.Player.transform.position.x - moleStates.transform.position.x, moleStates.transform.position.y, moleStates.Player.transform.position.z - moleStates.transform.position.z);
+            playerDirection = new Vector3(moleStates.Player.transform.position.x - moleStates.transform.position.x, moleStates.transform.position.y, moleStates.Player.transform.position.z - moleStates.transform.position.z);
+
+        }
     }
 }

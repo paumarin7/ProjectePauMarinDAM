@@ -30,7 +30,7 @@ internal class ShooterMoveToPlayer:IState
         Debug.Log("following player");
         //  animator.SetBool("Idle",false);
         enemyShooterStates.enemyShooterMovement.followPlayer = new Vector3((enemyShooterStates.Player.transform.position.x - enemyShooterStates.transform.position.x), 0, (enemyShooterStates.Player.transform.position.z - enemyShooterStates.transform.position.z)).normalized * enemyShooterStates.Stats.Speed;
-        enemyShooterStates.enemyShooterMovement.controller.Move(enemyShooterStates.enemyShooterMovement.followPlayer * Time.deltaTime);
+        enemyShooterStates.enemyShooterMovement.controller.Move(enemyShooterStates.enemyShooterMovement.followPlayer * Time.deltaTime * enemyShooterStates.Stats.Speed);
         enemyShooterStates.enemyShooterMovement.LastPosition = new Vector3(enemyShooterStates.Player.transform.position.x, enemyShooterStates.transform.position.y, enemyShooterStates.Player.transform.position.z);
         enemyShooterStates.enemyShooterMovement.FirstPosition = enemyShooterStates.transform.position;
     }
