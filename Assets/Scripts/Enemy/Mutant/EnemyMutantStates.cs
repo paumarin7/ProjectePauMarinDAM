@@ -15,8 +15,12 @@ public class EnemyMutantStates : MonoBehaviour
     public Delay jumpTimer;
 
 
+    public GameObject hips;
+
     public bool attacking;
     public bool jumping;
+    public bool stopMove;
+
     public GameObject Player { get => player; set => player = value; }
     
 
@@ -28,7 +32,7 @@ public class EnemyMutantStates : MonoBehaviour
         mutantMovement = GetComponent<EnemyMutantMovement>();
         Player = GameObject.FindGameObjectWithTag("Player");
         jumpTimer = new Delay(stats.FireRate);
-
+        
         mutantStateMachine = new StateMachine();
 
         var death = new MutantDeath(this);
@@ -51,21 +55,17 @@ public class EnemyMutantStates : MonoBehaviour
     void Update()
     {
  
-        if (mutantMovement.playerDirection.magnitude > mutantMovement.MinRange && jumpTimer.IsReady)
-        {
-            attacking = false;
-            jumping = true;
-        }
-        else if(mutantMovement.playerDirection.magnitude < mutantMovement.MinRange)
-        {
-            attacking = true;
-            jumping = false;
-        }
-        else
-        {
-            attacking = false;
-            jumping = false;
-        }
+        //if (mutantMovement.playerDirection.magnitude > mutantMovement.MinRange+2  && jumpTimer.IsReady)
+        //{
+            
+        //    jumping = true;
+        //}
+        //else if(mutantMovement.playerDirection.magnitude < mutantMovement.MinRange)
+        //{
+        //    attacking = true;
+            
+        //}
+       
         mutantAnimation.Attacking = attacking;
         mutantAnimation.Jumping = jumping;
         Player = GameObject.FindGameObjectWithTag("Player");

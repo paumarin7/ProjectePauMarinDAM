@@ -24,6 +24,18 @@ public class MutantMoveToPlayer : IState
 
     public void Tick()
     {
+        if (enemyMutantStates.mutantMovement.playerDirection.magnitude > enemyMutantStates.mutantMovement.MinRange + 2 && enemyMutantStates.jumpTimer.IsReady)
+        {
+
+            enemyMutantStates.jumping = true;
+        }
+        else if (enemyMutantStates.mutantMovement.playerDirection.magnitude < enemyMutantStates.mutantMovement.MinRange)
+        {
+            enemyMutantStates.attacking = true;
+
+        }
+
+
         enemyMutantStates.mutantMovement.playerDirection = new Vector3(enemyMutantStates.Player.transform.position.x - enemyMutantStates.transform.position.x, 0, enemyMutantStates.Player.transform.position.z - enemyMutantStates.transform.position.z);
         enemyMutantStates.mutantMovement.controller.Move(enemyMutantStates.mutantMovement.playerDirection * Time.deltaTime * enemyMutantStates.stats.Speed);
     }

@@ -9,6 +9,7 @@ public class MutantPunchAttack : IState
 
     public MutantPunchAttack(EnemyMutantStates enemyMutantStates)
     {
+        enemyMutantStates.attacking = true;
         this.enemyMutantStates = enemyMutantStates;
     }
     public void OnEnter()
@@ -18,11 +19,11 @@ public class MutantPunchAttack : IState
 
     public void OnExit()
     {
-
+        enemyMutantStates.attacking = false;
     }
 
     public void Tick()
     {
-      
+         enemyMutantStates.mutantMovement.controller.Move(Vector3.zero * Time.deltaTime * enemyMutantStates.stats.Speed);
     }
 }

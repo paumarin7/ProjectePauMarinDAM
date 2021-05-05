@@ -12,17 +12,24 @@ public class MutantJumpAttack : IState
     }
     public void OnEnter()
     {
-        
+       enemyMutantStates.jumping = true;
+        enemyMutantStates.stopMove = false;
     }
 
     public void OnExit()
     {
-       
+        enemyMutantStates.mutantMovement.controller.Move(Vector3.zero);
+        enemyMutantStates.jumping = false;
+
     }
 
     public void Tick()
     {
-        Debug.Log("djfifgj");
-        enemyMutantStates.mutantMovement.controller.Move(Vector3.forward * Time.deltaTime * enemyMutantStates.stats.Speed);
+       
+        if (!enemyMutantStates.stopMove)
+        {
+            enemyMutantStates.mutantMovement.controller.Move(enemyMutantStates.transform.forward * Time.deltaTime * 6);
+
+        }
     }
 }

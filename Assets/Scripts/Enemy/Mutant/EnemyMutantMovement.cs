@@ -35,7 +35,10 @@ public class EnemyMutantMovement : MonoBehaviour
             maxRange = enemyMutantStates.stats.Distance + 7;
             if (!enemyMutantStates.jumping)
             {
-                transform.LookAt(enemyMutantStates.Player.transform.position);
+             //   transform.LookAt(enemyMutantStates.Player.transform.position);
+                Quaternion toRotation = Quaternion.LookRotation(playerDirection);
+                transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, 4 * Time.deltaTime);
+
 
             }
 
@@ -43,5 +46,15 @@ public class EnemyMutantMovement : MonoBehaviour
             playerDirection = new Vector3(enemyMutantStates.Player.transform.position.x - transform.position.x, enemyMutantStates.Player.transform.position.y, enemyMutantStates.Player.transform.position.z - transform.position.z);
 
         }
+    }
+
+
+    public void StopMove()
+    {
+
+
+        
+        enemyMutantStates.stopMove = true;
+        controller.Move(Vector3.zero);
     }
 }
