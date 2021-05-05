@@ -1437,31 +1437,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &3072355143896730784 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8533138101134184733, guid: e7d905fc22c4e6b458fd58572518cd81,
-    type: 3}
-  m_PrefabInstance: {fileID: 6685867828261379517}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &3072355143896730790
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3072355143896730784}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: adeaf5c9862f8374aa0fb3886dc6e84d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &3844012764029109176
 Transform:
   m_ObjectHideFlags: 0
@@ -1719,7 +1694,7 @@ PrefabInstance:
     - target: {fileID: 8533138101134184733, guid: e7d905fc22c4e6b458fd58572518cd81,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9016236453868604327, guid: e7d905fc22c4e6b458fd58572518cd81,
         type: 3}
@@ -1865,10 +1840,10 @@ MonoBehaviour:
   strength: 5
   speed: 1
   attackSpeed: 1
-  fireRate: 0
+  fireRate: 4
   accuracy: 0
   gravity: 0
-  distance: 0
+  distance: 5
   isAlive: 1
 --- !u!143 &7011242185858155434
 CharacterController:
@@ -1917,6 +1892,8 @@ MonoBehaviour:
   player: {fileID: 0}
   animations: {fileID: 0}
   stats: {fileID: 0}
+  attacking: 0
+  jumping: 0
 --- !u!114 &7011242185858155437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1929,6 +1906,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1298c5889e6de244d9effc475a28f440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  playerDirection: {x: 0, y: 0, z: 0}
+  minRange: 0
+  maxRange: 0
 --- !u!4 &7052504002626053006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1300681098260070079, guid: 993b15db57d434d4b85c543000363ebd,

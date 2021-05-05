@@ -12,6 +12,11 @@ public class EnemyMutantStates : MonoBehaviour
     public Animator animations;
     public Stats stats;
 
+    public Delay jumpTimer;
+
+
+    public bool attacking;
+    public bool jumping;
     public GameObject Player { get => player; set => player = value; }
     
 
@@ -22,6 +27,22 @@ public class EnemyMutantStates : MonoBehaviour
         mutantAnimation = GetComponent<EnemyMutantAnimation>();
         mutantMovement = GetComponent<EnemyMutantMovement>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        jumpTimer = new Delay(stats.FireRate);
+
+        mutantStateMachine = new StateMachine();
+
+        var death = new MutantDeath(this);
+        var moveToPlayer = new MutantMoveToPlayer(this);
+        var punchAttack = new MutantPunchAttack(this);
+        var jumpAttack = new MutantJumpAttack(this);
+
+
+        mutantStateMachine.AddAnyTransition(death, () => !stats.IsAlive);
+        mutantStateMachine.AddAnyTransition(moveToPlayer, () => !jumping && !attacking);
+        mutantStateMachine.AddAnyTransition(jumpAttack, () => !attacking && jumping && mutantMovement.playerDirection.magnitude > mutantMovement.MinRange && mutantMovement.playerDirection.magnitude < mutantMovement.MaxRange);
+        mutantStateMachine.AddAnyTransition(punchAttack, () => attacking && !jumping && mutantMovement.playerDirection.magnitude < mutantMovement.MinRange);
+
+
         void At(IState to, IState from, System.Func<bool> condition) => mutantStateMachine.AddTransition(to, from, condition);
 
     }
@@ -29,9 +50,33 @@ public class EnemyMutantStates : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+ 
+        if (mutantMovement.playerDirection.magnitude > mutantMovement.MinRange && jumpTimer.IsReady)
+        {
+            attacking = false;
+            jumping = true;
+        }
+        else if(mutantMovement.playerDirection.magnitude < mutantMovement.MinRange)
+        {
+            attacking = true;
+            jumping = false;
+        }
+        else
+        {
+            attacking = false;
+            jumping = false;
+        }
+        mutantAnimation.Attacking = attacking;
+        mutantAnimation.Jumping = jumping;
         Player = GameObject.FindGameObjectWithTag("Player");
         mutantStateMachine.Tick();
+
+
+        
     }
+
+
+
 
     public void Destroy()
     {

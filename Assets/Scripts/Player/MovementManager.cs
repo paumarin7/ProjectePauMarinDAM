@@ -55,7 +55,7 @@ public class MovementManager : MonoBehaviour
      
       
 
-        controller.Move(moveDirection * Time.deltaTime);
+        controller.Move(moveDirection * Time.deltaTime * Speed);
 
     }
 }

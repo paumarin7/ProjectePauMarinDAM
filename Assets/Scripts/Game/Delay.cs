@@ -18,5 +18,10 @@ public class Delay
         completionTime = Time.time + WaitTime;
     }
 
+
+
+
+
+
     public bool IsReady { get { return Time.time >= completionTime; } }
 }

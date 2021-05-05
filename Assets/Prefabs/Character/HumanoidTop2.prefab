@@ -445,6 +445,7 @@ GameObject:
   - component: {fileID: 8533138101134184734}
   - component: {fileID: 8533138101134184735}
   - component: {fileID: 8533138101134184732}
+  - component: {fileID: 3072355143896730790}
   m_Layer: 0
   m_Name: HumanoidTop2
   m_TagString: Untagged
@@ -551,6 +552,25 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0.07, y: 0.46, z: -0.24}
+--- !u!95 &3072355143896730790
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8533138101134184733}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adeaf5c9862f8374aa0fb3886dc6e84d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8996223979087736771
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,6 @@ public class MoleDeath : IState
 
     public void Tick()
     {
-        throw new System.NotImplementedException();
+       // throw new System.NotImplementedException();
     }
 }
