@@ -27,7 +27,11 @@ public class MoleMoveToPlayer : IState
     public void Tick()
     {
 
-      enemyMoleStates.moleMovement.followPlayer = new Vector3(enemyMoleStates.Player.transform.position.x - enemyMoleStates.transform.position.x, 0, enemyMoleStates.Player.transform.position.z - enemyMoleStates.transform.position.z);
+        if (enemyMoleStates.moleMovement.playerDirection.magnitude < 4 && enemyMoleStates.moleMovement.playerDirection.magnitude != 0)
+        {
+            enemyMoleStates.isAttacking = true;
+        }
+        enemyMoleStates.moleMovement.followPlayer = new Vector3(enemyMoleStates.Player.transform.position.x - enemyMoleStates.transform.position.x, 0, enemyMoleStates.Player.transform.position.z - enemyMoleStates.transform.position.z);
       enemyMoleStates.moleMovement.controller.Move(enemyMoleStates.moleMovement.followPlayer * Time.deltaTime * enemyMoleStates.Stats.Speed);
     }
 }

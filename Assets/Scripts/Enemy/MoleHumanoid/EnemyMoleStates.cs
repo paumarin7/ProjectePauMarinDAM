@@ -45,10 +45,7 @@ public class EnemyMoleStates : MonoBehaviour
     void Update()
     {
       
-        if (moleMovement.playerDirection.magnitude < 4 && moleMovement.playerDirection.magnitude != 0)
-        {
-            isAttacking = true;
-        }
+       
 
         Player = GameObject.FindGameObjectWithTag("Player");
         moleStateMachine.Tick();
