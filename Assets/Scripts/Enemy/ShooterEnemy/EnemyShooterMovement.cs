@@ -76,7 +76,7 @@ public class EnemyShooterMovement : MonoBehaviour
     void Update()
     {
         SetMinRange(enemyShooterStates.Stats.Distance);
-        SetMaxRange(enemyShooterStates.Stats.Distance+7);
+        SetMaxRange(enemyShooterStates.Stats.Distance+12);
         transform.LookAt(enemyShooterStates.Player.transform.position);
        
         playerDirection = new Vector3(enemyShooterStates.Player.transform.position.x - transform.position.x, enemyShooterStates.Player.transform.position.y, enemyShooterStates.Player.transform.position.z - transform.position.z);

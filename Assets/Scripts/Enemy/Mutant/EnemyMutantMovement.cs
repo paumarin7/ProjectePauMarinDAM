@@ -38,8 +38,6 @@ public class EnemyMutantMovement : MonoBehaviour
              //   transform.LookAt(enemyMutantStates.Player.transform.position);
                 Quaternion toRotation = Quaternion.LookRotation(playerDirection);
                 transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, 4 * Time.deltaTime);
-
-
             }
 
 

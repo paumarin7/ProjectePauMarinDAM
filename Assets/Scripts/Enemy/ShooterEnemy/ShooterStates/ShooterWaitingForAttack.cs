@@ -27,7 +27,7 @@ internal class ShooterWaitingForAttack:IState
     public void Tick()
     {
         enemyShooterStates.enemyShooterMovement.followPlayer = new Vector3(mov.x - enemyShooterStates.transform.position.x, mov.y, mov.z - enemyShooterStates.transform.position.z).normalized * enemyShooterStates.Stats.Speed;
-        Debug.Log("Waiting");
+
         enemyShooterStates.enemyShooterMovement.controller.Move(enemyShooterStates.enemyShooterMovement.followPlayer * Time.deltaTime);
       //  enemyShooterStates.enemyShooterAnimations.Attacking = false;
       //  enemyShooterStates.enemyShooterAnimations.Idle = true;

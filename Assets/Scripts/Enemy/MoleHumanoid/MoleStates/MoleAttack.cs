@@ -23,7 +23,7 @@ public void OnEnter()
 
     public void Tick()
     {
-        Debug.Log("MoleAttack");
+
         enemyMoleStates.moleAnimation.Attacking = enemyMoleStates.isAttacking;
     }
 }

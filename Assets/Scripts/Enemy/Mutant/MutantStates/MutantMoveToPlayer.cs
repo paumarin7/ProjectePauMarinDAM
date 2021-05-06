@@ -37,6 +37,6 @@ public class MutantMoveToPlayer : IState
 
 
         enemyMutantStates.mutantMovement.playerDirection = new Vector3(enemyMutantStates.Player.transform.position.x - enemyMutantStates.transform.position.x, 0, enemyMutantStates.Player.transform.position.z - enemyMutantStates.transform.position.z);
-        enemyMutantStates.mutantMovement.controller.Move(enemyMutantStates.mutantMovement.playerDirection * Time.deltaTime * enemyMutantStates.stats.Speed);
+        enemyMutantStates.mutantMovement.controller.Move(enemyMutantStates.mutantMovement.playerDirection * enemyMutantStates.stats.Speed * Time.deltaTime );
     }
 }

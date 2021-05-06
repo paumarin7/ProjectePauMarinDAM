@@ -9,7 +9,7 @@ public class Roll : MonoBehaviour, IAbility
     PlayerManager playerManager;
     public bool isRolling = true;
 
-
+    public bool usingAbility { get => isRolling; set => isRolling = usingAbility; }
 
     public void Ability()
     {
@@ -24,12 +24,14 @@ public class Roll : MonoBehaviour, IAbility
     private IEnumerator Rolling()
     {
 
+        playerManager.playerMovementManager.controller.detectCollisions = false;
         Vector3 direction = new Vector3(transform.forward.x, 0, transform.forward.z);
    
         playerManager.playerMovementManager.setVectorMovement(direction);
         
         playerManager.playerAnimations.Rolling = true;
         yield return new WaitForSeconds(2);
+        playerManager.playerMovementManager.controller.detectCollisions = false;
         isRolling = true;
     }
 

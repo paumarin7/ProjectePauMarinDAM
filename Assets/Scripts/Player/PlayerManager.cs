@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public MovementManager playerMovementManager;
     public Stats playerStats;
+    public IAbility ability;
     public PlayerAnimations playerAnimations;
     public PlayerAttack playerAttack;
 
@@ -18,6 +19,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        ability = GetComponent<IAbility>();
         playerStats = GetComponent<Stats>();
         playerMovementManager = GetComponent<MovementManager>();
         playerAnimations = GetComponent<PlayerAnimations>();
@@ -27,18 +29,24 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-      
         playerAttack.SetFireRate(playerStats.FireRate);
-        if (!playerAnimations.Rolling)
+        if (ability != null)
         {
-            playerMovementManager.setSpeedMovement(playerStats.Speed);
+            if (ability.usingAbility)
+            {
+                playerMovementManager.setSpeedMovement(playerStats.Speed);
+            }
+            else
+            {
+                playerMovementManager.setSpeedMovement(playerStats.Speed + 2);
+
+            }
         }
         else
         {
-            playerMovementManager.setSpeedMovement(playerStats.Speed+2);
-
+            playerMovementManager.setSpeedMovement(playerStats.Speed);
         }
+
 
 
     }

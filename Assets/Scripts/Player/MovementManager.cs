@@ -8,7 +8,7 @@ public class MovementManager : MonoBehaviour
 
     private float Speed = 10;
     private Vector3 moveDirection;
-    private CharacterController controller;
+    public CharacterController controller;
 
     
 
@@ -37,20 +37,11 @@ public class MovementManager : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        //if (controller.isGrounded)
-        //{
-        //    moveDirection = (moveDirection) * Speed;
-
-           
-        //}
-        //else
-        //{
-        //    moveDirection.y -= 5f;
-        //}
-       
+   
 
 
-        Debug.Log(Speed);
+
+
         controller.Move(moveDirection * Time.deltaTime * Speed);
 
     }

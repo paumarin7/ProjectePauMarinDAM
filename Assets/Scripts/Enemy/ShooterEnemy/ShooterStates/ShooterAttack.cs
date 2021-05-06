@@ -11,8 +11,9 @@ internal class ShooterAttack:IState
 
     public void OnEnter()
     {
-        Debug.Log("Attacking");
-    //    enemyShooterStates.enemyShooterAnimations.Idle = true;
+
+        //    enemyShooterStates.enemyShooterAnimations.Idle = true;
+        enemyShooterStates.enemyShooterMovement.playerDirection = Vector3.zero;
         enemyShooterStates.enemyShooterAnimations.Attacking = true;
     }
 
@@ -25,7 +26,7 @@ internal class ShooterAttack:IState
 
     public void Tick()
     {
-
+        enemyShooterStates.enemyShooterMovement.controller.Move(Vector3.zero);
         enemyShooterStates.CanShoot = false;
         //    enemyShooterStates.Attacking();
     }

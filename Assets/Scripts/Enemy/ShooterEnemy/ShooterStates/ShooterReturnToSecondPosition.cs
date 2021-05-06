@@ -23,7 +23,7 @@ internal class ShooterReturnToSecondPosition:IState
     public void Tick()
     {
 
-        Debug.Log("Return to second position");
+
 
        // enemyShooterStates.enemyShooterAnimations.IsFollowing = false;
         if (Vector2.Distance(enemyShooterStates.enemyShooterMovement.FirstPosition, enemyShooterStates.enemyShooterMovement.LastPosition) < 0.5)
