@@ -14,18 +14,18 @@ public class PlantAttack : IState
 
     public void OnEnter()
     {
-        throw new System.NotImplementedException();
+       
     }
 
     public void OnExit()
     {
-        throw new System.NotImplementedException();
+       
     }
-
-
-
     public void Tick()
     {
-      
+        if (plantStates.plantMovement.playerDirection.magnitude > plantStates.plantMovement.maxRange)
+        {
+            plantStates.isAttacking = false;
+        }
     }
 }

@@ -45,4 +45,14 @@ public class EnemyPlantStates : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         plantStateMachine.Tick();
     }
+
+
+    public void Attack()
+    {
+        var bullet = GetComponentInChildren<IWeapon>();
+        bullet.SetDirectionShoot(transform.forward);
+        bullet.SetHitted("Enemy");
+        bullet.Attack();
+
+    }
 }

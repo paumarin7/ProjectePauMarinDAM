@@ -13,7 +13,7 @@ public class PlantWait : IState
 
     public void OnEnter()
     {
-        throw new System.NotImplementedException();
+
     }
 
     public void OnExit()
