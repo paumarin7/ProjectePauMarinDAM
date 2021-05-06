@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    Button shootButton;
+    Button abilityButton;
     public GameObject[] players;
     // Start is called before the first frame update
     void Start()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
-       //shootButton = GameObject.Find("ShooterJoystick").GetComponent<Button>();
+       abilityButton = GameObject.Find("abilityButton").GetComponent<Button>();
     }
 
     // Update is called once per frame
     void Update()
     {
-      //  shootButton.onClick.AddListener(players[0].GetComponentInChildren<PlayerAttack>().Attacking);
+        abilityButton.onClick.AddListener(players[0].GetComponentInChildren<IAbility>().Ability);
     }
 }

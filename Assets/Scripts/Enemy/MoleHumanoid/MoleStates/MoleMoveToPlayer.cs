@@ -28,6 +28,6 @@ public class MoleMoveToPlayer : IState
     {
         Debug.Log("Moving");
       enemyMoleStates.moleMovement.followPlayer = new Vector3(enemyMoleStates.Player.transform.position.x - enemyMoleStates.transform.position.x, 0, enemyMoleStates.Player.transform.position.z - enemyMoleStates.transform.position.z);
-      enemyMoleStates.moleMovement.controller.Move(enemyMoleStates.moleMovement.followPlayer * Time.deltaTime);
+      enemyMoleStates.moleMovement.controller.Move(enemyMoleStates.moleMovement.followPlayer * Time.deltaTime * enemyMoleStates.Stats.Speed);
     }
 }

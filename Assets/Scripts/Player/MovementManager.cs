@@ -12,9 +12,6 @@ public class MovementManager : MonoBehaviour
 
     
 
-   
-
-
     // Start is called before the first frame update
     private void Awake()
     {
@@ -40,21 +37,20 @@ public class MovementManager : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if (controller.isGrounded)
-        {
-            moveDirection = (moveDirection) * Speed;
+        //if (controller.isGrounded)
+        //{
+        //    moveDirection = (moveDirection) * Speed;
 
-            controller.Move(moveDirection * Time.deltaTime);
-        }
-        else
-        {
-            moveDirection.y -= 5f;
-        }
-        //animations
+           
+        //}
+        //else
+        //{
+        //    moveDirection.y -= 5f;
+        //}
+       
 
-     
-      
 
+        Debug.Log(Speed);
         controller.Move(moveDirection * Time.deltaTime * Speed);
 
     }

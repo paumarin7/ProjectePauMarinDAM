@@ -27,8 +27,19 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+      
         playerAttack.SetFireRate(playerStats.FireRate);
-        playerMovementManager.setSpeedMovement(playerStats.Speed);
-        
+        if (!playerAnimations.Rolling)
+        {
+            playerMovementManager.setSpeedMovement(playerStats.Speed);
+        }
+        else
+        {
+            playerMovementManager.setSpeedMovement(playerStats.Speed+2);
+
+        }
+
+
     }
 }
