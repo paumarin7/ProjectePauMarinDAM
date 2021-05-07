@@ -6,23 +6,27 @@ public class CreateCorridors : MonoBehaviour
 {
 
     public bool corridor = false;
+    public float angle;
     BoxCollider boxCollider;
     public GameObject corridorGameObject;
     public GameObject parent;
     // Start is called before the first frame update
     void Start()
     {
-        parent = GetComponentInParent<GameObject>();
+       
         boxCollider = GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (!corridor)
         {
           GameObject newGameObject =  Instantiate(corridorGameObject, this.transform.position, Quaternion.identity);
-            newGameObject.transform.Rotate(0, this.transform.rotation.y + 90, 0);
+            newGameObject.transform.Rotate(0, parent.transform.eulerAngles.y + angle, 0);
+            newGameObject.GetComponentInChildren<CreateFloors>().angle = angle;
+            corridor = true;
         }
     }
 
@@ -30,7 +34,7 @@ public class CreateCorridors : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
       
-        corridor = true;
+        
         Destroy(this.gameObject);
     }
 

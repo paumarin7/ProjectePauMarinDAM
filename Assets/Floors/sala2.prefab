@@ -153,7 +153,7 @@ MonoBehaviour:
   corridor: 0
   corridorGameObject: {fileID: 5830431872377205749, guid: 98d48fa0e8959ee4cbb8404be16d4c4e,
     type: 3}
-  parent: {fileID: 0}
+  parent: {fileID: 9220206638091279310}
 --- !u!1 &3212107157551165326
 GameObject:
   m_ObjectHideFlags: 0

@@ -783,6 +783,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRolling: 1
+--- !u!1 &1834036354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6009899113262884022, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2096604451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1868957028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1135,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 59148753, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3, type: 3}
+      propertyPath: angle
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 59148753, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1834036354}
+    - target: {fileID: 70597521, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3, type: 3}
+      propertyPath: angle
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 70597521, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 1834036354}
+    - target: {fileID: 76189942, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 76189943, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 76189943, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 32.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 203847188, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 203847190, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3, type: 3}
+      propertyPath: angle
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396084245, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6009899113262884022, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3,
         type: 3}
       propertyPath: m_Name

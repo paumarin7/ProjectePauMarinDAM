@@ -60,6 +60,7 @@ MonoBehaviour:
   corridor: 0
   corridorGameObject: {fileID: 5830431872377205749, guid: 98d48fa0e8959ee4cbb8404be16d4c4e,
     type: 3}
+  parent: {fileID: 0}
 --- !u!1 &203847188
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +121,7 @@ MonoBehaviour:
   corridor: 0
   corridorGameObject: {fileID: 5830431872377205749, guid: 98d48fa0e8959ee4cbb8404be16d4c4e,
     type: 3}
+  parent: {fileID: 6009899113262884022}
 --- !u!1 &1396084245
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +182,7 @@ MonoBehaviour:
   corridor: 0
   corridorGameObject: {fileID: 5830431872377205749, guid: 98d48fa0e8959ee4cbb8404be16d4c4e,
     type: 3}
+  parent: {fileID: 0}
 --- !u!1 &2922512196990252920
 GameObject:
   m_ObjectHideFlags: 0

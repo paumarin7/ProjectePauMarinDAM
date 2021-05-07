@@ -60,6 +60,7 @@ MonoBehaviour:
   floor: 0
   floorGameObject: {fileID: 6009899113262884022, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3,
     type: 3}
+  parent: {fileID: 4822726132296362784}
 --- !u!1 &4822726132296362784
 GameObject:
   m_ObjectHideFlags: 0
