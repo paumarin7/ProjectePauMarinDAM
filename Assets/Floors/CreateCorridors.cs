@@ -24,8 +24,9 @@ public class CreateCorridors : MonoBehaviour
         if (!corridor)
         {
           GameObject newGameObject =  Instantiate(corridorGameObject, this.transform.position, Quaternion.identity);
-            newGameObject.transform.Rotate(0, parent.transform.eulerAngles.y + angle, 0);
-            newGameObject.GetComponentInChildren<CreateFloors>().angle = angle;
+            newGameObject.transform.Rotate(0, this.transform.eulerAngles.y + angle, 0);
+
+            newGameObject.GetComponentInChildren<CreateFloors>().angle =  angle;
             corridor = true;
         }
     }
@@ -33,9 +34,9 @@ public class CreateCorridors : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-      
-        
-        Destroy(this.gameObject);
+
+        this.gameObject.GetComponent<CreateCorridors>().enabled = false;
+       // Destroy(this.gameObject);
     }
 
     private void OnTriggerExit(Collider other)

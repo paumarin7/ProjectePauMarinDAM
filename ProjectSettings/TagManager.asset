@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - Floor
+  - Corridor
+  - Exits
+  - GameManager
+  - SecondCycle
+  - ThirdCycle
   layers:
   - Default
   - TransparentFX
