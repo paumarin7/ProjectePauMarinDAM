@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CreateDungeon : MonoBehaviour
 {
@@ -12,14 +13,17 @@ public class CreateDungeon : MonoBehaviour
 
     public bool isFirstCircle = false;
 
+    public GameObject prizeRoom;
+    public GameObject BossRoom;
+
 
     public List<GameObject> corridors = null;
     public List<GameObject> floors = null;
     public List<GameObject> ExitFloors = null;
 
 
-    public List<GameObject> secondCycle = new List<GameObject>();
-    public List<GameObject> thirdCycle = new List<GameObject>();
+    private List<GameObject> secondCycle = new List<GameObject>();
+    private List<GameObject> thirdCycle = new List<GameObject>();
      
     public float angle;
 
@@ -29,7 +33,12 @@ public class CreateDungeon : MonoBehaviour
     public bool isThirdCycle = false;
     public bool prepareSecondCycle = false;
     public bool comprovFirstCicle = false;
+    public bool comprovThirdCycle = false;
     public bool prepareThirdCycle = false;
+
+
+    public bool priceRoomPicked = false;
+    public bool bossRoomPicked = false;
 
 
     public int corridorSelected;
@@ -86,8 +95,10 @@ public class CreateDungeon : MonoBehaviour
             else if (!isSecondCycle)
             {
                 Debug.Log("secondcycle");
+             //   var randomAngle = Random.Range(20, 60);
                 for (int i = 0; i < secondCycle.Count; i++)
                 {
+                   
                     secondCycle[i].GetComponent<CreateFloors>().angle = -20;
                     secondCycle[i].GetComponent<CreateFloors>().floorGameObject = ExitFloors[1];
                     secondCycle[i].GetComponent<CreateFloors>().enabled = true;
@@ -108,9 +119,11 @@ public class CreateDungeon : MonoBehaviour
             }else if (!isThirdCycle)
             {
                 Debug.Log("isthirdcycle");
+           //     var randomAngle = Random.Range(20, 60);
                 for (int i = 0; i < thirdCycle.Count; i++)
                 {
-                    thirdCycle[i].GetComponent<CreateCorridors>().angle = 0;
+                    
+                    thirdCycle[i].GetComponent<CreateCorridors>().angle = -50;
                     thirdCycle[i].GetComponent<CreateCorridors>().enabled = true;
                 }
                 isThirdCycle = true;
@@ -123,7 +136,46 @@ public class CreateDungeon : MonoBehaviour
         else
         {
             Debug.Log("Porfin");
-            floors[floors.Count-1].GetComponentInChildren<CreateCorridors>().enabled = false;
+            floors[floors.Count - 1].GetComponentInChildren<CreateCorridors>().enabled = false;
+            corridors[corridors.Count - 1].GetComponentInChildren<CreateFloors>().enabled = false;
+            if (!comprovThirdCycle)
+            {
+                Debug.Log("ComprovThird");
+                for (int i = numberOfFloors; i < floors.Count; i++)
+                {
+                    Destroy(floors[i].gameObject);
+                    floors.RemoveAt(i);
+                }
+
+                for (int j = numberOfFloors - 4; j < corridors.Count; j++)
+                {
+                    Destroy(corridors[j].gameObject);
+                    corridors.RemoveAt(j);
+                }
+
+                comprovThirdCycle = true;
+            }else if (!priceRoomPicked)
+            {
+                Debug.Log("price");
+                var roomPrizeNumber = Random.Range(1, floors.Count-2);
+                prizeRoom.transform.position = floors[roomPrizeNumber].transform.position;
+                prizeRoom.transform.rotation = floors[roomPrizeNumber].transform.rotation;
+                Destroy(floors[roomPrizeNumber].gameObject);
+                Instantiate(prizeRoom);
+                priceRoomPicked = true;
+            }else if (!bossRoomPicked)
+            {
+                Debug.Log("boss");
+
+                var roomPrizeNumber = Random.Range(floors.Count-4, floors.Count-1);
+                BossRoom.transform.position = floors[roomPrizeNumber].transform.position;
+                BossRoom.transform.rotation = floors[roomPrizeNumber].transform.rotation;
+                Destroy(floors[floors.Count-1].gameObject);
+                Instantiate(BossRoom);
+                bossRoomPicked = true;
+            }
+           
+
         }
        
         

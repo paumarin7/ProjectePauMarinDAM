@@ -780,23 +780,27 @@ MonoBehaviour:
   LevelInitializer: {fileID: 6009899113262884022, guid: 7fd54dc2fa5f2ee499a5b4a2012030b3,
     type: 3}
   isFirstCircle: 0
-  corridors: []
+  prizeRoom: {fileID: 3085812756037031446, guid: 3150771489fe2f5499ca61ad6869778f,
+    type: 3}
+  BossRoom: {fileID: 8691741903289015548, guid: e32ff5741e2a16c4199b37f4bd6334ba,
+    type: 3}
   floors: []
   ExitFloors:
   - {fileID: 9220206638091279310, guid: ad6bc9fee4cfe9c4eac3e448f488e6cd, type: 3}
   - {fileID: 2791565171692840453, guid: 69a304253ba101e478b970dbcadde1bd, type: 3}
   - {fileID: 6604275364171300098, guid: 20164a6d6a8b5b2429993d9e281af0ca, type: 3}
-  secondCycle: []
-  thirdCycle: []
   angle: 40
   firstFloorDeleted: 0
   isSecondCycle: 0
   isThirdCycle: 0
   prepareSecondCycle: 0
   comprovFirstCicle: 0
+  comprovThirdCycle: 0
   prepareThirdCycle: 0
+  priceRoomPicked: 0
+  bossRoomPicked: 0
   corridorSelected: 0
-  numberOfFloors: 11
+  numberOfFloors: 10
 --- !u!1 &1626216388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1821462223196480517, guid: 993b15db57d434d4b85c543000363ebd,
