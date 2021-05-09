@@ -19,7 +19,10 @@ public class CreateDungeon : MonoBehaviour
 
     public List<GameObject> corridors = null;
     public List<GameObject> floors = null;
-    public List<GameObject> ExitFloors = null;
+    public List<GameObject> salaFirstCycle = null;
+
+
+    public List<GameObject> salaThirdCycle = null;
 
 
     private List<GameObject> secondCycle = new List<GameObject>();
@@ -35,6 +38,7 @@ public class CreateDungeon : MonoBehaviour
     public bool comprovFirstCicle = false;
     public bool comprovThirdCycle = false;
     public bool prepareThirdCycle = false;
+    public bool finishThirdCycle = false;
 
 
     public bool priceRoomPicked = false;
@@ -60,7 +64,7 @@ public class CreateDungeon : MonoBehaviour
         corridors = GameObject.FindGameObjectsWithTag("Corridor").ToList();
         floors = GameObject.FindGameObjectsWithTag("Floor").ToList();
 
-        if (floors.Count <= numberOfFloors)
+        if (!finishThirdCycle)
         {
             if (!isFirstCircle)
             {
@@ -73,8 +77,7 @@ public class CreateDungeon : MonoBehaviour
                 for (int i = 4; i <= floors.Count; i++)
                 {
 
-                    Destroy(floors[i].gameObject);
-                    floors.RemoveAt(i);
+                  
                 }
 
                 comprovFirstCicle = true;
@@ -99,8 +102,8 @@ public class CreateDungeon : MonoBehaviour
                 for (int i = 0; i < secondCycle.Count; i++)
                 {
                    
-                    secondCycle[i].GetComponent<CreateFloors>().angle = -20;
-                    secondCycle[i].GetComponent<CreateFloors>().floorGameObject = ExitFloors[1];
+                    secondCycle[i].GetComponent<CreateFloors>().angle = 0;
+                    secondCycle[i].GetComponent<CreateFloors>().floorGameObject = salaThirdCycle[Random.Range(0,salaThirdCycle.Count)];
                     secondCycle[i].GetComponent<CreateFloors>().enabled = true;
                 }
                 isSecondCycle = true;
@@ -123,10 +126,11 @@ public class CreateDungeon : MonoBehaviour
                 for (int i = 0; i < thirdCycle.Count; i++)
                 {
                     
-                    thirdCycle[i].GetComponent<CreateCorridors>().angle = -50;
+                    thirdCycle[i].GetComponent<CreateCorridors>().angle = 0;
                     thirdCycle[i].GetComponent<CreateCorridors>().enabled = true;
                 }
                 isThirdCycle = true;
+                finishThirdCycle = true;
             }
             else
             {
@@ -160,6 +164,7 @@ public class CreateDungeon : MonoBehaviour
                 var roomPrizeNumber = Random.Range(1, floors.Count-2);
                 prizeRoom.transform.position = floors[roomPrizeNumber].transform.position;
                 prizeRoom.transform.rotation = floors[roomPrizeNumber].transform.rotation;
+                prizeRoom.transform.position = new Vector3(prizeRoom.transform.position.x, prizeRoom.transform.position.y + 0.01f, prizeRoom.transform.position.z);
                 Destroy(floors[roomPrizeNumber].gameObject);
                 Instantiate(prizeRoom);
                 priceRoomPicked = true;
@@ -167,10 +172,11 @@ public class CreateDungeon : MonoBehaviour
             {
                 Debug.Log("boss");
 
-                var roomPrizeNumber = Random.Range(floors.Count-4, floors.Count-1);
-                BossRoom.transform.position = floors[roomPrizeNumber].transform.position;
-                BossRoom.transform.rotation = floors[roomPrizeNumber].transform.rotation;
-                Destroy(floors[floors.Count-1].gameObject);
+                var roomPrizeNumber = Random.Range(corridors.Count-3, corridors.Count-1);
+                BossRoom.transform.position = corridors[roomPrizeNumber].transform.position;
+                BossRoom.transform.rotation = corridors[roomPrizeNumber].transform.rotation;
+                BossRoom.transform.position = new Vector3(BossRoom.transform.position.x, BossRoom.transform.position.y +0.02f, BossRoom.transform.position.z);
+                Destroy(corridors[roomPrizeNumber].gameObject);
                 Instantiate(BossRoom);
                 bossRoomPicked = true;
             }
@@ -196,7 +202,7 @@ public class CreateDungeon : MonoBehaviour
             isFirstCircle = true;
         }
 
-        corridors[corridors.Count-1].GetComponentInChildren<CreateFloors>().floorGameObject = ExitFloors[0];
+        corridors[corridors.Count-1].GetComponentInChildren<CreateFloors>().floorGameObject = salaFirstCycle[Random.Range(0,salaFirstCycle.Count)];
         corridors[corridors.Count-1].GetComponentInChildren<CreateFloors>().angle = angle;
         corridors[corridors.Count-1].GetComponentInChildren<CreateFloors>().enabled = true;
         if (!firstFloorDeleted)

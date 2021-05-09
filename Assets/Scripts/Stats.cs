@@ -28,6 +28,8 @@ public class Stats : MonoBehaviour, IDamageable
     [SerializeField]
     // private bool isActive = false;
     private bool isAlive;
+    [SerializeField]
+    private bool isActive;
 
     public float Health { get => health; set => health = value; }
     public float Strength { get => strength; set => strength = value; }
@@ -47,6 +49,7 @@ public class Stats : MonoBehaviour, IDamageable
     //public bool IsMoving { get => isMoving; set => isMoving = value; }
     //public bool IsActive { get => isActive; set => isActive = value; }
     public bool IsAlive { get => isAlive; set => isAlive = value; }
+    public bool IsActive { get => isActive; set => isActive = value; }
     public float MaxHealth { get => maxHealth; set => maxHealth = value; }
 
     // Start is called before the first frame update

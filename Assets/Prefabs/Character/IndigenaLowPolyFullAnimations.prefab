@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 546789205089539724}
   m_Layer: 0
   m_Name: IndigenaLowPolyFullAnimations
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +199,7 @@ Transform:
   m_GameObject: {fileID: 546789205089539725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.68, y: 0.48, z: 8.32}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 8101289758878784681}
   - {fileID: 4083889496237283154}
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 6
   strength: 2
-  speed: 2
+  speed: 1
   attackSpeed: 2
   fireRate: 1
   accuracy: 1

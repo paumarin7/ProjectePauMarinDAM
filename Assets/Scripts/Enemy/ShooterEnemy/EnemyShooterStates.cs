@@ -71,8 +71,12 @@ public class EnemyShooterStates : MonoBehaviour, IEnemyStates
     // Update is called once per frame
     void Update()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        shooterStateMachine.Tick();
+        if (Stats.IsActive)
+        {
+            Player = GameObject.FindGameObjectWithTag("Player");
+            shooterStateMachine.Tick();
+        }
+        
     }
 
     public IEnumerator Attack()

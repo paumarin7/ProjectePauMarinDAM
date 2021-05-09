@@ -44,11 +44,14 @@ public class EnemyMoleStates : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
-       
 
-        Player = GameObject.FindGameObjectWithTag("Player");
-        moleStateMachine.Tick();
+
+        if (Stats.IsActive)
+        {
+            Player = GameObject.FindGameObjectWithTag("Player");
+            moleStateMachine.Tick();
+        }
+    
     }
 
 

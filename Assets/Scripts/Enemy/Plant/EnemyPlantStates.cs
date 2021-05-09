@@ -40,10 +40,12 @@ public class EnemyPlantStates : MonoBehaviour
     void Update()
     {
 
-
-        plantAnimation.Attacking = isAttacking;
-        Player = GameObject.FindGameObjectWithTag("Player");
-        plantStateMachine.Tick();
+        if(stats.IsActive){
+            plantAnimation.Attacking = isAttacking;
+            Player = GameObject.FindGameObjectWithTag("Player");
+            plantStateMachine.Tick();
+        }
+ 
     }
 
 

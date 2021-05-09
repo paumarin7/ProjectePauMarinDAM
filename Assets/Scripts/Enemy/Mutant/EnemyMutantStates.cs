@@ -54,22 +54,26 @@ public class EnemyMutantStates : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- 
+
         //if (mutantMovement.playerDirection.magnitude > mutantMovement.MinRange+2  && jumpTimer.IsReady)
         //{
-            
+
         //    jumping = true;
         //}
         //else if(mutantMovement.playerDirection.magnitude < mutantMovement.MinRange)
         //{
         //    attacking = true;
-            
+
         //}
-       
-        mutantAnimation.Attacking = attacking;
-        mutantAnimation.Jumping = jumping;
-        Player = GameObject.FindGameObjectWithTag("Player");
-        mutantStateMachine.Tick();
+        if (stats.IsActive)
+        {
+            mutantAnimation.Attacking = attacking;
+            mutantAnimation.Jumping = jumping;
+            Player = GameObject.FindGameObjectWithTag("Player");
+            mutantStateMachine.Tick();
+        }
+
+    
 
 
         
