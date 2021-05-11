@@ -8,6 +8,9 @@ using Random = UnityEngine.Random;
 public class CreateDungeon : MonoBehaviour
 {
 
+    public GameObject player;
+
+
     public GameObject LevelInitializer;
 
 
@@ -179,6 +182,35 @@ public class CreateDungeon : MonoBehaviour
                 Destroy(corridors[roomPrizeNumber].gameObject);
                 Instantiate(BossRoom);
                 bossRoomPicked = true;
+                for (int i = 0; i < floors.Count; i++)
+                {
+                  var boxes =   floors[i].gameObject.GetComponentsInChildren<Rigidbody>();
+                    for (int l = 0; l < boxes.Length; l++)
+                    {
+                        if(boxes[l].transform.gameObject.tag == "Enemy")
+                        {
+
+                        }
+                        else
+                        {
+                            Destroy(boxes[l]);// boxes[l].enabled = false;
+                        }
+                    }
+                }
+                for (int j = 0; j < corridors.Count; j++)
+                {
+                    var boxes = corridors[j].gameObject.GetComponentsInChildren<BoxCollider>();
+                    for (int l = 0; l < boxes.Length; l++)
+                    {
+                        
+                            boxes[l].enabled = false;
+                        
+                    }
+                }
+
+
+                Instantiate(player);
+                Destroy(this);
             }
            
 

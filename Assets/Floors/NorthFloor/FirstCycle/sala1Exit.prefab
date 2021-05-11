@@ -84,7 +84,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3212107156269543789}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b00c5b2bd97bb8c41b7bdef777edd2ca, type: 3}
   m_Name: 
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 9220206637890439905}
   - component: {fileID: 9220206637890439904}
   - component: {fileID: 9220206637890439903}
-  - component: {fileID: 1756098971255994930}
+  - component: {fileID: 4841147115018703090}
   m_Layer: 0
   m_Name: Suelo
   m_TagString: Untagged
@@ -312,7 +312,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1756098971255994930
+--- !u!54 &4841147115018703090
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -510,6 +510,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3341680968065837068, guid: 5a0b080702bd80a47a47ee5bdd0f76da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3341680968065837070, guid: 5a0b080702bd80a47a47ee5bdd0f76da,
         type: 3}
       propertyPath: m_Name
@@ -605,6 +610,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3341680968065837068, guid: 5a0b080702bd80a47a47ee5bdd0f76da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3341680968065837070, guid: 5a0b080702bd80a47a47ee5bdd0f76da,
         type: 3}
       propertyPath: m_Name
@@ -635,6 +645,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9220206638091279311}
     m_Modifications:
+    - target: {fileID: 7011242185858155434, guid: b5411a453fd415b46b2032e04e0df917,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7444642503510245570, guid: b5411a453fd415b46b2032e04e0df917,
         type: 3}
       propertyPath: m_Name
@@ -730,6 +745,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9220206638091279311}
     m_Modifications:
+    - target: {fileID: 546789205089539723, guid: d2de8b8aa4267cb4fb6e09ce88768cf6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 546789205089539725, guid: d2de8b8aa4267cb4fb6e09ce88768cf6,
         type: 3}
       propertyPath: m_Name
