@@ -26,7 +26,7 @@ public class ActiveEnemy : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.transform.gameObject.name);
-        if (other.transform.gameObject.tag == "Player")
+        if (other.transform.gameObject.CompareTag( "Player"))
         {
             
             for (int i = 0; i < enemy.Count; i++)
@@ -41,7 +41,7 @@ public class ActiveEnemy : MonoBehaviour
     {
 
         Debug.Log(other.transform.gameObject.name);
-        if (other.transform.gameObject.tag == "Player")
+        if (other.transform.gameObject.CompareTag("Player"))
         {
          
             for (int i = 0; i < enemy.Count; i++)
