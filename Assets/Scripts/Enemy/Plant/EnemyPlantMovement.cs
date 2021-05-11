@@ -20,12 +20,16 @@ public class EnemyPlantMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (plantStates.stats.IsAlive)
+        if (plantStates.stats.IsActive)
         {
-            transform.LookAt(plantStates.Player.transform.position);
+            if (plantStates.stats.IsAlive)
+            {
+                transform.LookAt(plantStates.Player.transform.position);
 
-            playerDirection = new Vector3(plantStates.Player.transform.position.x - plantStates.transform.position.x, plantStates.transform.position.y, plantStates.Player.transform.position.z - plantStates.transform.position.z);
-            maxRange = plantStates.stats.Distance;
+                playerDirection = new Vector3(plantStates.Player.transform.position.x - plantStates.transform.position.x, plantStates.transform.position.y, plantStates.Player.transform.position.z - plantStates.transform.position.z);
+                maxRange = plantStates.stats.Distance;
+            }
         }
+
     }
 }

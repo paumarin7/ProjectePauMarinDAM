@@ -19,7 +19,7 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
 
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = GameManager.player.transform;
         transform.position = target.position + offset;
     }
 }

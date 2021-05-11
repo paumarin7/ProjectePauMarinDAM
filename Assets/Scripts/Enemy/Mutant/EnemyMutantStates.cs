@@ -30,7 +30,7 @@ public class EnemyMutantStates : MonoBehaviour
         stats = GetComponent<Stats>();
         mutantAnimation = GetComponent<EnemyMutantAnimation>();
         mutantMovement = GetComponent<EnemyMutantMovement>();
-        Player = GameObject.FindGameObjectWithTag("Player");
+        Player = GameManager.player;
         jumpTimer = new Delay(stats.FireRate);
         
         mutantStateMachine = new StateMachine();
@@ -69,7 +69,7 @@ public class EnemyMutantStates : MonoBehaviour
         {
             mutantAnimation.Attacking = attacking;
             mutantAnimation.Jumping = jumping;
-            Player = GameObject.FindGameObjectWithTag("Player");
+            Player = GameManager.player;
             mutantStateMachine.Tick();
         }
 
@@ -84,6 +84,8 @@ public class EnemyMutantStates : MonoBehaviour
 
     public void Destroy()
     {
+        ActiveEnemy activ = GetComponentInParent<ActiveEnemy>();
+        activ.enemy.Remove(this.stats);
         Destroy(this.gameObject);
     }
 }

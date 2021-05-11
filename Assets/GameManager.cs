@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     Button abilityButton;
-    public GameObject player;
+    public static GameObject player;
     // Start is called before the first frame update
     void Start()
     {

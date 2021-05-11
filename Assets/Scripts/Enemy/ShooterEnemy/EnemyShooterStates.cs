@@ -32,7 +32,7 @@ public class EnemyShooterStates : MonoBehaviour, IEnemyStates
         movementManager = GetComponent<MovementManager>();
         delay = new Delay(Stats.FireRate);
         canShoot = false;
-        Player = GameObject.FindGameObjectWithTag("Player");
+        Player = GameManager.player;
         animations = GetComponent<Animator>();
 
 
@@ -73,7 +73,7 @@ public class EnemyShooterStates : MonoBehaviour, IEnemyStates
     {
         if (Stats.IsActive)
         {
-            Player = GameObject.FindGameObjectWithTag("Player");
+            Player = GameManager.player;
             shooterStateMachine.Tick();
         }
         
@@ -105,6 +105,9 @@ public class EnemyShooterStates : MonoBehaviour, IEnemyStates
 
     public void Destroy()
     {
+
+        ActiveEnemy activ = GetComponentInParent<ActiveEnemy>();
+        activ.enemy.Remove(this.Stats);
         Destroy(this.gameObject);
     }
 

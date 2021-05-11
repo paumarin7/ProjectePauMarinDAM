@@ -19,7 +19,7 @@ public class EnemyPlantStates : MonoBehaviour
     void Start()
     {
         stats = GetComponent<Stats>();
-        Player = GameObject.FindGameObjectWithTag("Player");
+        Player = GameManager.player;
         plantAnimation = GetComponent<EnemyPlantAnimation>();
         plantMovement = GetComponent<EnemyPlantMovement>();
         plantStateMachine = new StateMachine();
@@ -42,7 +42,7 @@ public class EnemyPlantStates : MonoBehaviour
 
         if(stats.IsActive){
             plantAnimation.Attacking = isAttacking;
-            Player = GameObject.FindGameObjectWithTag("Player");
+            Player = GameManager.player;
             plantStateMachine.Tick();
         }
  
@@ -55,6 +55,15 @@ public class EnemyPlantStates : MonoBehaviour
         bullet.SetDirectionShoot(transform.forward);
         bullet.SetHitted("Enemy");
         bullet.Attack();
+
+    }
+
+
+    public void Destroy()
+    {
+        ActiveEnemy activ = GetComponentInParent<ActiveEnemy>();
+        activ.enemy.Remove(this.stats);
+        Destroy(this.gameObject);
 
     }
 }

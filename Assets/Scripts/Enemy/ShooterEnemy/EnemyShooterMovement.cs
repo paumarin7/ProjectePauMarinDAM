@@ -75,10 +75,18 @@ public class EnemyShooterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetMinRange(enemyShooterStates.Stats.Distance);
-        SetMaxRange(enemyShooterStates.Stats.Distance+12);
-        transform.LookAt(enemyShooterStates.Player.transform.position);
+        if (enemyShooterStates.Stats.IsActive)
+        {
+            if (enemyShooterStates.Stats.IsAlive)
+            {
+                SetMinRange(enemyShooterStates.Stats.Distance);
+                SetMaxRange(enemyShooterStates.Stats.Distance + 12);
+                transform.LookAt(enemyShooterStates.Player.transform.position);
+
+                playerDirection = new Vector3(enemyShooterStates.Player.transform.position.x - transform.position.x, enemyShooterStates.Player.transform.position.y, enemyShooterStates.Player.transform.position.z - transform.position.z);
+
+            }
+        }
        
-        playerDirection = new Vector3(enemyShooterStates.Player.transform.position.x - transform.position.x, enemyShooterStates.Player.transform.position.y, enemyShooterStates.Player.transform.position.z - transform.position.z);
     }
 }

@@ -29,21 +29,25 @@ public class EnemyMutantMovement : MonoBehaviour
     void Update()
     {
 
-        if (enemyMutantStates.stats.IsAlive)
+        if (enemyMutantStates.stats.IsActive)
         {
-            minRange = enemyMutantStates.stats.Distance;
-            maxRange = enemyMutantStates.stats.Distance + 7;
-            if (!enemyMutantStates.jumping)
+            if (enemyMutantStates.stats.IsAlive)
             {
-             //   transform.LookAt(enemyMutantStates.Player.transform.position);
-                Quaternion toRotation = Quaternion.LookRotation(playerDirection);
-                transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, 4 * Time.deltaTime);
+                minRange = enemyMutantStates.stats.Distance;
+                maxRange = enemyMutantStates.stats.Distance + 7;
+                if (!enemyMutantStates.jumping)
+                {
+                    //   transform.LookAt(enemyMutantStates.Player.transform.position);
+                    Quaternion toRotation = Quaternion.LookRotation(playerDirection);
+                    transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, 4 * Time.deltaTime);
+                }
+
+
+                playerDirection = new Vector3(enemyMutantStates.Player.transform.position.x - transform.position.x, enemyMutantStates.Player.transform.position.y, enemyMutantStates.Player.transform.position.z - transform.position.z);
+
             }
-
-
-            playerDirection = new Vector3(enemyMutantStates.Player.transform.position.x - transform.position.x, enemyMutantStates.Player.transform.position.y, enemyMutantStates.Player.transform.position.z - transform.position.z);
-
         }
+ 
     }
 
 
