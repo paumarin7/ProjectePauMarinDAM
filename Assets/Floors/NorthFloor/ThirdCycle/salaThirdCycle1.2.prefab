@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 8663735644435106710}
   - component: {fileID: 3539006182572143361}
   - component: {fileID: 1717317580990455910}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: FloorMinimap
   m_TagString: Minimap
   m_Icon: {fileID: 0}
@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visited: {fileID: 2100000, guid: 40c02210d66f4a844832ee82aa6bb442, type: 2}
+  NoVisited: {fileID: 2100000, guid: 41e5c06645064a9489644eed750a0486, type: 2}
 --- !u!1 &5961277606599956825
 GameObject:
   m_ObjectHideFlags: 0

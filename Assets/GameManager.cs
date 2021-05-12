@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         //  UnityAction<GameObject> action = new UnityAction<GameObject>(abilityButton.OnButtonClick);
-        Debug.Log("((");
+
      
         //  abilityButton.onClick.AddListener(delegate() { player.GetComponentInChildren<IAbility>().Ability(); });
         //abilityButton.onClick.RemoveAllListeners();
