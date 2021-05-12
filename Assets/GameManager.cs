@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        if(player == null) player = GameObject.FindGameObjectWithTag("Player");
 
         // UnityEventTools.AddObjectPersistentListener<GameObject>()
         //    abilityButton.onClick.AddListener(player.GetComponentInChildren<IAbility>().Ability);
@@ -45,5 +45,10 @@ public class GameManager : MonoBehaviour
         //  abilityButton.onClick.AddListener(delegate() { player.GetComponentInChildren<IAbility>().Ability(); });
         //abilityButton.onClick.RemoveAllListeners();
 
+    }
+
+    public void ActionTriggerPlayer()
+    {
+        player.GetComponentInChildren<IAbility>().Ability();
     }
 }

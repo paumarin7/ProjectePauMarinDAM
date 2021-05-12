@@ -39,6 +39,7 @@ public class Roll : MonoBehaviour, IAbility
     private void stopRoll()
     {
         playerManager.playerAnimations.Rolling = false;
+        playerManager.playerMovementManager.controller.detectCollisions = true;
     }
 
     // Start is called before the first frame update
