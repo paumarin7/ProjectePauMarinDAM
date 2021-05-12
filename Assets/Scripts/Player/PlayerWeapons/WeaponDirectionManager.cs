@@ -48,7 +48,7 @@ public class WeaponDirectionManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         IDamageable trigger = other.GetComponent<IDamageable>();
-        if (other.tag == hitted || other.tag == "Bullet" || other.tag == "Floor" || other.tag =="Untagged" || other.tag == "SecondCycle" || other.tag == "ThirdCycle")
+        if (other.tag == hitted || other.tag == "Bullet" || other.tag == "Floor" || other.tag =="Untagged" || other.tag == "SecondCycle" || other.tag == "ThirdCycle" || other.tag == "Minimap")
         {
 
         }

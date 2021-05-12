@@ -187,7 +187,7 @@ public class CreateDungeon : MonoBehaviour
                   var boxes =   floors[i].gameObject.GetComponentsInChildren<Rigidbody>();
                     for (int l = 0; l < boxes.Length; l++)
                     {
-                        if(boxes[l].transform.gameObject.tag == "Enemy")
+                        if(boxes[l].transform.gameObject.CompareTag("Enemy") || boxes[l].transform.gameObject.CompareTag("Minimap"))
                         {
 
                         }
@@ -202,8 +202,16 @@ public class CreateDungeon : MonoBehaviour
                     var boxes = corridors[j].gameObject.GetComponentsInChildren<BoxCollider>();
                     for (int l = 0; l < boxes.Length; l++)
                     {
-                        
+
+                        if ( boxes[l].transform.gameObject.CompareTag("Minimap"))
+                        {
+
+                        }
+                        else
+                        {
                             boxes[l].enabled = false;
+                        }
+                        
                         
                     }
                 }

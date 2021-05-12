@@ -12,6 +12,7 @@ TagManager:
   - SecondCycle
   - ThirdCycle
   - Enemy
+  - Minimap
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Visited
+  - NotVisited
   - 
   - 
   - 
