@@ -13,9 +13,9 @@ public class ActiveEnemy : MonoBehaviour
     void Start()
     {
 
-         
-        enemy = GetComponentsInChildren<Stats>().ToList();
-        
+
+
+        StartCoroutine(waitForEnemy());
         boxCollider = GetComponent<BoxCollider>();
         boxCollider.enabled = true;
     }
@@ -23,7 +23,7 @@ public class ActiveEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+   
         if (enemy.Count == 0)
         {
             for (int i = 0; i < chains.Length; i++)
@@ -65,21 +65,10 @@ public class ActiveEnemy : MonoBehaviour
             }
         }
     }
-
-    private void OnTriggerStay(Collider other)
+        public IEnumerator waitForEnemy()
     {
-
-        //Debug.Log(other.transform.gameObject.name);
-        //if (other.transform.gameObject.CompareTag("Player"))
-        //{
-         
-        //    for (int i = 0; i < enemy.Count; i++)
-        //    {
-        //        enemy[i].IsActive = true;
-        //        enemy[i].transform.gameObject.GetComponent<CharacterController>().enabled = true;
-        //        Debug.Log(enemy[i].IsActive);
-        //    }
-        //}
+        yield return new WaitForSeconds(3);
+        enemy = GetComponentsInChildren<Stats>().ToList();
     }
 
  

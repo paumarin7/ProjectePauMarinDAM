@@ -20,7 +20,7 @@ public class EnemyMoleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (moleStates.Stats.IsAlive)
+        if (moleStates.Stats.IsAlive && moleStates.Stats.IsActive)
         {
             transform.LookAt(moleStates.Player.transform.position);
 

@@ -73,7 +73,11 @@ public class EnemyShooterStates : MonoBehaviour, IEnemyStates
     {
         if (Stats.IsActive)
         {
-            Player = GameManager.player;
+            if(GameManager.player != null)
+            {
+                Player = GameManager.player;
+            }
+          
             shooterStateMachine.Tick();
         }
         

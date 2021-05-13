@@ -6,11 +6,14 @@ public class WeaponDirectionManager : MonoBehaviour
 {
     private Vector3 shootDirection;
     private float attackSpeed;
+    private float range;
     private float damage;
     private string hitted;
 
 
     private Rigidbody rb;
+
+    public float Range { get => range; set => range = value; }
 
     public void SetDamage(float damage)
     {
@@ -26,6 +29,12 @@ public class WeaponDirectionManager : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        if (this.gameObject.name.Equals("Diente"))
+        {
+            StartCoroutine(rangeDistance());
+        }
+       
     }
     public void SetShootDirection(Vector3 shootDirection)
     {
@@ -35,6 +44,12 @@ public class WeaponDirectionManager : MonoBehaviour
     public void SetAttackSpeed(float attackSpeed)
     {
         this.attackSpeed = attackSpeed;
+    }
+
+    public IEnumerator rangeDistance()
+    {
+        yield return new WaitForSeconds(Range);
+        Destroy(this.gameObject);
     }
 
     // Update is called once per frame

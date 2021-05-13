@@ -17,6 +17,8 @@ public class Stats : MonoBehaviour, IDamageable
     [SerializeField]
     private float accuracy;
     [SerializeField]
+    private float range;
+    [SerializeField]
     private float gravity;
     [SerializeField]
     private float distance;
@@ -39,6 +41,7 @@ public class Stats : MonoBehaviour, IDamageable
     public float Gravity { get => gravity; set => gravity = value; }
     public float Distance { get => distance; set => distance = value; }
     public float FireRate { get => fireRate; set => fireRate = value; }
+    public float Range { get => range; set => range = value; }
 
     public void TakeHealth(float damage)
     {

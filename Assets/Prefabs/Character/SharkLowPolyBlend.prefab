@@ -462,6 +462,7 @@ MonoBehaviour:
   attackSpeed: 2
   fireRate: 1
   accuracy: 1
+  range: 1
   gravity: 0
   distance: 5
   isAlive: 0

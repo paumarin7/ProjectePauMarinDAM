@@ -443,9 +443,11 @@ MonoBehaviour:
   attackSpeed: 1
   fireRate: 1
   accuracy: 1
+  range: 3
   gravity: 1
   distance: 20
   isAlive: 1
+  isActive: 0
 --- !u!114 &3341680968065837072
 MonoBehaviour:
   m_ObjectHideFlags: 0

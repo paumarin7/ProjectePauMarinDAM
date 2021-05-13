@@ -247,9 +247,11 @@ MonoBehaviour:
   attackSpeed: 2
   fireRate: 1
   accuracy: 1
+  range: 3
   gravity: 0
   distance: 4
   isAlive: 1
+  isActive: 0
 --- !u!114 &546789205089539721
 MonoBehaviour:
   m_ObjectHideFlags: 0

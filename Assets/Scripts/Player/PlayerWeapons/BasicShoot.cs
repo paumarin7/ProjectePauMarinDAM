@@ -25,6 +25,8 @@ public class BasicShoot : MonoBehaviour, IWeapon
         bala.AddComponent<WeaponDirectionManager>();
         bala.GetComponent<WeaponDirectionManager>().SetDamage(GetComponentInParent<Stats>().Strength);
         bala.GetComponent<WeaponDirectionManager>().SetAttackSpeed(GetComponentInParent<Stats>().AttackSpeed);
+        bala.GetComponent<WeaponDirectionManager>().Range = GetComponentInParent<Stats>().Range;
+        bala.name = "Diente";
         bala.GetComponent<WeaponDirectionManager>().SetHitted(hitted);
 
         bala.GetComponent<IShootable>().SetAccuracy(GetComponentInParent<Stats>().Accuracy);

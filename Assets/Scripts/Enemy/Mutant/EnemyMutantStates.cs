@@ -65,11 +65,14 @@ public class EnemyMutantStates : MonoBehaviour
         //    attacking = true;
 
         //}
-        if (stats.IsActive)
+        if (stats.IsActive && stats.IsAlive)
         {
             mutantAnimation.Attacking = attacking;
             mutantAnimation.Jumping = jumping;
-            Player = GameManager.player;
+            if (GameManager.player != null)
+            {
+                Player = GameManager.player;
+            }
             mutantStateMachine.Tick();
         }
 

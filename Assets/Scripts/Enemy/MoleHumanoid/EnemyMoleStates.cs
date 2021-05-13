@@ -48,7 +48,11 @@ public class EnemyMoleStates : MonoBehaviour
 
         if (Stats.IsActive)
         {
-            Player = GameObject.FindGameObjectWithTag("Player");
+            if(GameManager.player != null)
+            {
+                Player = GameManager.player;
+            }
+      
             moleStateMachine.Tick();
         }
     
