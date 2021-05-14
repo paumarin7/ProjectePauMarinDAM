@@ -61,6 +61,8 @@ public class EnemyMoleStates : MonoBehaviour
 
     public void Destroy()
     {
+        ActiveEnemy activ = GetComponentInParent<ActiveEnemy>();
+        activ.enemy.Remove(this.Stats);
         Destroy(this.gameObject);
     }
 }
