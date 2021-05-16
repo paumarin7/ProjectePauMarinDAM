@@ -830,6 +830,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventAdded: 0
+  poolOfEnemies:
+  - {fileID: 3341680968065837070, guid: 5a0b080702bd80a47a47ee5bdd0f76da, type: 3}
+  - {fileID: 8533138101134184733, guid: e7d905fc22c4e6b458fd58572518cd81, type: 3}
+  - {fileID: 546789205089539725, guid: d2de8b8aa4267cb4fb6e09ce88768cf6, type: 3}
+  - {fileID: 7444642503510245570, guid: b5411a453fd415b46b2032e04e0df917, type: 3}
+  poolOfBosses:
+  - {fileID: 6286913958057390336, guid: d4e213106dceb0d468cb09e26be0bc6d, type: 3}
 --- !u!4 &1498015552
 Transform:
   m_ObjectHideFlags: 0
@@ -1153,72 +1160,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
---- !u!1001 &3546761636868036228
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6286913958057390336, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_Name
-      value: ChamanMixamo
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662031404333067194, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662031404333067194, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662031404333067194, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662031404333067194, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662031404333067194, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.08715578
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662031404333067194, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662031404333067194, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9961947
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662031404333067194, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662031404333067194, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662031404333067194, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 190
-      objectReference: {fileID: 0}
-    - target: {fileID: 6662031404333067194, guid: d4e213106dceb0d468cb09e26be0bc6d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d4e213106dceb0d468cb09e26be0bc6d, type: 3}

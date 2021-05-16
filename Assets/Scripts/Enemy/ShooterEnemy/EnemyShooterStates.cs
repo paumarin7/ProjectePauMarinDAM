@@ -71,7 +71,7 @@ public class EnemyShooterStates : MonoBehaviour, IEnemyStates
     // Update is called once per frame
     void Update()
     {
-        if (Stats.IsActive)
+        if (Stats.IsActive && Stats.IsAlive)
         {
             if(GameManager.player != null)
             {
