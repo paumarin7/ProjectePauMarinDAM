@@ -62,17 +62,30 @@ public class QuartHeart : MonoBehaviour
             heartAnchoredPosition += new Vector2(170, 0);
         }
         heartHealthSystem.onDamaged += HeartHealthSystem_onDamaged;
+        heartHealthSystem.onHealed += HeartHealthSystem_onHealed;
 
         }
+
+    private void HeartHealthSystem_onHealed(object sender, System.EventArgs e)
+    {
+        //Hearts health system was healed
+        RefreshAllHearts();
+    }
 
     private void HeartHealthSystem_onDamaged(object sender, System.EventArgs e)
     {
         //Hearts health system was damaged
+        RefreshAllHearts();
+
+    }
+
+    private void RefreshAllHearts()
+    {
         List<HeartHealthSystem.Heart> heartList = heartHealthSystem.GetHeartList();
         for (int i = 0; i < heartImageList.Count; i++)
         {
             HeartImage heartImage = heartImageList[i];
-            HeartHealthSystem.Heart heart= heartList[i];
+            HeartHealthSystem.Heart heart = heartList[i];
             heartImage.SetHeartFragments(heart.GetFragmentAmount());
         }
     }
@@ -91,6 +104,8 @@ public class QuartHeart : MonoBehaviour
 
         }
     }
+
+
 
     private HeartImage CreateHeartImage(Vector2 anchoredPosition)
     {

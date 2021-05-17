@@ -14,6 +14,7 @@ TagManager:
   - Enemy
   - Minimap
   - Chain
+  - Boss
   layers:
   - Default
   - TransparentFX
