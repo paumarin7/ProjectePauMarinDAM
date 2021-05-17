@@ -45,7 +45,17 @@ public class Stats : MonoBehaviour, IDamageable
 
     public void TakeHealth(float damage)
     {
-        health -= damage;
+
+        if (this.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("PlayerDamage");
+            GameObject.Find("Hearts").GetComponent<QuartHeart>().heartHealthSystem.Damage((int)damage);
+        }
+        else
+        {
+            health -= damage;
+        }
+       
 
     }
 
