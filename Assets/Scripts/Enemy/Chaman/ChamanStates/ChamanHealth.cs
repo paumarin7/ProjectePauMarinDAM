@@ -12,7 +12,7 @@ public class ChamanHealth : IState
     }
     public void OnEnter()
     {
-        throw new System.NotImplementedException();
+
     }
 
     public void OnExit()
@@ -22,6 +22,17 @@ public class ChamanHealth : IState
 
     public void Tick()
     {
-        throw new System.NotImplementedException();
+        chamanStates.chamanMovement.controller.Move(Vector3.zero);
+        if(chamanStates.stats.MaxHealth >= chamanStates.stats.Health)
+        {
+            chamanStates.stats.Health += 0.005f;
+            Debug.Log("Aqui");
+        }
+        else
+        {
+          
+            
+        }
+       
     }
 }

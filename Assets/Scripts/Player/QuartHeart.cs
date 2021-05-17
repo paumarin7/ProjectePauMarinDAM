@@ -21,7 +21,9 @@ public class QuartHeart : MonoBehaviour
 
     private Stats playerStats;
 
-    float lastHealth;
+
+
+    float lastMaxHealth;
 
     private List<HeartImage> heartImageList;
 
@@ -44,14 +46,25 @@ public class QuartHeart : MonoBehaviour
 
 
         yield return new WaitForSeconds(1);
-        HeartHealthSystem heartHealthSystem = new HeartHealthSystem((int)Mathf.Ceil(playerStats.Health / 4f),(int)playerStats.Health);
+
+        HeartHealthSystem heartHealthSystem = new HeartHealthSystem((int)Mathf.Ceil(playerStats.MaxHealth / 4f),(int)playerStats.Health);
         SetHeartsHealthSystem(heartHealthSystem);
+        lastMaxHealth = playerStats.MaxHealth;
+
 
     }
 
     public void SetHeartsHealthSystem(HeartHealthSystem heartHealthSystem)
     {
-        
+        if(heartImageList.Count!= 0)
+        {
+            for (int i = 0; i < heartImageList.Count; i++)
+            {
+                Destroy(heartImageList[i].GetTransform().gameObject);
+                
+            }
+            heartImageList.Clear();
+        }
         this.heartHealthSystem = heartHealthSystem;
         List<HeartHealthSystem.Heart> heartList = heartHealthSystem.GetHeartList();
         Vector2 heartAnchoredPosition = new Vector2(0, 0);
@@ -60,6 +73,7 @@ public class QuartHeart : MonoBehaviour
             HeartHealthSystem.Heart heart = heartList[i];
             CreateHeartImage(heartAnchoredPosition).SetHeartFragments(heart.GetFragmentAmount());
             heartAnchoredPosition += new Vector2(170, 0);
+
         }
         heartHealthSystem.onDamaged += HeartHealthSystem_onDamaged;
         heartHealthSystem.onHealed += HeartHealthSystem_onHealed;
@@ -86,6 +100,7 @@ public class QuartHeart : MonoBehaviour
         {
             HeartImage heartImage = heartImageList[i];
             HeartHealthSystem.Heart heart = heartList[i];
+            Debug.Log(heartList.Count);
             heartImage.SetHeartFragments(heart.GetFragmentAmount());
         }
     }
@@ -99,10 +114,25 @@ public class QuartHeart : MonoBehaviour
             playerStats = GameManager.player.GetComponent<Stats>();
         }
 
-        if(playerStats.Health != lastHealth)
+        if(playerStats!= null)
         {
-
+            if(lastMaxHealth!= 0)
+            {
+                if (playerStats.MaxHealth != lastMaxHealth)
+                {
+                    heartHealthSystem.AddHeart((int)(playerStats.MaxHealth - lastMaxHealth));
+                    SetHeartsHealthSystem(heartHealthSystem);
+                    lastMaxHealth = playerStats.MaxHealth;
+                    
+                }
+            } 
         }
+
+
+
+        RefreshAllHearts();
+
+
     }
 
 
@@ -147,6 +177,11 @@ public class QuartHeart : MonoBehaviour
                 case 3: heartImage.sprite = quartHeart.heartSprite3;break;
                 case 4: heartImage.sprite = quartHeart.heartSprite4;break;
             }
+        }
+
+        public Transform GetTransform()
+        {
+            return heartImage.transform;
         }
     }
 

@@ -40,6 +40,32 @@ public class HeartHealthSystem
         
     }
 
+
+    public void AddHeart(int health)
+    {
+        this.health += health;
+        int hearts = (int)Mathf.Ceil(health / 4f);
+        if (hearts == 0) hearts++;
+        Debug.Log(hearts);
+
+        for (int i = 0; i < hearts; i++)
+        {
+            if (health >= 4)
+            {
+                Heart heart = new Heart(4);
+                heartList.Add(heart);
+            }
+            else
+            {
+                Heart heart = new Heart(health);
+                heartList.Add(heart);
+            }
+            health -= 4;
+
+
+        }
+    }
+
     public void Damage(int damageAmount)
     {
         //Cycle through all hearts starting from the end

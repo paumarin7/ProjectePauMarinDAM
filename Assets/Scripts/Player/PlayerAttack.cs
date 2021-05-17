@@ -81,7 +81,7 @@ public class PlayerAttack : MonoBehaviour
         GetComponent<IWeapon>().SetDirectionShoot(new Vector3(horizontalMove, 0, verticalMove).normalized);
 
 
-        var weapon = GetComponent<IWeapon>();
+        IWeapon weapon = GetComponent<IWeapon>();
             weapon.SetHitted("Player");
             weapon.Attack();
 

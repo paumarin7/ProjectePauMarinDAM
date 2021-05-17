@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: References
   m_EditorClassIdentifier: 
   _bookmarks: []
-  _favoriteWindows:
-  - title: Animator
-    className: UnityEditor.Graphs.AnimatorControllerTool, UnityEditor.Graphs, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  _favoriteWindows: []
   _quickAccessItems:
   - expanded: 0
     settings:
@@ -67,18 +64,6 @@ MonoBehaviour:
     customWindowSize: {x: 400, y: 300}
   - expanded: 0
     settings:
-    - UnityEditor.Graphs.AnimatorControllerTool, UnityEditor.Graphs, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-    intSettings: 
-    tooltip: Animator
-    type: 0
-    visibleRules: 1
-    icon: 1
-    iconSettings: d_UnityEditor.Graphs.AnimatorControllerTool
-    useCustomWindowSize: 0
-    customWindowSize: {x: 1281, y: 426}
-  - expanded: 0
-    settings:
     - InfinityCode.uContext.Windows.Bookmarks, uContext-Editor, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     intSettings: 
@@ -113,7 +98,7 @@ MonoBehaviour:
     iconSettings: Assets\Plugins\Infinity Code\uContext/Icons/Rule.png
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
-  - expanded: 0
+  - expanded: 1
     settings: []
     intSettings: 
     tooltip: 

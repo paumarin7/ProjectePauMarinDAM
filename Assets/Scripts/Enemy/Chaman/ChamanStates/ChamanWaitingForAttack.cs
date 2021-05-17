@@ -22,6 +22,6 @@ public class ChamanWaitingForAttack : IState
 
     public void Tick()
     {
-
+        chamanStates.chamanMovement.controller.Move(Vector3.zero);
     }
 }

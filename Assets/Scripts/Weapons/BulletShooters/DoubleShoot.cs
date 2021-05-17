@@ -2,26 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicShoot : MonoBehaviour, IWeapon
+public class DoubleShoot : MonoBehaviour, IWeapon
 {
-
 
     private GameObject bullet;
     [SerializeField]
     private Vector3 directionShoot;
     private string hitted;
+
     public GameObject positionShoot;
-
     List<GameObject> positions = new List<GameObject>();
-
 
     public void Attack()
     {
-
-      
-
         Bullet(positions[0].transform.position);
-        
+        Bullet(positions[1].transform.position);
     }
 
     public void Bullet(Vector3 bulletPosition)
@@ -61,21 +56,24 @@ public class BasicShoot : MonoBehaviour, IWeapon
     void Start()
     {
         bullet = Resources.Load<GameObject>("Diente");
-       positions.Add (Instantiate(positionShoot, transform));
-
+        positions.Add(Instantiate(positionShoot, transform));
+     
+        positions.Add(Instantiate(positionShoot, transform));
+        positions[0].transform.position = new Vector3(positions[0].transform.position.x - 1f, positions[1].transform.position.y, positions[1].transform.position.z);
+        positions[1].transform.position = new Vector3(positions[1].transform.position.x + 1f, positions[1].transform.position.y, positions[1].transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnDestroy()
     {
         for (int i = 0; i < positions.Count; i++)
         {
-            Destroy(positions[i].gameObject);
+           Destroy(positions[i].gameObject);
         }
     }
 }

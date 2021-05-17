@@ -15,6 +15,7 @@ TagManager:
   - Minimap
   - Chain
   - Boss
+  - Item
   layers:
   - Default
   - TransparentFX
