@@ -1,24 +1,27 @@
-﻿using System.Collections;
+﻿using Sirenix.OdinInspector;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AddTripleShoot : MonoBehaviour , IItem
+public class AddShooters : SerializedMonoBehaviour, IItem
 {
-
-  //  public IWeapon weapon;
+    
+    public Type weapon = typeof(IWeapon);
    
 
     public void Item(GameObject player)
     {
-      var v =  player.GetComponentsInChildren<Transform>();
+
+      
+        var v =  player.GetComponentsInChildren<Transform>();
 
         for (int i = 0; i < v.Length; i++)
         {
             if (v[i].gameObject.name.Equals("Weapon"))
             {
                 v[i].gameObject.GetComponent<IWeapon>().Destroy();
-                //     v[i].AddComponent((System.Type)(weapon as IWeapon));
-                v[i].gameObject.AddComponent<TripleShoot>();
+                v[i].gameObject.AddComponent(weapon);
             }
         }
       
@@ -45,4 +48,6 @@ public class AddTripleShoot : MonoBehaviour , IItem
         }
 
     }
+
+
 }

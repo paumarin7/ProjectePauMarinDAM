@@ -64,18 +64,18 @@ public class TripleShoot : MonoBehaviour, IWeapon
     {
 
         bullet = Resources.Load<GameObject>("Diente");
-        var t = this.gameObject.transform.localPosition; 
-        Debug.Log(this.gameObject.name);
-        Debug.Log(this.gameObject.transform.localPosition.x);
-        Debug.Log(this.gameObject.transform.position);
+
+
         positionShoot = Resources.Load<GameObject>("CenterShoot");
         positions.Add(Instantiate(positionShoot, transform, false));
         positions.Add(Instantiate(positionShoot, transform,false));
         positions.Add(Instantiate(positionShoot, transform, false));
 
-        positions[0].transform.position = new Vector3(positions[0].transform.position.x + 1, positions[0].transform.position.y, positions[0].transform.position.z);
-        positions[1].transform.position = new Vector3(positions[1].transform.position.x , positions[1].transform.position.y+1, positions[1].transform.position.z);
-        positions[2].transform.position = new Vector3(positions[2].transform.position.x - 1, positions[2].transform.position.y, positions[2].transform.position.z);
+
+       // positions[0].transform.position = new Vector3(positions[0].transform.position.x + 1, positions[0].transform.position.y, positions[0].transform.position.z);
+        positions[0].transform.localPosition = new Vector3(-1,0,0);
+        positions[1].transform.localPosition = new Vector3(+1,0,0);
+        positions[2].transform.localPosition =   new Vector3(0,1,0);
     }
 
     // Update is called once per frame

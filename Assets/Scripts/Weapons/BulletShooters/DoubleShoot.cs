@@ -68,8 +68,8 @@ public class DoubleShoot : MonoBehaviour, IWeapon
         positions.Add(Instantiate(positionShoot, transform));
         
         positions.Add(Instantiate(positionShoot, transform));
-        positions[0].transform.position = new Vector3(positions[0].transform.position.x - 1f, positions[1].transform.position.y, positions[1].transform.position.z);
-        positions[1].transform.position = new Vector3(positions[1].transform.position.x + 1f, positions[1].transform.position.y, positions[1].transform.position.z);
+        positions[0].transform.localPosition = new Vector3(-1f, 0, 0);
+        positions[1].transform.localPosition = new Vector3(+1f, 0, 0);
     }
 
     // Update is called once per frame
