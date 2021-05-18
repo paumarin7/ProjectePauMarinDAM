@@ -15,6 +15,11 @@ public class BasicShoot : MonoBehaviour, IWeapon
     List<GameObject> positions = new List<GameObject>();
 
 
+    public void Destroy()
+    {
+        Destroy(this);
+    }
+
     public void Attack()
     {
 
@@ -61,7 +66,8 @@ public class BasicShoot : MonoBehaviour, IWeapon
     void Start()
     {
         bullet = Resources.Load<GameObject>("Diente");
-       positions.Add (Instantiate(positionShoot, transform));
+        positionShoot = Resources.Load<GameObject>("CenterShoot");
+        positions.Add (Instantiate(positionShoot, transform));
 
     }
 

@@ -11,6 +11,10 @@ public class ChamanBossShoot : MonoBehaviour, IWeapon
     private Vector3 directionShoot;
     private string hitted;
 
+    public void Destroy()
+    {
+        Destroy(this);
+    }
 
     public void Attack()
     {

@@ -55,9 +55,13 @@ public class WeaponDirectionManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-    //    rb.AddForce(shootDirection * attackSpeed * Time.deltaTime, ForceMode.Impulse) ;
-           transform.position +=   shootDirection * Time.deltaTime * attackSpeed * 10;
+
+        //    rb.AddForce(shootDirection * attackSpeed * Time.deltaTime, ForceMode.Impulse) ;
+        if (this.gameObject.CompareTag("Bullet"))
+        {
+            transform.position += shootDirection * Time.deltaTime * attackSpeed * 10;
+        }
+       
        // rb.velocity =  shootDirection * Time.deltaTime * attackSpeed;
     }
 

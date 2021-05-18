@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoubleShoot : MonoBehaviour, IWeapon
+public class TripleShoot : MonoBehaviour, IWeapon
 {
-
     private GameObject bullet;
     [SerializeField]
     private Vector3 directionShoot;
@@ -20,11 +19,11 @@ public class DoubleShoot : MonoBehaviour, IWeapon
         Destroy(this);
     }
 
-
     public void Attack()
     {
         Bullet(positions[0].transform.position);
         Bullet(positions[1].transform.position);
+        Bullet(positions[2].transform.position);
     }
 
     public void Bullet(Vector3 bulletPosition)
@@ -66,10 +65,11 @@ public class DoubleShoot : MonoBehaviour, IWeapon
         bullet = Resources.Load<GameObject>("Diente");
         positionShoot = Resources.Load<GameObject>("CenterShoot");
         positions.Add(Instantiate(positionShoot, transform));
-        
+        positions[0].transform.position = new Vector3(positions[0].transform.position.x - 1f, positions[0].transform.position.y, positions[0].transform.position.z);
         positions.Add(Instantiate(positionShoot, transform));
-        positions[0].transform.position = new Vector3(positions[0].transform.position.x - 1f, positions[1].transform.position.y, positions[1].transform.position.z);
         positions[1].transform.position = new Vector3(positions[1].transform.position.x + 1f, positions[1].transform.position.y, positions[1].transform.position.z);
+        positions.Add(Instantiate(positionShoot, transform));
+        positions[2].transform.position = new Vector3(positions[2].transform.position.x , positions[2].transform.position.y +1, positions[2].transform.position.z);
     }
 
     // Update is called once per frame
@@ -82,7 +82,7 @@ public class DoubleShoot : MonoBehaviour, IWeapon
     {
         for (int i = 0; i < positions.Count; i++)
         {
-           Destroy(positions[i].gameObject);
+            Destroy(positions[i].gameObject);
         }
     }
 }
