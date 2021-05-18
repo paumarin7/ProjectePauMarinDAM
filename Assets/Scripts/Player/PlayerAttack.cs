@@ -35,7 +35,8 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
 
-
+        //Debug.Log(transform.position +"Position");
+        //Debug.Log(transform.localPosition +"localPosition");
         //  NearestEnemy = GameObject.FindGameObjectsWithTag("Enemy").OrderBy(t => Vector3.Distance(transform.position, t.transform.position)).FirstOrDefault();
         //if (NearestEnemy == null)
         //{

@@ -62,20 +62,26 @@ public class TripleShoot : MonoBehaviour, IWeapon
     // Start is called before the first frame update
     void Start()
     {
+
         bullet = Resources.Load<GameObject>("Diente");
+        var t = this.gameObject.transform.localPosition; 
+        Debug.Log(this.gameObject.name);
+        Debug.Log(this.gameObject.transform.localPosition.x);
+        Debug.Log(this.gameObject.transform.position);
         positionShoot = Resources.Load<GameObject>("CenterShoot");
-        positions.Add(Instantiate(positionShoot, transform));
-        positions[0].transform.position = new Vector3(positions[0].transform.position.x - 1f, positions[0].transform.position.y, positions[0].transform.position.z);
-        positions.Add(Instantiate(positionShoot, transform));
-        positions[1].transform.position = new Vector3(positions[1].transform.position.x + 1f, positions[1].transform.position.y, positions[1].transform.position.z);
-        positions.Add(Instantiate(positionShoot, transform));
-        positions[2].transform.position = new Vector3(positions[2].transform.position.x , positions[2].transform.position.y +1, positions[2].transform.position.z);
+        positions.Add(Instantiate(positionShoot, transform, false));
+        positions.Add(Instantiate(positionShoot, transform,false));
+        positions.Add(Instantiate(positionShoot, transform, false));
+
+        positions[0].transform.position = new Vector3(positions[0].transform.position.x + 1, positions[0].transform.position.y, positions[0].transform.position.z);
+        positions[1].transform.position = new Vector3(positions[1].transform.position.x , positions[1].transform.position.y+1, positions[1].transform.position.z);
+        positions[2].transform.position = new Vector3(positions[2].transform.position.x - 1, positions[2].transform.position.y, positions[2].transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void OnDestroy()

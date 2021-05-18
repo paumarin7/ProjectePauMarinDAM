@@ -100,7 +100,7 @@ public class QuartHeart : MonoBehaviour
         {
             HeartImage heartImage = heartImageList[i];
             HeartHealthSystem.Heart heart = heartList[i];
-            Debug.Log(heartList.Count);
+
             heartImage.SetHeartFragments(heart.GetFragmentAmount());
         }
     }
