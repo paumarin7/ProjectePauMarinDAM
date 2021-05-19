@@ -9,6 +9,13 @@ public class WeaponDirectionManager : MonoBehaviour
     private float range;
     private float damage;
     private string hitted;
+    private IShootable bullet;
+
+
+    public void SetBullet(IShootable bullet)
+    {
+        this.bullet = bullet;
+    }
 
 
     private Rigidbody rb;
@@ -49,6 +56,7 @@ public class WeaponDirectionManager : MonoBehaviour
     public IEnumerator rangeDistance()
     {
         yield return new WaitForSeconds(Range);
+        
         Destroy(this.gameObject);
     }
 
@@ -59,7 +67,7 @@ public class WeaponDirectionManager : MonoBehaviour
         //    rb.AddForce(shootDirection * attackSpeed * Time.deltaTime, ForceMode.Impulse) ;
         if (this.gameObject.CompareTag("Bullet"))
         {
-            transform.position += shootDirection * Time.deltaTime * attackSpeed * 10;
+            transform.position += shootDirection * Time.deltaTime * attackSpeed * 10; 
         }
        
        // rb.velocity =  shootDirection * Time.deltaTime * attackSpeed;
