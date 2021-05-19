@@ -84,6 +84,7 @@ public class PlayerAttack : MonoBehaviour
 
         IWeapon weapon = GetComponent<IWeapon>();
             weapon.SetHitted("Player");
+            
             weapon.Attack();
 
 

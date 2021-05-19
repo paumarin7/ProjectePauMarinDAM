@@ -32,10 +32,17 @@ public class Inmunity : MonoBehaviour , IAbility
         yield return new WaitForSeconds(4);
         playerManager.playerMovementManager.controller.detectCollisions = true;
         playerManager.playerAnimations.Inmune = false;
-        isInmune = true;
+        
+        StartCoroutine(wait());
     }
 
 
+
+    private IEnumerator wait()
+    {
+        yield return new WaitForSeconds(4);
+        isInmune = true;
+    }
 
     // Start is called before the first frame update
     void Start()

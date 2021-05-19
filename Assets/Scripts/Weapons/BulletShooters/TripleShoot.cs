@@ -75,7 +75,7 @@ public class TripleShoot : MonoBehaviour, IWeapon
        // positions[0].transform.position = new Vector3(positions[0].transform.position.x + 1, positions[0].transform.position.y, positions[0].transform.position.z);
         positions[0].transform.localPosition = new Vector3(-1,0,0);
         positions[1].transform.localPosition = new Vector3(+1,0,0);
-        positions[2].transform.localPosition =   new Vector3(0,1,0);
+        positions[2].transform.localPosition = new Vector3(0,1,0);
     }
 
     // Update is called once per frame

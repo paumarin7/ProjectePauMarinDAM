@@ -6,6 +6,7 @@ public class BasicShoot : MonoBehaviour, IWeapon
 {
 
 
+    public string bulletName;
     private GameObject bullet;
     [SerializeField]
     private Vector3 directionShoot;
@@ -22,9 +23,6 @@ public class BasicShoot : MonoBehaviour, IWeapon
 
     public void Attack()
     {
-
-      
-
         Bullet(positions[0].transform.position);
         
     }
@@ -32,14 +30,12 @@ public class BasicShoot : MonoBehaviour, IWeapon
     public void Bullet(Vector3 bulletPosition)
     {
         GameObject bala = Instantiate(bullet);
-
         bala.AddComponent(GetComponent<IShootable>().GetType());
-        bala.AddComponent<WeaponDirectionManager>();
-        bala.GetComponent<WeaponDirectionManager>().SetDamage(GetComponentInParent<Stats>().Strength);
-        bala.GetComponent<WeaponDirectionManager>().SetAttackSpeed(GetComponentInParent<Stats>().AttackSpeed);
-        bala.GetComponent<WeaponDirectionManager>().Range = GetComponentInParent<Stats>().Range;
-        bala.name = "Diente";
-        bala.GetComponent<WeaponDirectionManager>().SetHitted(hitted);
+        bala.GetComponent<Bullet>().SetDamage(GetComponentInParent<Stats>().Strength);
+        bala.GetComponent<Bullet>().SetAttackSpeed(GetComponentInParent<Stats>().AttackSpeed);
+        bala.GetComponent<Bullet>().Range = GetComponentInParent<Stats>().Range;
+        bala.name = bulletName;
+        bala.GetComponent<Bullet>().SetHitted(hitted);
 
         bala.GetComponent<IShootable>().SetAccuracy(GetComponentInParent<Stats>().Accuracy);
         bala.transform.position = bulletPosition;
@@ -65,9 +61,12 @@ public class BasicShoot : MonoBehaviour, IWeapon
     // Start is called before the first frame update
     void Start()
     {
-        bullet = Resources.Load<GameObject>("Diente");
+        
+        bullet = Resources.Load<GameObject>(bulletName);
+
         positionShoot = Resources.Load<GameObject>("CenterShoot");
         positions.Add (Instantiate(positionShoot, transform));
+
 
     }
 
