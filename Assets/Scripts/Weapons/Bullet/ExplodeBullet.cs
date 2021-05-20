@@ -41,28 +41,45 @@ public class ExplodeBullet : Bullet
                 foreach (var hitCollider in hitColliders)
                 {
                     Debug.Log(hitCollider.transform.gameObject.name);
-                    hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
-                    
+                    if(hitCollider.transform.gameObject.GetComponent<IDamageable>() == null)
+                    {
+
+                    }
+                    else
+                    {
+                        hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
+                    }
+               
+                    Destroy(this.gameObject);
+
                 }
             //    trigger.TakeHealth(damage);
             }
 
-            Destroy(this.gameObject);
+            
 
         }
 
     }
 
-    public new IEnumerator rangeDistance()
+    public override IEnumerator rangeDistance()
     {
         yield return new WaitForSeconds(range);
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 20);
         foreach (var hitCollider in hitColliders)
         {
             Debug.Log(hitCollider.transform.gameObject.name);
-            hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
+            if (hitCollider.transform.gameObject.GetComponent<IDamageable>() == null)
+            {
 
+            }
+            else
+            {
+                hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
+            }
+            
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
+    
     }
 }

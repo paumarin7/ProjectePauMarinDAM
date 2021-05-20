@@ -50,7 +50,7 @@ public class Bullet : MonoBehaviour, IShootable
         this.attackSpeed = attackSpeed;
     }
 
-    public IEnumerator rangeDistance()
+    public virtual IEnumerator rangeDistance()
     {
         yield return new WaitForSeconds(range);
 
