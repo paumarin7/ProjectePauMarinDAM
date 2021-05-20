@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 93724035}
   - component: {fileID: 93724036}
-  - component: {fileID: 93724039}
   - component: {fileID: 93724038}
   - component: {fileID: 93724037}
+  - component: {fileID: 321295235}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -47,19 +47,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canShoot: 1
---- !u!114 &93724039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93724034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12b0af24b7300b744a940bbe10ccc01e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyTransform: {x: 0, y: 0, z: 0}
 --- !u!114 &93724038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5201452381ff9d44ad085c0e1c7347f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletName: Diente
   directionShoot: {x: 0, y: 0, z: 0}
   positionShoot: {fileID: 2826109250955565314, guid: d8c8f00bc2f6fc549b90ccc9246f751d,
     type: 3}
@@ -87,6 +75,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d44ed7ca205f3f4d8b1bbf5cf08e35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &321295235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93724034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed079b8e14bb62479a56e4d22ea28d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTransform: {x: 0, y: 0, z: 0}
 --- !u!1 &116165845240702736
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +465,7 @@ MonoBehaviour:
   attackSpeed: 2
   fireRate: 1
   accuracy: 1
-  range: 10
+  range: 5
   gravity: 0
   distance: 5
   isAlive: 0

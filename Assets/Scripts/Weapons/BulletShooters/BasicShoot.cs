@@ -59,7 +59,7 @@ public class BasicShoot : MonoBehaviour, IWeapon
     }
 
     // Start is called before the first frame update
-    void Start()
+     void Start()
     {
         
         bullet = Resources.Load<GameObject>(bulletName);

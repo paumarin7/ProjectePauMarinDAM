@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicBullet : Bullet
+public class BlockingBullet : Bullet
 {
-   
-    
     public override void Start()
     {
         base.Start();
+        if (gameObject.CompareTag("Bullet"))
+        {
+            rb = GetComponent<Rigidbody>();
+            GetComponent<SphereCollider>().material = Resources.Load<PhysicMaterial>("Bounce");
+            GetComponent<SphereCollider>().isTrigger = true;
+
+        }
     }
 
     public override void Update()
@@ -16,18 +21,18 @@ public class BasicBullet : Bullet
         base.Update();
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
         IDamageable trigger = other.GetComponent<IDamageable>();
 
 
-        if (other.tag == hitted || other.tag == "Bullet" || other.tag == "Floor" || other.tag == "Untagged" || other.tag == "SecondCycle" || other.tag == "ThirdCycle" || other.tag == "Minimap")
+        if (other.tag == hitted  || other.tag == "Floor" || other.tag == "Untagged" || other.tag == "SecondCycle" || other.tag == "ThirdCycle" || other.tag == "Minimap")
         {
 
         }
         else
         {
-
             if (other.transform.gameObject.GetComponent<IDamageable>() == null)
             {
 
@@ -37,10 +42,17 @@ public class BasicBullet : Bullet
                 other.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
             }
 
+            if(other.tag == "Bullet")
+            {
+                Destroy(other.gameObject);
+                Destroy(this.gameObject);
+            }
+            
+            
+
             Destroy(this.gameObject);
 
         }
 
     }
-
 }

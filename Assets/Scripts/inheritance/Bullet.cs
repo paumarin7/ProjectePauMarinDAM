@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour, IShootable
 {
     [SerializeField]
     protected Vector3 enemyTransform;
-
+    protected Rigidbody rb;
     protected WeaponDirectionManager weaponDirectionManager;
     protected float Accuracy;
     protected GameObject bullet;

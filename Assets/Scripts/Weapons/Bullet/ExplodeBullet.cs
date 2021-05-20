@@ -6,20 +6,51 @@ using UnityEngine;
 public class ExplodeBullet : Bullet
 {
 
+    public Vector3 mov;
+    public bool movingAlong = true;
+
     public override void Start()
     {
         base.Start();
+        if (gameObject.CompareTag("Bullet"))
+        {
+            var g = gameObject.GetComponent<Rigidbody>();
+            g.useGravity = enabled;
+         
+            StartCoroutine(down(g));
+           
+        }
+
+
+    }
+
+    public IEnumerator down(Rigidbody g)
+    {
+       
+        yield return new WaitForSeconds(0.3f);
+        movingAlong = false;
+        
+        //   g.AddForce(new Vector3(0, -2000, 0), ForceMode.Force);
+        SetShootDirection(new Vector3(enemyTransform.x, -10, enemyTransform.z));
 
 
     }
     public override void Update()
     {
-        base.Update();
-        if (gameObject.CompareTag("Bullet"))
+        SetShootDirection(new Vector3(enemyTransform.x , range / 30 , enemyTransform.z));
+        if (this.gameObject.CompareTag("Bullet"))
         {
+            if (movingAlong)
+            {
+                transform.position += shootDirection * Time.deltaTime * attackSpeed * 10;
+            }
+            else
+            {
+                transform.position += shootDirection * Time.deltaTime * attackSpeed * 10;
+            }
+            
             
         }
-       
     }
 
 
@@ -28,16 +59,13 @@ public class ExplodeBullet : Bullet
         IDamageable trigger = other.GetComponent<IDamageable>();
 
 
-        if (other.tag == hitted || other.tag == "Bullet" || other.tag == "Floor" || other.tag == "Untagged" || other.tag == "SecondCycle" || other.tag == "ThirdCycle" || other.tag == "Minimap")
+        if (other.tag == hitted || other.tag == "Bullet"  || other.tag == "Untagged" || other.tag == "SecondCycle" || other.tag == "ThirdCycle" || other.tag == "Minimap")
         {
 
         }
         else
         {
-            if (trigger != null)
-            {
-
-                Collider[] hitColliders = Physics.OverlapSphere(transform.position, 20);
+                Collider[] hitColliders = Physics.OverlapSphere(transform.position, 7);
                 foreach (var hitCollider in hitColliders)
                 {
                     Debug.Log(hitCollider.transform.gameObject.name);
@@ -51,10 +79,7 @@ public class ExplodeBullet : Bullet
                     }
                
                     Destroy(this.gameObject);
-
-                }
-            //    trigger.TakeHealth(damage);
-            }
+                    }
 
             
 
@@ -62,24 +87,5 @@ public class ExplodeBullet : Bullet
 
     }
 
-    public override IEnumerator rangeDistance()
-    {
-        yield return new WaitForSeconds(range);
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 20);
-        foreach (var hitCollider in hitColliders)
-        {
-            Debug.Log(hitCollider.transform.gameObject.name);
-            if (hitCollider.transform.gameObject.GetComponent<IDamageable>() == null)
-            {
-
-            }
-            else
-            {
-                hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
-            }
-            
-            Destroy(this.gameObject);
-        }
-    
-    }
+ 
 }
