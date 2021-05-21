@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8597396196701759663}
   - component: {fileID: 5836684208989497512}
   - component: {fileID: 6442057847105037417}
-  - component: {fileID: 1115118847106196039}
   - component: {fileID: -3161309500487122118}
+  - component: {fileID: 8382255296278827711}
   m_Layer: 0
   m_Name: Diente
   m_TagString: Bullet
@@ -81,19 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1115118847106196039
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7867979183068135354}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8263288, y: 1.0952812, z: 0.44639137}
-  m_Center: {x: -0.17338344, y: -0.10447579, z: -0.07708045}
 --- !u!54 &-3161309500487122118
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -110,3 +97,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &8382255296278827711
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867979183068135354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: -0.22450976, y: 0.086532675, z: -0.07708046}

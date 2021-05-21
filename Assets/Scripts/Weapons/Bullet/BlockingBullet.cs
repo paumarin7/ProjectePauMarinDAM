@@ -10,7 +10,7 @@ public class BlockingBullet : Bullet
         if (gameObject.CompareTag("Bullet"))
         {
             rb = GetComponent<Rigidbody>();
-            GetComponent<SphereCollider>().material = Resources.Load<PhysicMaterial>("Bounce");
+          
             GetComponent<SphereCollider>().isTrigger = true;
 
         }

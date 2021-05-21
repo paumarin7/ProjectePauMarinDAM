@@ -15,6 +15,7 @@ public class PlayerAnimations : MonoBehaviour
     bool walking = false;
     bool rolling = false;
     bool inmune = false;
+    bool enforced = false;
 
     public bool Shooting { get => shooting; set => shooting = value; }
     public Vector3 AttackRotation { get => attackRotation; set => attackRotation = value; }
@@ -22,6 +23,7 @@ public class PlayerAnimations : MonoBehaviour
     public bool Walking { get => walking; set => walking = value; }
     public bool Rolling { get => rolling; set => rolling = value; }
     public bool Inmune { get => inmune; set => inmune = value; }
+    public bool Enforced { get => enforced; set => enforced = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +62,7 @@ public class PlayerAnimations : MonoBehaviour
         animator.SetBool("walking", walking);
         animator.SetBool("rolling", rolling);
         animator.SetBool("inmune", inmune);
+        animator.SetBool("enforced", enforced);
         
     }
 

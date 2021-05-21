@@ -17,7 +17,10 @@ public class Bullet : MonoBehaviour, IShootable
     protected string hitted;
 
 
+
     
+    public int create = 0;
+
 
     public float Range { get => range; set => range = value; }
 

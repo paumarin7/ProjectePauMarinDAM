@@ -9,6 +9,13 @@ public class BasicBullet : Bullet
     public override void Start()
     {
         base.Start();
+        if (gameObject.CompareTag("Bullet"))
+        {
+            rb = GetComponent<Rigidbody>();
+            
+            GetComponent<SphereCollider>().isTrigger = true;
+
+        }
     }
 
     public override void Update()
