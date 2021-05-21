@@ -28,6 +28,7 @@ namespace InfinityCode.uContext
         private static GameObject _lastGameObjectUnderCursor;
         private static Plane zeroPlane;
         private static double lastUpdateLate = 0;
+        private static bool beforeInvoked = false;
 
         public static GameObject lastGameObjectUnderCursor
         {
@@ -190,6 +191,7 @@ namespace InfinityCode.uContext
 
         private static void SceneGUI(SceneView view)
         {
+            beforeInvoked = true;
             if (OnNextGUI != null)
             {
                 try
@@ -226,7 +228,9 @@ namespace InfinityCode.uContext
 
         private static void SceneGUILate(SceneView view)
         {
+            if (!beforeInvoked) SceneGUI(view);
             InvokeSceneGUILate(view);
+            beforeInvoked = false;
         }
 
         public static void UpdateLastItems(SceneView view)

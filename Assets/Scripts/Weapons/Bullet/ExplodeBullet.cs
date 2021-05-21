@@ -79,7 +79,7 @@ public class ExplodeBullet : Bullet
                     }
                
                     Destroy(this.gameObject);
-                    }
+                }
 
             
 

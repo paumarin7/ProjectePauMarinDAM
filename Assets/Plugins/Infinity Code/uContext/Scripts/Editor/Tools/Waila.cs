@@ -114,8 +114,8 @@ namespace InfinityCode.uContext.Tools
                 {
                     tooltip = null;
                     Highlight(null);
+                    return;
                 }
-                return;
             }
             if (!Prefs.waila) return;
 

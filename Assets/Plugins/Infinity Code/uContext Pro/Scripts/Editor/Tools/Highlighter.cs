@@ -38,12 +38,13 @@ namespace InfinityCode.uContextPro.Tools
 
         static Highlighter()
         {
-            HierarchyItemDrawer.Register("Highlighter", DrawHierarchyItem, 1);
+            HierarchyItemDrawer.Register("Highlighter2", DrawHierarchyItem, 1);
         }
 
         private static Rect DrawHierarchyItem(int id, Rect rect)
         {
             if (!Prefs.highlight) return rect;
+            if (!(EditorWindow.mouseOverWindow is SceneView)) return rect;
 
             GameObject go = EditorUtility.InstanceIDToObject(id) as GameObject;
 

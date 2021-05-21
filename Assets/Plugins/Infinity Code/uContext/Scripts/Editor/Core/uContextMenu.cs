@@ -16,7 +16,7 @@ namespace InfinityCode.uContext
     [InitializeOnLoad]
     public static class uContextMenu
     {
-        public const string version = "2.5.1.1";
+        public const string version = "2.5.3.1";
 
         public static bool allowCloseWindow = true;
 

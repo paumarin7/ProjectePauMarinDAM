@@ -10,6 +10,7 @@ namespace InfinityCode.uContext
     {
         public static bool jumpToPoint = true;
         public static bool highJumpToPoint = true;
+        public static bool alternativeJumpShortcut = false;
 
         private class JumpToPointManager : PrefManager, IHasShortcutPref
         {
@@ -38,6 +39,13 @@ namespace InfinityCode.uContext
                 string label = "High Jump To Point (PRO)";
 #endif
                 highJumpToPoint = EditorGUILayout.ToggleLeft(label, highJumpToPoint, EditorStyles.boldLabel);
+
+#if UNITY_EDITOR_OSX
+                string alternativeLabel = "Alternative Jump Shortcuts (SHIFT + SHIFT, CMD + SHIFT + SHIFT)";
+#else
+                string alternativeLabel = "Alternative Jump Shortcuts (SHIFT + SHIFT, CTRL + SHIFT + SHIFT)";
+#endif
+                alternativeJumpShortcut = EditorGUILayout.ToggleLeft(alternativeLabel, alternativeJumpShortcut, EditorStyles.boldLabel);
             }
 
             public IEnumerable<Shortcut> GetShortcuts()
@@ -47,6 +55,7 @@ namespace InfinityCode.uContext
                 if (jumpToPoint)
                 {
                     shortcuts.Add(new Shortcut("Jump To Point", "Scene View", "SHIFT + MMB"));
+                    if (alternativeJumpShortcut) shortcuts.Add(new Shortcut("Jump To Point", "Scene View", "SHIFT + SHIFT"));
                 }
 
 #if UCONTEXT_PRO
@@ -54,10 +63,13 @@ namespace InfinityCode.uContext
                 {
 #if UNITY_EDITOR_OSX
                     string shortcut = "CMD + SHIFT + MMB";
+                    string shortcut2 = "CMD + SHIFT + SHIFT";
 #else
                     string shortcut = "CTRL + SHIFT + MMB";
+                    string shortcut2 = "CTRL + SHIFT + SHIFT";
 #endif
                     shortcuts.Add(new Shortcut("High Jump To Point", "Scene View", shortcut));
+                    if (alternativeJumpShortcut) shortcuts.Add(new Shortcut("High Jump To Point", "Scene View", shortcut2));
                 }
 #endif
                     return shortcuts;

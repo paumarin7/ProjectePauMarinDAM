@@ -13,7 +13,7 @@ namespace InfinityCode.uContext.Tools
 
         static HierarchyEnable()
         {
-            HierarchyItemDrawer.Register("HierarchyEnable", OnHierarchyItem);
+            HierarchyItemDrawer.Register("HierarchyEnable", OnHierarchyItem, -1);
         }
 
         private static Rect OnHierarchyItem(int id, Rect rect)
@@ -22,6 +22,14 @@ namespace InfinityCode.uContext.Tools
 
             Event e = Event.current;
             if (e.modifiers != EventModifiers.Control && e.modifiers != EventModifiers.Command) return rect;
+
+            float mx = e.mousePosition.x;
+
+            if (mx < 0 || mx > rect.width)
+            {
+                if (activeID == id) activeID = -1;
+                return rect;
+            }
 
             float my = e.mousePosition.y;
 

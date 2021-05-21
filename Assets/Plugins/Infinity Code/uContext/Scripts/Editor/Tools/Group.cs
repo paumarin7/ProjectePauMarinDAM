@@ -14,6 +14,7 @@ namespace InfinityCode.uContext.Tools
     {
         private static string defaultName = "Group";
         private static GameObject[] _targets;
+        private static InputDialog dialog;
 
         static Group()
         {
@@ -60,7 +61,7 @@ namespace InfinityCode.uContext.Tools
         [MenuItem("GameObject/Group", false, 0)]
         public static void GroupSelection()
         {
-            GroupTargets(Selection.gameObjects);
+            if (dialog == null) GroupTargets(Selection.gameObjects);
         }
 
         public static void GroupTargets(params GameObject[] targets)
@@ -68,9 +69,15 @@ namespace InfinityCode.uContext.Tools
             if (targets.Length == 0) return;
 
             _targets = targets;
-            InputDialog dialog = InputDialog.Show("Enter name of GameObject", defaultName, OnCreateGroup);
+            dialog = InputDialog.Show("Enter name of GameObject", defaultName, OnCreateGroup);
+            dialog.OnClose += OnDialogClose;
             dialog.OnDrawExtra += OnDrawShiftHint;
             dialog.minSize = new Vector2(dialog.minSize.x, 70);
+        }
+
+        private static void OnDialogClose(InputDialog obj)
+        {
+            dialog = null;
         }
 
         private static void OnDrawShiftHint(InputDialog dialog)

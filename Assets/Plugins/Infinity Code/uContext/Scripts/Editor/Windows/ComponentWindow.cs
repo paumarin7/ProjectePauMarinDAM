@@ -478,7 +478,9 @@ namespace InfinityCode.uContext.Windows
             wnd.OnPin += () =>
             {
                 Rect wRect = wnd.position;
-                Show(component, false).position = wRect;
+                ComponentWindow w = Show(component, false);
+                w.position = wRect;
+                w.closeOnLossFocus = false;
                 wnd.Close();
             };
 

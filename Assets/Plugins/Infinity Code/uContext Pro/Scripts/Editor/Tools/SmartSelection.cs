@@ -43,42 +43,67 @@ namespace InfinityCode.uContextPro.Tools
             Waila.OnStartSmartSelection += ShowSmartSelection;
         }
 
-        private static void DrawButton(Transform t, bool addSlash, ref bool state)
+        private static void DrawButton(ref Rect r, Transform t, bool addSlash, ref bool state)
         {
             if (t.parent != null)
             {
-                DrawButton(t.parent, true, ref state);
+                DrawButton(ref r, t.parent, true, ref state);
             }
 
-            if (GUILayout.Button(t.gameObject.name, Waila.labelStyle, GUILayout.ExpandWidth(false)))
+            Rect r2 = new Rect(r);
+            GUIContent content = new GUIContent(t.gameObject.name);
+            GUIStyle style = Waila.labelStyle;
+            r2.width = style.CalcSize(content).x + style.margin.horizontal;
+
+            r.xMin += r2.width;
+
+            if (GUI.Button(r2, content, style))
             {
                 if (Event.current.control || Event.current.shift) SelectionRef.Add(t.gameObject);
                 else Selection.activeGameObject = t.gameObject;
                 state = true;
             }
 
-            if (GUILayoutUtility.GetLastRect().Contains(Event.current.mousePosition))
+            if (r2.Contains(Event.current.mousePosition))
             {
                 Waila.Highlight(t.gameObject);
             }
 
-            if (addSlash) GUILayout.Label("/", Waila.labelStyle, GUILayout.ExpandWidth(false));
+            if (addSlash)
+            {
+                r2.xMin = r2.xMax;
+                content.text = "/";
+                r2.width = style.CalcSize(content).x + style.margin.horizontal;
+                GUI.Label(r2, content, style);
+                r.xMin += r2.width;
+            }
         }
 
         private static void DrawSmartSelection(Event e)
         {
             if (!UnityEditor.Tools.hidden) UnityEditor.Tools.hidden = true;
 
+            EventType type = e.type;
+
             try
             {
                 Handles.BeginGUI();
 
-                GUILayout.BeginArea(screenRect, areaStyle);
-                
-                GUILayout.Label("Select GameObject:", Waila.labelStyle);
-                Rect rect = EditorGUILayout.GetControlRect(false, 1);
-                rect.height = 1;
-                EditorGUI.DrawRect(rect, new Color(0.5f, 0.5f, 0.5f, 1));
+                if (e.type == EventType.Repaint) areaStyle.Draw(screenRect, GUIContent.none, -1);
+
+                GUIStyle style = Waila.labelStyle;
+                RectOffset margin = style.margin;
+                RectOffset padding = style.padding;
+
+                Rect r = new Rect(screenRect.x + 5, screenRect.y + margin.top + padding.top, screenRect.width - 10, style.lineHeight + margin.vertical + padding.vertical);
+
+                GUI.Label(r,  "Select GameObject:", style);
+                r.y += r.height + margin.bottom;
+                r.height = 1;
+                EditorGUI.DrawRect(r, new Color(0.5f, 0.5f, 0.5f, 1));
+
+                r.y += 2;
+                r.height = style.lineHeight + margin.vertical + padding.vertical;
 
                 try
                 {
@@ -86,10 +111,17 @@ namespace InfinityCode.uContextPro.Tools
 
                     for (int i = 0; i < Waila.targets.Count; i++)
                     {
+                        Rect r2 = new Rect(r);
+                        r2.y += i * (style.lineHeight + margin.vertical + padding.vertical);
                         Transform t = Waila.targets[i].transform;
-                        EditorGUILayout.BeginHorizontal();
-                        DrawButton(t, false, ref state);
-                        EditorGUILayout.EndHorizontal();
+                        try
+                        {
+                            DrawButton(ref r2, t, false, ref state);
+                        }
+                        catch
+                        {
+                            
+                        }
                     }
 
                     if (state)
@@ -103,15 +135,12 @@ namespace InfinityCode.uContextPro.Tools
                     Log.Add(ex);
                 }
 
-                GUILayout.EndArea();
-                Handles.EndGUI();
-
-                if (e.type == EventType.MouseUp)
+                if (type == EventType.MouseUp)
                 {
                     Waila.mode = 0;
                     UnityEditor.Tools.hidden = false;
                 }
-                else if (e.type == EventType.KeyDown)
+                else if (type == EventType.KeyDown)
                 {
                     if (e.keyCode != KeyCode.LeftShift && e.keyCode != KeyCode.RightShift && e.keyCode != KeyCode.LeftControl && e.keyCode != KeyCode.RightControl)
                     {
@@ -119,6 +148,8 @@ namespace InfinityCode.uContextPro.Tools
                         UnityEditor.Tools.hidden = false;
                     }
                 }
+
+                Handles.EndGUI();
             }
             catch
             {
@@ -150,17 +181,19 @@ namespace InfinityCode.uContextPro.Tools
 
         private static void ShowSmartSelection()
         {
-            if (!(EditorWindow.focusedWindow is SceneView)) return;
+            if (!(EditorWindow.mouseOverWindow is SceneView)) return;
             if (Waila.targets == null || Waila.targets.Count == 0) return;
 
-            Event.current.Use();
+            GUIStyle style = Waila.labelStyle;
+            RectOffset margin = style.margin;
+            RectOffset padding = style.padding;
 
-            float width = Waila.labelStyle.CalcSize(new GUIContent("Select GameObject")).x + Waila.labelStyle.margin.horizontal + 10;
+            float width = style.CalcSize(new GUIContent("Select GameObject")).x + margin.horizontal + 10;
 
-            int rightMargin = Waila.labelStyle.margin.right;
-            Vector2 slashSize = Waila.labelStyle.CalcSize(new GUIContent("/"));
+            int rightMargin = margin.right;
+            Vector2 slashSize = style.CalcSize(new GUIContent("/"));
 
-            float height = Waila.labelStyle.margin.top;
+            float height = margin.top;
 
             int count = 0;
 
@@ -173,15 +206,15 @@ namespace InfinityCode.uContextPro.Tools
 
                     float w = 0;
                     Transform t = go.transform;
-                    Vector2 contentSize = Waila.labelStyle.CalcSize(new GUIContent(t.gameObject.name));
-                    w += contentSize.x + rightMargin + Waila.labelStyle.margin.left;
-                    height += contentSize.y + Waila.labelStyle.margin.bottom + Waila.labelStyle.padding.bottom;
+                    Vector2 contentSize = style.CalcSize(new GUIContent(t.gameObject.name));
+                    w += contentSize.x + margin.horizontal;
+                    height += contentSize.y + margin.bottom + padding.bottom;
 
                     while (t.parent != null)
                     {
                         t = t.parent;
                         w += slashSize.x + rightMargin;
-                        contentSize = Waila.labelStyle.CalcSize(new GUIContent(t.gameObject.name));
+                        contentSize = style.CalcSize(new GUIContent(t.gameObject.name));
                         w += contentSize.x + rightMargin;
                     }
 

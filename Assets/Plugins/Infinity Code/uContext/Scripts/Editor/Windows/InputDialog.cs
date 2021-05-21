@@ -16,6 +16,12 @@ namespace InfinityCode.uContext.Windows
         private Action<string> okCallback;
         private string text;
 
+        private static void CloseActiveInstances()
+        {
+            InputDialog[] dialogs = UnityEngine.Resources.FindObjectsOfTypeAll<InputDialog>();
+            foreach (InputDialog d in dialogs) d.Close();
+        }
+
         private void InvokeOK()
         {
             try
@@ -78,6 +84,8 @@ namespace InfinityCode.uContext.Windows
 
         public static InputDialog Show(string title, string text, Action<string> okCallback)
         {
+            CloseActiveInstances();
+
             Resolution r = Screen.currentResolution;
             Vector2 size = new Vector2(300, 50);
 
