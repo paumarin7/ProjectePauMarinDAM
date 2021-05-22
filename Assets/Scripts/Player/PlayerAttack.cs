@@ -46,6 +46,7 @@ public class PlayerAttack : MonoBehaviour
         //else
         //{
         //   playerManager.playerAnimations.FocusedOnEnemy = true;                   Aqui esta
+
         horizontalMove = shootButton.Horizontal;
         verticalMove = shootButton.Vertical;  
         

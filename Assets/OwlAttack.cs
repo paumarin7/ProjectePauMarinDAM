@@ -28,7 +28,8 @@ public class OwlAttack : MonoBehaviour
             if(enemies.Count == 0)
             {
                 var direction =  new Vector3(GameManager.player.transform.position.x - transform.position.x,0, GameManager.player.transform.position.z - transform.position.z);
-                transform.LookAt(GameManager.player.transform);
+               
+                transform.LookAt(new Vector3(GameManager.player.transform.position.x, transform.position.y , GameManager.player.transform.position.z));
                 ch.Move(direction * Time.deltaTime * speed);
             }
             else
