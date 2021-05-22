@@ -1260,28 +1260,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1089387335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5201452381ff9d44ad085c0e1c7347f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0233bcfc1ef726942917bcdfe7fe71d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletName: Laser
-  directionShoot: {x: 0, y: 0, z: 0}
+  meleWeapon: Pa
   positionShoot: {fileID: 0}
---- !u!114 &1089387339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089387335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9236540fbcacc74080e913359dcacd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyTransform: {x: 0, y: 0, z: 0}
-  create: 0
-  mov: {x: 0, y: 0, z: 0}
-  movingAlong: 1
 --- !u!1001 &1273998378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2291,6 +2274,7 @@ PrefabInstance:
     - {fileID: 321295235, guid: 993b15db57d434d4b85c543000363ebd, type: 3}
     - {fileID: 1626216396, guid: 993b15db57d434d4b85c543000363ebd, type: 3}
     - {fileID: 93724038, guid: 993b15db57d434d4b85c543000363ebd, type: 3}
+    - {fileID: 93724037, guid: 993b15db57d434d4b85c543000363ebd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 993b15db57d434d4b85c543000363ebd, type: 3}
 --- !u!1001 &1986443110
 PrefabInstance:
@@ -2302,7 +2286,7 @@ PrefabInstance:
     - target: {fileID: 546789205089539720, guid: d2de8b8aa4267cb4fb6e09ce88768cf6,
         type: 3}
       propertyPath: isActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 546789205089539725, guid: d2de8b8aa4267cb4fb6e09ce88768cf6,
         type: 3}

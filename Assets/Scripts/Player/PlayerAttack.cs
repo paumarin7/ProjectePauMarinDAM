@@ -15,6 +15,8 @@ public class PlayerAttack : MonoBehaviour
     float verticalMove = 0f;
     Joystick shootButton;
 
+    public bool isMeleeWeapon = false;
+
 
     private Vector3 rotation;
     private Vector3 lastRotation;
@@ -50,7 +52,7 @@ public class PlayerAttack : MonoBehaviour
         horizontalMove = shootButton.Horizontal;
         verticalMove = shootButton.Vertical;  
         
-        if(horizontalMove != 0 && verticalMove != 0)
+        if(horizontalMove != 0 && verticalMove != 0 && !isMeleeWeapon)
         {
 
             rotation = new Vector3(0, Mathf.Atan2(horizontalMove, verticalMove) * 180 / Mathf.PI, 0);
@@ -61,6 +63,7 @@ public class PlayerAttack : MonoBehaviour
         else
         {
             playerManager.playerAnimations.Shooting = false;
+            GetComponent<IWeapon>().SetDirectionShoot(new Vector3(horizontalMove, 0, verticalMove).normalized);
         }
         //    GetComponent<IWeapon>().SetNearestEnemy(nearestEnemy);
 
