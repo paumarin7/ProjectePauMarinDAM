@@ -1,0 +1,10 @@
+﻿namespace DungeonArchitect.Extensions
+{
+    public static class DungeonExtensions
+    {
+        public static bool IsValid(this System.Guid guid)
+        {
+            return guid != System.Guid.Empty;
+        }
+    }
+}
