@@ -79,6 +79,10 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
     public void OnDestroy()
     {
         playerAttack.isMeleeWeapon = false;
+        for (int i = 0; i < positions.Count; i++)
+        {
+            Destroy(positions[i].gameObject);
+        }
     }
 
 
