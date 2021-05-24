@@ -83,4 +83,20 @@ public class Stats : MonoBehaviour, IDamageable
             IsAlive = true;
         }
     }
+
+
+    public void boostStat(string stat, float value)
+    {
+        switch (stat)
+        {
+            case "Strength":  strength += value;
+                    break;
+            case "Speed": speed += value; break;
+            case "AttackSpeed": attackSpeed += value; break;
+            case "FireRate": fireRate += value; break;
+            case "Range": range += value; break;
+            
+
+        }
+    }
 }
