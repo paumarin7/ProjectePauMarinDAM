@@ -1,5 +1,136 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9024840721563216706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_04a7a59e-125d-48fa-bcf2-601101cfd228
+  m_EditorClassIdentifier: 
+  id: 04a7a59e-125d-48fa-bcf2-601101cfd228
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: -389.72928
+    y: 229.99805
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 85
+  inputPins:
+  - {fileID: 5982849715564584599}
+  outputPins:
+  - {fileID: 4059009307167483675}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 10
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 10
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 10
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 1
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: 6786486885823835943}
+  Template: {fileID: 7991238252883101650, guid: dd2cc7b80b8497444ab1a5124955a968,
+    type: 3}
+--- !u!114 &-8605500671192678947
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 6811876355150252606}
+  links: []
+  asset: {fileID: -1688585202113110568}
+--- !u!114 &-8503002695819844129
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: 8266986369745263521}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &-8354613268139149027
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f86a247f92be461b8448085107abfca, type: 3}
+  m_Name: MarkerNode_771fb6fd-cf1a-4579-ace1-1942454206d3
+  m_EditorClassIdentifier: 
+  id: 771fb6fd-cf1a-4579-ace1-1942454206d3
+  caption: Enemy
+  bounds:
+    serializedVersion: 2
+    x: 583.9811
+    y: 537.5131
+    width: 120
+    height: 50
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 122
+  inputPins: []
+  outputPins:
+  - {fileID: 3809268205726063365}
+  graph: {fileID: 11400000}
 --- !u!114 &-8182184584960048135
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -40,14 +171,14 @@ MonoBehaviour:
   bounds:
     serializedVersion: 2
     x: 9
-    y: 95.5
+    y: 94.169
     width: 120
     height: 120
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 5
+  zIndex: 7
   inputPins:
   - {fileID: -2663141216657816664}
   outputPins:
@@ -65,7 +196,7 @@ MonoBehaviour:
     e20: 0
     e21: 0
     e22: 2
-    e23: 0
+    e23: -13
     e30: 0
     e31: 0
     e32: 0
@@ -82,6 +213,81 @@ MonoBehaviour:
   spatialConstraint: {fileID: -6264097279527578659}
   Template: {fileID: 6834018558095684438, guid: 68aaba5ca82d2a44999545107e5a7bf1,
     type: 3}
+--- !u!114 &-8101006736270122706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_f66297d5-9c4b-4f2a-b6ff-661dfb9ee630
+  m_EditorClassIdentifier: 
+  id: f66297d5-9c4b-4f2a-b6ff-661dfb9ee630
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: 1129.886
+    y: 222.81085
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 140
+  inputPins:
+  - {fileID: 5345943771092164449}
+  outputPins:
+  - {fileID: 179587620964134159}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 1
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: 4243474020937361227}
+  Template: {fileID: 1821462223196480517, guid: 993b15db57d434d4b85c543000363ebd,
+    type: 3}
+--- !u!114 &-7757405202730767753
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_12
+  m_EditorClassIdentifier: 
+  id: 12
+  input: {fileID: 7009840084239996309}
+  output: {fileID: 6455326667108053201}
+  graph: {fileID: 11400000}
 --- !u!114 &-7472455508762177169
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,7 +312,7 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 0
+  zIndex: 16
   inputPins: []
   outputPins:
   - {fileID: -1744877283493177565}
@@ -134,6 +340,117 @@ MonoBehaviour:
     height: 15
   tangent: {x: 0, y: 1}
   tangentStrength: 50
+--- !u!114 &-7375233555840435696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: b364e94a-01ac-4171-b341-03585c1d854c
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: 7058560890371398062}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &-7367885135429433204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_bb6df116-49c8-40c1-80b7-2e58b96d1f23
+  m_EditorClassIdentifier: 
+  id: bb6df116-49c8-40c1-80b7-2e58b96d1f23
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: 938.29333
+    y: 747.0179
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 137
+  inputPins:
+  - {fileID: -1171220381507772038}
+  outputPins:
+  - {fileID: 6819959353474345477}
+  graph: {fileID: 11400000}
+  offset:
+    e00: -1.4772117
+    e01: 0
+    e02: -0.2604724
+    e03: 0
+    e10: 0
+    e11: 1.5
+    e12: 0
+    e13: 0
+    e20: 0.2604724
+    e21: -0
+    e22: -1.4772117
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 1
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: -1990297112554447025}
+  Template: {fileID: 6286913958057390336, guid: d4e213106dceb0d468cb09e26be0bc6d,
+    type: 3}
+--- !u!114 &-7310040373868238913
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: 1792940393821402997}
+  graph: {fileID: -4529186408257537065}
 --- !u!114 &-7255644111053928543
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,6 +474,137 @@ MonoBehaviour:
     height: 15
   tangent: {x: 0, y: 1}
   tangentStrength: 50
+--- !u!114 &-6888863197333599986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_ff81dc25-ed05-4ccc-9de9-5dd605b9afa2
+  m_EditorClassIdentifier: 
+  id: ff81dc25-ed05-4ccc-9de9-5dd605b9afa2
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: -369.6259
+    y: 692.2001
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 75
+  inputPins:
+  - {fileID: 243655271001649879}
+  outputPins:
+  - {fileID: 7635638737910314772}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 3
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 3
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 3
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.25
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: -2235988938431080359}
+  Template: {fileID: 1308358589415666, guid: 43bbe6106d9602b418076e5e6955f800, type: 3}
+--- !u!114 &-6578130319456438331
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_5
+  m_EditorClassIdentifier: 
+  id: 5
+  input: {fileID: 5982849715564584599}
+  output: {fileID: -6540185750621753190}
+  graph: {fileID: 11400000}
+--- !u!114 &-6540185750621753190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: MarkerNode_6b50b717-b4f7-4a37-8065-aa811ad85385_OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: -5024967843471160234}
+  position: {x: 60, y: 48}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &-6338687783751915652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 7d674a31-aced-46b5-bc2f-1a2fbf9cba7a
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: -109315509032540712}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
 --- !u!114 &-6264097279527578659
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,6 +623,266 @@ MonoBehaviour:
   checkRelativeToMarkerRotation: 1
   hostThemeNode: {fileID: -8164961612159723106}
   graph: {fileID: -3043051428970558678}
+--- !u!114 &-5923418928780572770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: 7338103093995189635}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &-5913796974730380216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: 1365880623632470319}
+  graph: {fileID: 7058560890371398062}
+--- !u!114 &-5573049459325511476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: -1147699171637369520}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &-5460114484550838310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 1816067615735024609}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &-5024967843471160234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f86a247f92be461b8448085107abfca, type: 3}
+  m_Name: MarkerNode_6b50b717-b4f7-4a37-8065-aa811ad85385
+  m_EditorClassIdentifier: 
+  id: 6b50b717-b4f7-4a37-8065-aa811ad85385
+  caption: Rock
+  bounds:
+    serializedVersion: 2
+    x: -386.8923
+    y: 39.012383
+    width: 120
+    height: 50
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 33
+  inputPins: []
+  outputPins:
+  - {fileID: -6540185750621753190}
+  graph: {fileID: 11400000}
+--- !u!114 &-4857359413826835500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 591011697918132098}
+  links: []
+  asset: {fileID: 2171990763513566840}
+--- !u!114 &-4640006240205951555
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: MarkerNode_cdf82db7-e24a-4a3e-802e-c14870a16f4b_OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 564964823740245267}
+  position: {x: 60, y: 48}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &-4529186408257537065
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 9108599504542417564}
+  links: []
+  asset: {fileID: -7310040373868238913}
+--- !u!114 &-4434007710761317588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_b560c003-5dae-4082-a16c-b499b46a97e5
+  m_EditorClassIdentifier: 
+  id: b560c003-5dae-4082-a16c-b499b46a97e5
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: -81.25286
+    y: 642.1352
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 116
+  inputPins:
+  - {fileID: -3042332247000034595}
+  outputPins:
+  - {fileID: 5233591932162331860}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 3
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 3
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.1
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: 4404846703160583648}
+  Template: {fileID: 1012375330806954, guid: b4a6dcef6d2570e46a2d9c2c52f1c8de, type: 3}
+--- !u!114 &-4404915024739244291
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: 1816067615735024609}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
 --- !u!114 &-4155938698236247033
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,6 +917,44 @@ MonoBehaviour:
   constraintEvaluationMode: 0
   exclusionRuleSearchRadius: 0.1
   exclusionRuleMarkersToRemove: []
+--- !u!114 &-4071347260149426205
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 2186142165398936877}
+  links: []
+  asset: {fileID: 4404846703160583648}
+--- !u!114 &-3585331769738084667
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: 3360421952181837717}
+  graph: {fileID: 6660061925449942080}
 --- !u!114 &-3230796274630237765
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,7 +979,7 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 0
+  zIndex: 24
   inputPins: []
   outputPins:
   - {fileID: 6663495883890341967}
@@ -258,6 +1004,61 @@ MonoBehaviour:
   - {fileID: -4155938698236247033}
   links: []
   asset: {fileID: -6264097279527578659}
+--- !u!114 &-3042332247000034595
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: -4434007710761317588}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &-2885569383425323690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_14
+  m_EditorClassIdentifier: 
+  id: 14
+  input: {fileID: -1648942638940803813}
+  output: {fileID: 6455326667108053201}
+  graph: {fileID: 11400000}
+--- !u!114 &-2710236489451876437
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_20
+  m_EditorClassIdentifier: 
+  id: 20
+  input: {fileID: 5345943771092164449}
+  output: {fileID: 1846449467735138894}
+  graph: {fileID: 11400000}
 --- !u!114 &-2663141216657816664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,6 +1082,87 @@ MonoBehaviour:
     height: 15
   tangent: {x: 0, y: -1}
   tangentStrength: 50
+--- !u!114 &-2426014350409948306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 3360421952181837717}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &-2377470729891284281
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_48ddd827-6098-4649-8c96-bdeb36f527a4
+  m_EditorClassIdentifier: 
+  id: 48ddd827-6098-4649-8c96-bdeb36f527a4
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: 184.28162
+    y: 755.8026
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 121
+  inputPins:
+  - {fileID: -1648942638940803813}
+  outputPins:
+  - {fileID: 2110148730453975254}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 6
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 6
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 6
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.1
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: 2907832633809835424}
+  Template: {fileID: 1114102773694634, guid: d67884e9d618cfe4ea769c246cbb6ccc, type: 3}
 --- !u!114 &-2236523073266621404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -298,18 +1180,36 @@ MonoBehaviour:
   bounds:
     serializedVersion: 2
     x: 400
-    y: 300
+    y: 298.05127
     width: 120
     height: 50
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 0
+  zIndex: 14
   inputPins: []
   outputPins:
   - {fileID: 3898415765692117588}
   graph: {fileID: 11400000}
+--- !u!114 &-2235988938431080359
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: -6888863197333599986}
+  graph: {fileID: -916125614803040602}
 --- !u!114 &-2218384920756353846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,6 +1233,24 @@ MonoBehaviour:
     height: 15
   tangent: {x: 0, y: 1}
   tangentStrength: 50
+--- !u!114 &-1990297112554447025
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: -7367885135429433204}
+  graph: {fileID: 4433296453642233802}
 --- !u!114 &-1744877283493177565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,6 +1274,366 @@ MonoBehaviour:
     height: 15
   tangent: {x: 0, y: 1}
   tangentStrength: 50
+--- !u!114 &-1688585202113110568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: -1147699171637369520}
+  graph: {fileID: -8605500671192678947}
+--- !u!114 &-1648942638940803813
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: -2377470729891284281}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &-1448696529281385102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: 7338103093995189635}
+  graph: {fileID: -109315509032540712}
+--- !u!114 &-1380423784602818790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_16
+  m_EditorClassIdentifier: 
+  id: 16
+  input: {fileID: 7742934186348915175}
+  output: {fileID: 3809268205726063365}
+  graph: {fileID: 11400000}
+--- !u!114 &-1374503707136003673
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 1365880623632470319}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &-1304865467511613598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 1792940393821402997}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &-1171220381507772038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: -7367885135429433204}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &-1147699171637369520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_f5b518a9-83fc-4cd4-87db-ab276423de45
+  m_EditorClassIdentifier: 
+  id: f5b518a9-83fc-4cd4-87db-ab276423de45
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: -648.3543
+    y: 707.00006
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 77
+  inputPins:
+  - {fileID: 5124301817707291558}
+  outputPins:
+  - {fileID: -5573049459325511476}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 10
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 10
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 10
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.25
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: -1688585202113110568}
+  Template: {fileID: 1814772297973644, guid: 7b324b148b509104cb0f42a02b6b4b78, type: 3}
+--- !u!114 &-1032192449790669472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 7338103093995189635}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &-924356365740231565
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: MarkerNode_5e5fbea3-1f63-46f4-98ff-e3aa1c3b59ff_OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 3928015459784354965}
+  position: {x: 60, y: 48}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &-916125614803040602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 3775881695881892522}
+  links: []
+  asset: {fileID: -2235988938431080359}
+--- !u!114 &-716784931243814660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_8
+  m_EditorClassIdentifier: 
+  id: 8
+  input: {fileID: 5124301817707291558}
+  output: {fileID: -924356365740231565}
+  graph: {fileID: 11400000}
+--- !u!114 &-692282754207195708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_19
+  m_EditorClassIdentifier: 
+  id: 19
+  input: {fileID: -1171220381507772038}
+  output: {fileID: 2432918831943568021}
+  graph: {fileID: 11400000}
+--- !u!114 &-494039549983967313
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 4365452520141477047}
+  links: []
+  asset: {fileID: 6786486885823835943}
+--- !u!114 &-226795376356906962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 2118730909204543302}
+  links: []
+  asset: {fileID: 5003158114204995638}
+--- !u!114 &-109315509032540712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: -6338687783751915652}
+  links: []
+  asset: {fileID: -1448696529281385102}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,9 +1647,9 @@ MonoBehaviour:
   m_Name: DungeonTheme
   m_EditorClassIdentifier: 
   indexCounter:
-    index: 1
+    index: 20
   topZIndex:
-    index: 6
+    index: 143
   nodes:
   - {fileID: 6198672359067943215}
   - {fileID: -3230796274630237765}
@@ -384,8 +1662,304 @@ MonoBehaviour:
   - {fileID: 2294267917925859458}
   - {fileID: -7472455508762177169}
   - {fileID: -8164961612159723106}
+  - {fileID: -9024840721563216706}
+  - {fileID: -5024967843471160234}
+  - {fileID: 3928015459784354965}
+  - {fileID: -6888863197333599986}
+  - {fileID: -1147699171637369520}
+  - {fileID: 850966974768490093}
+  - {fileID: 3001862810772856172}
+  - {fileID: -4434007710761317588}
+  - {fileID: 8266986369745263521}
+  - {fileID: 1816067615735024609}
+  - {fileID: 3360421952181837717}
+  - {fileID: -2377470729891284281}
+  - {fileID: -8354613268139149027}
+  - {fileID: 4770427249578173830}
+  - {fileID: 4296473180406850214}
+  - {fileID: 6188925097714560922}
+  - {fileID: 1792940393821402997}
+  - {fileID: 7338103093995189635}
+  - {fileID: -7367885135429433204}
+  - {fileID: 7960297129494867864}
+  - {fileID: -8101006736270122706}
+  - {fileID: 564964823740245267}
+  - {fileID: 1365880623632470319}
   links:
   - {fileID: 3639458545395796578}
+  - {fileID: -6578130319456438331}
+  - {fileID: 2398531312349038337}
+  - {fileID: 3703876019373437474}
+  - {fileID: -716784931243814660}
+  - {fileID: 7103314281184988905}
+  - {fileID: 6977207347241684085}
+  - {fileID: 6306310321660903507}
+  - {fileID: -7757405202730767753}
+  - {fileID: -2885569383425323690}
+  - {fileID: 8589427215904670164}
+  - {fileID: -1380423784602818790}
+  - {fileID: 3565575998975541733}
+  - {fileID: 2553563505578244543}
+  - {fileID: -692282754207195708}
+  - {fileID: -2710236489451876437}
+--- !u!114 &179587620964134159
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: -8101006736270122706}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &243655271001649879
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: -6888863197333599986}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &538202354943968372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4fae1cfd-18f2-4e94-9eb7-25a217283f02
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: 6660061925449942080}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &564964823740245267
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f86a247f92be461b8448085107abfca, type: 3}
+  m_Name: MarkerNode_cdf82db7-e24a-4a3e-802e-c14870a16f4b
+  m_EditorClassIdentifier: 
+  id: cdf82db7-e24a-4a3e-802e-c14870a16f4b
+  caption: Treasure
+  bounds:
+    serializedVersion: 2
+    x: -831.9818
+    y: 184.55882
+    width: 120
+    height: 50
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 141
+  inputPins: []
+  outputPins:
+  - {fileID: -4640006240205951555}
+  graph: {fileID: 11400000}
+--- !u!114 &591011697918132098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: ccb397cf-dc78-45af-8c0c-afec6836e531
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: -4857359413826835500}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &850966974768490093
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_1a12f27f-1bb2-4d3c-bf2a-1353c7b651c7
+  m_EditorClassIdentifier: 
+  id: 1a12f27f-1bb2-4d3c-bf2a-1353c7b651c7
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: -515.1567
+    y: 640.401
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 78
+  inputPins:
+  - {fileID: 958119778260695646}
+  outputPins:
+  - {fileID: 2514024631108355908}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 5
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 5
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 5
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.25
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: 2171990763513566840}
+  Template: {fileID: 1814190282122440, guid: 33247b6aefb946246bc9f0c7346b4364, type: 3}
+--- !u!114 &933997014112671038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0188429f-7b4f-4c93-8699-8598f361ecc9
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: 6543292770453199911}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &958119778260695646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: 850966974768490093}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
 --- !u!114 &1015911858629396949
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -403,18 +1977,297 @@ MonoBehaviour:
   bounds:
     serializedVersion: 2
     x: 0
-    y: 300
+    y: 298.05127
     width: 120
     height: 50
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 0
+  zIndex: 12
   inputPins: []
   outputPins:
   - {fileID: 8877603524659837367}
   graph: {fileID: 11400000}
+--- !u!114 &1173207849214309594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 4296473180406850214}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &1365880623632470319
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_d6c79845-870d-40f9-9ed9-3090247d45a2
+  m_EditorClassIdentifier: 
+  id: d6c79845-870d-40f9-9ed9-3090247d45a2
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: -898.3502
+    y: 323.13782
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 1
+  zIndex: 143
+  inputPins:
+  - {fileID: 4203992654949631083}
+  outputPins:
+  - {fileID: -1374503707136003673}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 2
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 2
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 2
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 1
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: -5913796974730380216}
+  Template: {fileID: 8773650680304483224, guid: 5a3a19d5616efdd4bb252bd1a0b5adba,
+    type: 3}
+--- !u!114 &1636382299060250105
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: bb941b6e-30c6-4b2c-8047-0dbbb146666e
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: 9068690584128664261}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &1687312656992381402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 8266986369745263521}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &1792940393821402997
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_2375a850-21a1-4bba-b1af-9d7ab7675c62
+  m_EditorClassIdentifier: 
+  id: 2375a850-21a1-4bba-b1af-9d7ab7675c62
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: 417.07376
+    y: 900.74835
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 133
+  inputPins:
+  - {fileID: 5847800934003332983}
+  outputPins:
+  - {fileID: -1304865467511613598}
+  graph: {fileID: 11400000}
+  offset:
+    e00: -0.5
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0.5
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: -0.5
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.25
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: -7310040373868238913}
+  Template: {fileID: 3341680968065837070, guid: 5a0b080702bd80a47a47ee5bdd0f76da,
+    type: 3}
+--- !u!114 &1816067615735024609
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_ba6c445b-c857-443b-a2df-8a857017ece2
+  m_EditorClassIdentifier: 
+  id: ba6c445b-c857-443b-a2df-8a857017ece2
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: 272.12762
+    y: 518.6183
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 119
+  inputPins:
+  - {fileID: -4404915024739244291}
+  outputPins:
+  - {fileID: -5460114484550838310}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 3
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 6
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 3
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.1
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: 5003158114204995638}
+  Template: {fileID: 1393679957294896, guid: c0afa580c5ee8484183dafdc704e8768, type: 3}
+--- !u!114 &1846449467735138894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: MarkerNode_c227a06d-e121-49fa-98be-6a4ddde8c834_OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 7960297129494867864}
+  position: {x: 60, y: 48}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
 --- !u!114 &1866542650518178404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -438,6 +2291,149 @@ MonoBehaviour:
     height: 15
   tangent: {x: 0, y: 1}
   tangentStrength: 50
+--- !u!114 &2110148730453975254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: -2377470729891284281}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &2118730909204543302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1d7bf083-c2fb-4a35-a4c3-9a7fb23cbd5d
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: -226795376356906962}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &2171990763513566840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: 850966974768490093}
+  graph: {fileID: -4857359413826835500}
+--- !u!114 &2186142165398936877
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1ec26446-8fbf-485f-ace8-8fa182758744
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: -4071347260149426205}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &2259250819023745600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: d5e3d05e-b9e8-4307-b84f-16179c89d32a
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: 4433296453642233802}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
 --- !u!114 &2294267917925859458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -462,10 +2458,288 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 0
+  zIndex: 15
   inputPins: []
   outputPins:
   - {fileID: -7441326508326440363}
+  graph: {fileID: 11400000}
+--- !u!114 &2398531312349038337
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_6
+  m_EditorClassIdentifier: 
+  id: 6
+  input: {fileID: 958119778260695646}
+  output: {fileID: -924356365740231565}
+  graph: {fileID: 11400000}
+--- !u!114 &2432918831943568021
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: MarkerNode_e196d2a0-a027-467a-895d-46b605b4bf08_OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 4770427249578173830}
+  position: {x: 60, y: 48}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &2514024631108355908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 850966974768490093}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &2516175430298784031
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: 8266986369745263521}
+  graph: {fileID: 6860293402131479359}
+--- !u!114 &2527008486331009192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 6188925097714560922}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &2553563505578244543
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_18
+  m_EditorClassIdentifier: 
+  id: 18
+  input: {fileID: -5923418928780572770}
+  output: {fileID: 3809268205726063365}
+  graph: {fileID: 11400000}
+--- !u!114 &2777843772124254194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: 6188925097714560922}
+  graph: {fileID: 5197957304107025334}
+--- !u!114 &2789974312826983113
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 4501092738398837317}
+  links: []
+  asset: {fileID: 4243474020937361227}
+--- !u!114 &2907832633809835424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: -2377470729891284281}
+  graph: {fileID: 6543292770453199911}
+--- !u!114 &3001862810772856172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f86a247f92be461b8448085107abfca, type: 3}
+  m_Name: MarkerNode_5cf15f0e-d6a6-4e41-b342-7859c81e546a
+  m_EditorClassIdentifier: 
+  id: 5cf15f0e-d6a6-4e41-b342-7859c81e546a
+  caption: Details
+  bounds:
+    serializedVersion: 2
+    x: -12.972573
+    y: 476.02115
+    width: 120
+    height: 50
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 87
+  inputPins: []
+  outputPins:
+  - {fileID: 6455326667108053201}
+  graph: {fileID: 11400000}
+--- !u!114 &3360421952181837717
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_b36bbb78-e13a-4dd3-963f-3910a0af5c9f
+  m_EditorClassIdentifier: 
+  id: b36bbb78-e13a-4dd3-963f-3910a0af5c9f
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: 32.01526
+    y: 751.41016
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 117
+  inputPins:
+  - {fileID: 7009840084239996309}
+  outputPins:
+  - {fileID: -2426014350409948306}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 3
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 3
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 3
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.1
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: -3585331769738084667}
+  Template: {fileID: 1364733423325056, guid: 97e77ce5d8e6fcf45968ff6855ddddf2, type: 3}
+--- !u!114 &3565575998975541733
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_17
+  m_EditorClassIdentifier: 
+  id: 17
+  input: {fileID: 5847800934003332983}
+  output: {fileID: 3809268205726063365}
   graph: {fileID: 11400000}
 --- !u!114 &3639458545395796578
 MonoBehaviour:
@@ -483,6 +2757,79 @@ MonoBehaviour:
   input: {fileID: -2663141216657816664}
   output: {fileID: -2218384920756353846}
   graph: {fileID: 11400000}
+--- !u!114 &3703876019373437474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_7
+  m_EditorClassIdentifier: 
+  id: 7
+  input: {fileID: 243655271001649879}
+  output: {fileID: -924356365740231565}
+  graph: {fileID: 11400000}
+--- !u!114 &3775881695881892522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 5cebfe0d-7ce8-42e8-82c0-e53f41965ada
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: -916125614803040602}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &3809268205726063365
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: MarkerNode_771fb6fd-cf1a-4579-ace1-1942454206d3_OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: -8354613268139149027}
+  position: {x: 60, y: 48}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
 --- !u!114 &3898415765692117588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -506,6 +2853,311 @@ MonoBehaviour:
     height: 15
   tangent: {x: 0, y: 1}
   tangentStrength: 50
+--- !u!114 &3928015459784354965
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f86a247f92be461b8448085107abfca, type: 3}
+  m_Name: MarkerNode_5e5fbea3-1f63-46f4-98ff-e3aa1c3b59ff
+  m_EditorClassIdentifier: 
+  id: 5e5fbea3-1f63-46f4-98ff-e3aa1c3b59ff
+  caption: Tree
+  bounds:
+    serializedVersion: 2
+    x: -520.0899
+    y: 507.67084
+    width: 120
+    height: 50
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 34
+  inputPins: []
+  outputPins:
+  - {fileID: -924356365740231565}
+  graph: {fileID: 11400000}
+--- !u!114 &4059009307167483675
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: -9024840721563216706}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &4203992654949631083
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: 1365880623632470319}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &4243474020937361227
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: -8101006736270122706}
+  graph: {fileID: 2789974312826983113}
+--- !u!114 &4296473180406850214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_1a03aa63-c19b-4037-88a0-06808467f4ae
+  m_EditorClassIdentifier: 
+  id: 1a03aa63-c19b-4037-88a0-06808467f4ae
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: 477.10184
+    y: 742.6256
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 132
+  inputPins:
+  - {fileID: 8199805363523705432}
+  outputPins:
+  - {fileID: 1173207849214309594}
+  graph: {fileID: 11400000}
+  offset:
+    e00: -0.9625498
+    e01: -0
+    e02: -0.27110454
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: -0
+    e13: 0
+    e20: 0.27110454
+    e21: 0
+    e22: -0.9625498
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.25
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: 4301112148560829121}
+  Template: {fileID: 8533138101134184733, guid: e7d905fc22c4e6b458fd58572518cd81,
+    type: 3}
+--- !u!114 &4301112148560829121
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: 4296473180406850214}
+  graph: {fileID: 9068690584128664261}
+--- !u!114 &4365452520141477047
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: f894177a-f739-44c0-a55d-7532656a18b3
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: -494039549983967313}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &4404846703160583648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: -4434007710761317588}
+  graph: {fileID: -4071347260149426205}
+--- !u!114 &4433296453642233802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 2259250819023745600}
+  links: []
+  asset: {fileID: -1990297112554447025}
+--- !u!114 &4501092738398837317
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 71059ef6-9880-4a94-8b3a-23ec3760ae52
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: 2789974312826983113}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &4770427249578173830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f86a247f92be461b8448085107abfca, type: 3}
+  m_Name: MarkerNode_e196d2a0-a027-467a-895d-46b605b4bf08
+  m_EditorClassIdentifier: 
+  id: e196d2a0-a027-467a-895d-46b605b4bf08
+  caption: Boss
+  bounds:
+    serializedVersion: 2
+    x: 859.23193
+    y: 549.22595
+    width: 120
+    height: 50
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 123
+  inputPins: []
+  outputPins:
+  - {fileID: 2432918831943568021}
+  graph: {fileID: 11400000}
 --- !u!114 &4778720347718926877
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -530,11 +3182,118 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 0
+  zIndex: 9
   inputPins: []
   outputPins:
   - {fileID: -7255644111053928543}
   graph: {fileID: 11400000}
+--- !u!114 &5003158114204995638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: 1816067615735024609}
+  graph: {fileID: -226795376356906962}
+--- !u!114 &5124301817707291558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: -1147699171637369520}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &5197957304107025334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 9069519071376715668}
+  links: []
+  asset: {fileID: 2777843772124254194}
+--- !u!114 &5233591932162331860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: -4434007710761317588}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &5345943771092164449
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: -8101006736270122706}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
 --- !u!114 &5588466619203488299
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -557,6 +3316,63 @@ MonoBehaviour:
     width: 80
     height: 15
   tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &5801612892438350475
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: e4567a40-6177-4c82-9a4f-b3850dffe54f
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: 6860293402131479359}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &5847800934003332983
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: 1792940393821402997}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
   tangentStrength: 50
 --- !u!114 &5869934340409914990
 MonoBehaviour:
@@ -582,11 +3398,93 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 0
+  zIndex: 11
   inputPins: []
   outputPins:
   - {fileID: 5588466619203488299}
   graph: {fileID: 11400000}
+--- !u!114 &5982849715564584599
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: -9024840721563216706}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &6188925097714560922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_1d03ceb4-e884-4fc8-a5c7-f6a40dd42eb6
+  m_EditorClassIdentifier: 
+  id: 1d03ceb4-e884-4fc8-a5c7-f6a40dd42eb6
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: 641.08105
+    y: 801.18964
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 134
+  inputPins:
+  - {fileID: 7742934186348915175}
+  outputPins:
+  - {fileID: 2527008486331009192}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 1.3
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1.3
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1.3
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.25
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: 2777843772124254194}
+  Template: {fileID: 7444642503510245570, guid: b5411a453fd415b46b2032e04e0df917,
+    type: 3}
 --- !u!114 &6198672359067943215
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -610,11 +3508,27 @@ MonoBehaviour:
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
-  selected: 1
-  zIndex: 6
+  selected: 0
+  zIndex: 17
   inputPins: []
   outputPins:
   - {fileID: -2218384920756353846}
+  graph: {fileID: 11400000}
+--- !u!114 &6306310321660903507
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_11
+  m_EditorClassIdentifier: 
+  id: 11
+  input: {fileID: -4404915024739244291}
+  output: {fileID: 6455326667108053201}
   graph: {fileID: 11400000}
 --- !u!114 &6445056163753179500
 MonoBehaviour:
@@ -639,6 +3553,69 @@ MonoBehaviour:
     height: 15
   tangent: {x: 0, y: 1}
   tangentStrength: 50
+--- !u!114 &6455326667108053201
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: MarkerNode_5cf15f0e-d6a6-4e41-b342-7859c81e546a_OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: 3001862810772856172}
+  position: {x: 60, y: 48}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &6543292770453199911
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 933997014112671038}
+  links: []
+  asset: {fileID: 2907832633809835424}
+--- !u!114 &6660061925449942080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 538202354943968372}
+  links: []
+  asset: {fileID: -3585331769738084667}
 --- !u!114 &6663495883890341967
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -662,6 +3639,24 @@ MonoBehaviour:
     height: 15
   tangent: {x: 0, y: 1}
   tangentStrength: 50
+--- !u!114 &6786486885823835943
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e932ba1f67d245ac1a041984c7f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateToFit: 1
+  applyFitRotation: 0
+  applyMarkerRotation: 1
+  checkRelativeToMarkerRotation: 1
+  hostThemeNode: {fileID: -9024840721563216706}
+  graph: {fileID: -494039549983967313}
 --- !u!114 &6787669492148636318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -678,7 +3673,7 @@ MonoBehaviour:
   caption: Fence
   bounds:
     serializedVersion: 2
-    x: 600
+    x: 601.331
     y: 0
     width: 120
     height: 50
@@ -686,10 +3681,162 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 0
+  zIndex: 10
   inputPins: []
   outputPins:
   - {fileID: 1866542650518178404}
+  graph: {fileID: 11400000}
+--- !u!114 &6811876355150252606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 626081be-e475-40aa-8e7e-b8d78f36cbcc
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: -8605500671192678947}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &6819959353474345477
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: -7367885135429433204}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &6860293402131479359
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 5801612892438350475}
+  links: []
+  asset: {fileID: 2516175430298784031}
+--- !u!114 &6977207347241684085
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_10
+  m_EditorClassIdentifier: 
+  id: 10
+  input: {fileID: -8503002695819844129}
+  output: {fileID: 6455326667108053201}
+  graph: {fileID: 11400000}
+--- !u!114 &7009840084239996309
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: 3360421952181837717}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &7058560890371398062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: -7375233555840435696}
+  links: []
+  asset: {fileID: -5913796974730380216}
+--- !u!114 &7103314281184988905
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_9
+  m_EditorClassIdentifier: 
+  id: 9
+  input: {fileID: -3042332247000034595}
+  output: {fileID: 6455326667108053201}
   graph: {fileID: 11400000}
 --- !u!114 &7223150837599631946
 MonoBehaviour:
@@ -715,10 +3862,240 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 0
+  zIndex: 13
   inputPins: []
   outputPins:
   - {fileID: 6445056163753179500}
+  graph: {fileID: 11400000}
+--- !u!114 &7338103093995189635
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_334e40b4-e140-4377-9a19-2e55de8ca512
+  m_EditorClassIdentifier: 
+  id: 334e40b4-e140-4377-9a19-2e55de8ca512
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: 591.30164
+    y: 973.95337
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 135
+  inputPins:
+  - {fileID: -5923418928780572770}
+  outputPins:
+  - {fileID: -1032192449790669472}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 1.5
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1.5
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1.5
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.25
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: -1448696529281385102}
+  Template: {fileID: 546789205089539725, guid: d2de8b8aa4267cb4fb6e09ce88768cf6, type: 3}
+--- !u!114 &7635638737910314772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _OutputPin
+  m_EditorClassIdentifier: 
+  pinType: 1
+  node: {fileID: -6888863197333599986}
+  position: {x: 60, y: 120}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: -15
+    width: 80
+    height: 15
+  tangent: {x: 0, y: 1}
+  tangentStrength: 50
+--- !u!114 &7742934186348915175
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: 6188925097714560922}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &7960297129494867864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f86a247f92be461b8448085107abfca, type: 3}
+  m_Name: MarkerNode_c227a06d-e121-49fa-98be-6a4ddde8c834
+  m_EditorClassIdentifier: 
+  id: c227a06d-e121-49fa-98be-6a4ddde8c834
+  caption: SpawnPoint
+  bounds:
+    serializedVersion: 2
+    x: 1142.2869
+    y: 54.08136
+    width: 120
+    height: 50
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 138
+  inputPins: []
+  outputPins:
+  - {fileID: 1846449467735138894}
+  graph: {fileID: 11400000}
+--- !u!114 &8199805363523705432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a4af758c5024ee3ad022895232667f, type: 3}
+  m_Name: _InputPin
+  m_EditorClassIdentifier: 
+  pinType: 0
+  node: {fileID: 4296473180406850214}
+  position: {x: 60, y: 0}
+  boundsOffset:
+    serializedVersion: 2
+    x: -40
+    y: 0
+    width: 80
+    height: 15
+  tangent: {x: 0, y: -1}
+  tangentStrength: 50
+--- !u!114 &8266986369745263521
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc1d246dd77b46a4aee970ab911ea63, type: 3}
+  m_Name: MeshNode_b9c6ee97-262d-4c64-8f72-c1f7f42de346
+  m_EditorClassIdentifier: 
+  id: b9c6ee97-262d-4c64-8f72-c1f7f42de346
+  caption: Game Object Node
+  bounds:
+    serializedVersion: 2
+    x: 179.88934
+    y: 628.4258
+    width: 120
+    height: 120
+  canBeDeleted: 1
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 118
+  inputPins:
+  - {fileID: -8503002695819844129}
+  outputPins:
+  - {fileID: 1687312656992381402}
+  graph: {fileID: 11400000}
+  offset:
+    e00: 6
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 6
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  consumeOnAttach: 1
+  attachmentProbability: 0.1
+  IsStatic: 0
+  affectsNavigation: 1
+  selectionRuleEnabled: 0
+  selectionRuleClassName: 
+  transformRuleEnabled: 0
+  transformRuleClassName: 
+  useSpatialConstraint: 0
+  spatialConstraint: {fileID: 2516175430298784031}
+  Template: {fileID: 1896228811670048, guid: a77401c30ad8d4a4cbf36d16e8126678, type: 3}
+--- !u!114 &8589427215904670164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1574844e380142bb9f5e4a8003b85a1, type: 3}
+  m_Name: Link_15
+  m_EditorClassIdentifier: 
+  id: 15
+  input: {fileID: 8199805363523705432}
+  output: {fileID: 3809268205726063365}
   graph: {fileID: 11400000}
 --- !u!114 &8877603524659837367
 MonoBehaviour:
@@ -743,3 +4120,91 @@ MonoBehaviour:
     height: 15
   tangent: {x: 0, y: 1}
   tangentStrength: 50
+--- !u!114 &9068690584128664261
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473b3d45cb4f50043ba3a6be2df48e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexCounter:
+    index: 0
+  topZIndex:
+    index: 0
+  nodes:
+  - {fileID: 1636382299060250105}
+  links: []
+  asset: {fileID: 4301112148560829121}
+--- !u!114 &9069519071376715668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: bae14c06-73f0-4567-bf06-2179b7cf3083
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: 5197957304107025334}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []
+--- !u!114 &9108599504542417564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584263142da7e3f4ebae84cbbc5b4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 98039dab-deec-48ec-a90d-20ff80b1bf91
+  caption: 
+  bounds:
+    serializedVersion: 2
+    x: 90
+    y: 90
+    width: 20
+    height: 20
+  canBeDeleted: 0
+  canBeSelected: 1
+  canBeMoved: 1
+  selected: 0
+  zIndex: 0
+  inputPins: []
+  outputPins: []
+  graph: {fileID: -4529186408257537065}
+  ruleDomain: 0
+  isSnapped: 1
+  constraints: []
+  constraintEvaluationMode: 0
+  exclusionRuleSearchRadius: 0.1
+  exclusionRuleMarkersToRemove: []

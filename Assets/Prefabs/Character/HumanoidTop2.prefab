@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &1499201095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103652162078475709}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020367602, y: 0.004587422, z: 0.028611505}
+  m_Center: {x: -0.019932903, y: -0.006440402, z: 0.032951176}
+--- !u!114 &1499201094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103652162078475709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b82f912dbbc1cd45a109f190eb53485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitted: Enemy
+  damage: 0
 --- !u!1 &1199102072106366085
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,14 +509,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 6
-  strength: 3
+  strength: 1
   speed: 1
   attackSpeed: 4
   fireRate: 2
   accuracy: 3
+  range: 0
   gravity: 2
   distance: 2
   isAlive: 1
+  isActive: 0
 --- !u!114 &8533138101134184729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,6 +720,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96c3c829d8b342548a587c94dba653f4, type: 3}
+--- !u!1 &103652162078475709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6753365662778037332, guid: 96c3c829d8b342548a587c94dba653f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6685867826887463401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3321719999092972546 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8273648943639317995, guid: 96c3c829d8b342548a587c94dba653f4,

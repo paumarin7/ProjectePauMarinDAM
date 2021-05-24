@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5397688138748801467}
+  - component: {fileID: 1237368772}
+  - component: {fileID: 1237368773}
   m_Layer: 0
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
@@ -32,6 +34,33 @@ Transform:
   m_Father: {fileID: 5544558936939530502}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.00000192099, y: -0.0000072570756, z: -0.000006403302}
+--- !u!65 &1237368772
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283330229829661184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8418736, y: 0.7464984, z: 0.713759}
+  m_Center: {x: -0.11169491, y: -0.12675649, z: -0.106817104}
+--- !u!114 &1237368773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283330229829661184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b807f76c510854686d74f3c61ff07d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitted: Enemy
+  damage: 0
 --- !u!1 &438180917548212872
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +935,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3956007322121426986}
+  - component: {fileID: 553171509}
+  - component: {fileID: 553171508}
   m_Layer: 0
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
@@ -929,6 +960,33 @@ Transform:
   m_Father: {fileID: 8008515532422821618}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.0000008537737, y: -0.0000005336086, z: 0.0000004268869}
+--- !u!65 &553171509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6856894705491512831}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.52140784, y: 0.83070105, z: 0.67142874}
+  m_Center: {x: 0.04913342, y: -0.08464963, z: 0.05072224}
+--- !u!114 &553171508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6856894705491512831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b807f76c510854686d74f3c61ff07d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitted: Enemy
+  damage: 1
 --- !u!1 &7248729991501260600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,15 +1136,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 633b831cd873e6e458d677ec5838c190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  strength: 5
+  health: 100
+  strength: 2
   speed: 1
   attackSpeed: 1
   fireRate: 5
   accuracy: 0
+  range: 0
   gravity: 0
-  distance: 6
+  distance: 5.5
   isAlive: 1
+  isActive: 0
 --- !u!114 &7011242185858155435
 MonoBehaviour:
   m_ObjectHideFlags: 0
