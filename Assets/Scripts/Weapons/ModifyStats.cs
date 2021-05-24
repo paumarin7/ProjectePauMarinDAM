@@ -14,6 +14,7 @@ public class ModifyStats : MonoBehaviour, IItem
     {
        
                 player.gameObject.GetComponent<Stats>().boostStat(stat, value);
+        Destroy(this.gameObject);
     }
 
     // Start is called before the first frame update

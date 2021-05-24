@@ -132,6 +132,8 @@ MonoBehaviour:
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
   _sceneHistory:
+  - name: DemoScene
+    path: Assets/Imports/CodeRespawn/DungeonArchitect_Samples/DemoBuilder_Snap/Scenes/DemoScene.unity
   - name: SampleScene
     path: Assets/Scenes/SampleScene.unity
   - name: Scene_Prefabs

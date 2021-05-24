@@ -95,6 +95,7 @@ public class Stats : MonoBehaviour, IDamageable
             case "AttackSpeed": attackSpeed += value; break;
             case "FireRate": fireRate += value; break;
             case "Range": range += value; break;
+            case "Health": maxHealth += value; break;
             
 
         }

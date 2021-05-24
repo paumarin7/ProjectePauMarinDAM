@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canShoot: 1
+  isMeleeWeapon: 0
 --- !u!114 &93724038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +89,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTransform: {x: 0, y: 0, z: 0}
+  create: 0
+  mov: {x: 0, y: 0, z: 0}
+  movingAlong: 1
 --- !u!1 &116165845240702736
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +469,7 @@ MonoBehaviour:
   attackSpeed: 2
   fireRate: 1
   accuracy: 1
-  range: 5
+  range: 1
   gravity: 0
   distance: 5
   isAlive: 0
