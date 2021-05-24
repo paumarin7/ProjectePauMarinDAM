@@ -387,7 +387,6 @@ GameObject:
   - component: {fileID: 1821462223196480519}
   - component: {fileID: 1821462223196480523}
   - component: {fileID: 1821462223196480522}
-  - component: {fileID: 1626216396}
   - component: {fileID: 1618392590}
   m_Layer: 0
   m_Name: SharkLowPolyBlend
@@ -529,19 +528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26101498abc80049bb09e293a2dddfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1626216396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821462223196480517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aca3849632c91b48a590b8978c21dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isRolling: 1
 --- !u!54 &1618392590
 Rigidbody:
   m_ObjectHideFlags: 0

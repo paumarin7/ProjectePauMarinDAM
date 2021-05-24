@@ -63,6 +63,7 @@ public class ActiveEnemy : MonoBehaviour
                 }
             
             }
+            Destroy(this.GetComponent<BoxCollider>());
         }
     }
         public IEnumerator waitForEnemy()

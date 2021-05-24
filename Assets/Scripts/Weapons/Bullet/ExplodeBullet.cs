@@ -15,6 +15,7 @@ public class ExplodeBullet : Bullet
         if (gameObject.CompareTag("Bullet"))
         {
             var g = gameObject.GetComponent<Rigidbody>();
+             gameObject.GetComponent<SphereCollider>().isTrigger = true;
             g.useGravity = enabled;
          
             StartCoroutine(down(g));
@@ -65,7 +66,7 @@ public class ExplodeBullet : Bullet
         }
         else
         {
-                Collider[] hitColliders = Physics.OverlapSphere(transform.position, 7);
+                Collider[] hitColliders = Physics.OverlapSphere(transform.position, 5);
                 foreach (var hitCollider in hitColliders)
                 {
                     Debug.Log(hitCollider.transform.gameObject.name);
