@@ -132,6 +132,14 @@ MonoBehaviour:
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
   _sceneHistory:
+  - name: Demo_Hell_01
+    path: Assets/Imports/PolygonDungeonRealms/Scenes/Demo_Hell_01.unity
+  - name: Demo_Forge_01
+    path: Assets/PolygonDungeonRealms/Scenes/Demo_Forge_01.unity
+  - name: Demo_Dungeon_01
+    path: Assets/PolygonDungeonRealms/Scenes/Demo_Dungeon_01.unity
+  - name: Demo_Desert_01
+    path: Assets/PolygonDungeonRealms/Scenes/Demo_Desert_01.unity
   - name: SampleScene
     path: Assets/Scenes/SampleScene.unity
   - name: DemoScene_01
