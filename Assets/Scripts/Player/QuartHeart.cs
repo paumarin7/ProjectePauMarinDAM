@@ -89,6 +89,7 @@ public class QuartHeart : MonoBehaviour
     private void HeartHealthSystem_onDamaged(object sender, System.EventArgs e)
     {
         //Hearts health system was damaged
+        Instantiate(Resources.Load<GameObject>("Particles/Blood"), new Vector3(playerStats.transform.position.x, playerStats.transform.position.y+3, playerStats.transform.position.z) , Quaternion.identity);
         RefreshAllHearts();
 
     }

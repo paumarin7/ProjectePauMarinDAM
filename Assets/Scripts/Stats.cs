@@ -24,6 +24,9 @@ public class Stats : MonoBehaviour, IDamageable
     private float distance;
 
 
+    private GameObject blood;
+    private float lastHealth;
+
     float maxHealth;
 
     // private bool isMoving = false;
@@ -68,6 +71,8 @@ public class Stats : MonoBehaviour, IDamageable
     // Start is called before the first frame update
     void Start()
     {
+        blood = Resources.Load<GameObject>("Particles/Blood");
+        lastHealth = health;
         MaxHealth = health;
     }
 
@@ -81,6 +86,14 @@ public class Stats : MonoBehaviour, IDamageable
         else
         {
             IsAlive = true;
+        }
+
+        if(health != lastHealth)
+        {
+
+
+            Instantiate(blood, new Vector3(transform.position.x,transform.position.y+3,transform.position.z), Quaternion.identity);
+            lastHealth = health;
         }
     }
 

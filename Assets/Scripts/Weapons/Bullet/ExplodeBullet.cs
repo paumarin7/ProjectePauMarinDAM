@@ -72,11 +72,13 @@ public class ExplodeBullet : Bullet
                     Debug.Log(hitCollider.transform.gameObject.name);
                     if(hitCollider.transform.gameObject.GetComponent<IDamageable>() == null)
                     {
-
-                    }
+                    Instantiate(Resources.Load<GameObject>("Particles/Explosion"), this.transform.position, Quaternion.identity);
+                }
                     else
                     {
-                        hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
+                    Instantiate(Resources.Load<GameObject>("Particles/Explosion"), this.transform.position, Quaternion.identity);
+                    hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
+
                     }
                
                     Destroy(this.gameObject);
@@ -88,5 +90,12 @@ public class ExplodeBullet : Bullet
 
     }
 
- 
+
+
+    private void OnDestroy()
+    {
+     
+    }
+
+
 }
