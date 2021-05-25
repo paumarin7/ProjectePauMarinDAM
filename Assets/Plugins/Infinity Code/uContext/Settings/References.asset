@@ -132,19 +132,9 @@ MonoBehaviour:
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
   _sceneHistory:
-  - name: Demo_Hell_01
-    path: Assets/Imports/PolygonDungeonRealms/Scenes/Demo_Hell_01.unity
-  - name: Demo_Forge_01
-    path: Assets/PolygonDungeonRealms/Scenes/Demo_Forge_01.unity
-  - name: Demo_Dungeon_01
-    path: Assets/PolygonDungeonRealms/Scenes/Demo_Dungeon_01.unity
-  - name: Demo_Desert_01
-    path: Assets/PolygonDungeonRealms/Scenes/Demo_Desert_01.unity
   - name: SampleScene
     path: Assets/Scenes/SampleScene.unity
-  - name: DemoScene_01
-    path: Assets/Imports/PolygonNature/Scenes/DemoScene_01.unity
-  - name: DemoScene_Classic_Trees
-    path: Assets/Imports/PolygonNature/Scenes/DemoScene_Classic_Trees.unity
-  - name: Scene_Prefabs
-    path: Assets/Imports/PureNature/Scenes/Scene_Prefabs/Scene_Prefabs.unity
+  - name: Demo_IsaacBuilder
+    path: Assets/Imports/CodeRespawn/DungeonArchitect_Samples/DemoBuilder_Isaac/Scenes/Demo_IsaacBuilder.unity
+  - name: Demo_IsaacBuilder_RoomCenterEmitter
+    path: Assets/Imports/CodeRespawn/DungeonArchitect_Samples/DemoBuilder_Isaac/Scenes/Demo_IsaacBuilder_RoomCenterEmitter.unity
