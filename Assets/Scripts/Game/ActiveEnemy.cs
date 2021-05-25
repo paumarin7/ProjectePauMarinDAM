@@ -44,32 +44,39 @@ public class ActiveEnemy : MonoBehaviour
         Debug.Log(other.transform.gameObject.name);
         if (other.transform.gameObject.CompareTag( "Player"))
         {
-           
-            for (int i = 0; i < enemy.Count; i++)
-            {
-                enemy[i].IsActive = true ;
-                enemy[i].transform.gameObject.GetComponent<CharacterController>().enabled = true;
-                Debug.Log(enemy[i].IsActive);
-            }
-            
-           
-            for (int i = 0; i < chains.Length; i++)
-            {
-                if (chains[i].CompareTag("Chain"))
-                {
 
-                    chains[i].GetComponent<MeshRenderer>().enabled = true;
-                    chains[i].GetComponent<BoxCollider>().enabled = true;
-                }
-            
-            }
-            Destroy(this.GetComponent<BoxCollider>());
+            StartCoroutine(startFight());
         }
     }
         public IEnumerator waitForEnemy()
     {
         yield return new WaitForSeconds(3);
         enemy = GetComponentsInChildren<Stats>().ToList();
+    }
+
+
+    public IEnumerator startFight()
+    {
+        yield return new WaitForSeconds(1);
+        for (int i = 0; i < enemy.Count; i++)
+        {
+            enemy[i].IsActive = true;
+            enemy[i].transform.gameObject.GetComponent<CharacterController>().enabled = true;
+            Debug.Log(enemy[i].IsActive);
+        }
+
+
+        for (int i = 0; i < chains.Length; i++)
+        {
+            if (chains[i].CompareTag("Chain"))
+            {
+
+                chains[i].GetComponent<MeshRenderer>().enabled = true;
+                chains[i].GetComponent<BoxCollider>().enabled = true;
+            }
+
+        }
+        Destroy(this.GetComponent<BoxCollider>());
     }
 
  

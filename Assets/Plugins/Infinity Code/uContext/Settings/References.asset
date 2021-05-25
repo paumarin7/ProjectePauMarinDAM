@@ -132,17 +132,11 @@ MonoBehaviour:
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
   _sceneHistory:
-  - name: Scene_Prefabs
-    path: Assets/Imports/PureNature/Scenes/Scene_Prefabs/Scene_Prefabs.unity
-  - name: DemoScene_Classic_Trees
-    path: Assets/Imports/PolygonNature/Scenes/DemoScene_Classic_Trees.unity
-  - name: DemoScene_01
-    path: Assets/Imports/PolygonNature/Scenes/DemoScene_01.unity
   - name: SampleScene
     path: Assets/Scenes/SampleScene.unity
-  - name: DemoScene
-    path: Assets/Imports/CodeRespawn/DungeonArchitect_Samples/DemoBuilder_Snap/Scenes/DemoScene.unity
+  - name: DemoScene_01
+    path: Assets/Imports/PolygonNature/Scenes/DemoScene_01.unity
+  - name: DemoScene_Classic_Trees
+    path: Assets/Imports/PolygonNature/Scenes/DemoScene_Classic_Trees.unity
   - name: Scene_Prefabs
-    path: Assets/PureNature/Scenes/Scene_Prefabs/Scene_Prefabs.unity
-  - name: Scene_Demo
-    path: Assets/PureNature/Scenes/Scene_Demo/Scene_Demo.unity
+    path: Assets/Imports/PureNature/Scenes/Scene_Prefabs/Scene_Prefabs.unity
