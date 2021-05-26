@@ -4,29 +4,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AddShooters : SerializedMonoBehaviour, IItem
+public class AddBullets : SerializedMonoBehaviour, IItem
 {
-    
-    public Type weapon = typeof(IWeapon);
-   
+    public Type bullet = typeof(Bullet);
+
 
     public void Item(GameObject player)
     {
 
-      
-        var v =  player.GetComponentsInChildren<Transform>();
+
+        var v = player.GetComponentsInChildren<Transform>();
 
         for (int i = 0; i < v.Length; i++)
         {
             if (v[i].gameObject.name.Equals("Weapon"))
             {
-                v[i].gameObject.GetComponent<IWeapon>().Destroy();
-                v[i].gameObject.AddComponent(weapon);
+                v[i].gameObject.GetComponent<Bullet>().Destroy();
+                v[i].gameObject.AddComponent(bullet);
             }
         }
         Destroy(this.gameObject);
-      
-    
+
+
     }
 
     // Start is called before the first frame update
@@ -38,7 +37,7 @@ public class AddShooters : SerializedMonoBehaviour, IItem
     // Update is called once per frame
     void Update()
     {
-    
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,6 +48,4 @@ public class AddShooters : SerializedMonoBehaviour, IItem
         }
 
     }
-
-
 }

@@ -937,6 +937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_StoneWall_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4339720627652856, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1011,6 +1015,10 @@ PrefabInstance:
     - target: {fileID: 1747092849511402, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
       propertyPath: m_Name
       value: SM_Env_Hell_Bone_Skull_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747092849511402, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4291255729478990, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
       propertyPath: m_RootOrder
@@ -1087,6 +1095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_TorchStick_01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1250922595661228, guid: 04116d893f2546248ac274d84a40eae9, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4171746013389360, guid: 04116d893f2546248ac274d84a40eae9, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -1162,6 +1174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Rock_Pile_04 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1955666037651256, guid: d5c8b482981a2af429dd7551de6af107, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4505691806356784, guid: d5c8b482981a2af429dd7551de6af107, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -1236,6 +1252,10 @@ PrefabInstance:
     - target: {fileID: 1284412465784686, guid: b99ce17d2a62f164698110549e49b762, type: 3}
       propertyPath: m_Name
       value: Fire_FX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284412465784686, guid: b99ce17d2a62f164698110549e49b762, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4228211876280308, guid: b99ce17d2a62f164698110549e49b762, type: 3}
       propertyPath: m_RootOrder
@@ -1395,6 +1415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_StoneWall_03 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4204474577979000, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1469,6 +1493,10 @@ PrefabInstance:
     - target: {fileID: 1747092849511402, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
       propertyPath: m_Name
       value: SM_Env_Hell_Bone_Skull_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747092849511402, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4291255729478990, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
       propertyPath: m_RootOrder
@@ -1915,6 +1943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_StoneWall_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4339720627652856, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1989,6 +2021,10 @@ PrefabInstance:
     - target: {fileID: 1250922595661228, guid: 04116d893f2546248ac274d84a40eae9, type: 3}
       propertyPath: m_Name
       value: SM_Prop_TorchStick_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250922595661228, guid: 04116d893f2546248ac274d84a40eae9, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4171746013389360, guid: 04116d893f2546248ac274d84a40eae9, type: 3}
       propertyPath: m_RootOrder
@@ -2065,6 +2101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_StoneWall_03 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4204474577979000, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -2139,6 +2179,10 @@ PrefabInstance:
     - target: {fileID: 1747092849511402, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
       propertyPath: m_Name
       value: SM_Env_Hell_Bone_Skull_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747092849511402, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4291255729478990, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
       propertyPath: m_RootOrder
@@ -2304,6 +2348,10 @@ PrefabInstance:
     - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_Name
       value: SM_Prop_StoneWall_03 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4204474577979000, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_RootOrder
@@ -2480,6 +2528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_StoneWall_03 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4204474577979000, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2645,6 +2697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_FX (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284412465784686, guid: b99ce17d2a62f164698110549e49b762, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4228211876280308, guid: b99ce17d2a62f164698110549e49b762, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -2712,6 +2768,10 @@ PrefabInstance:
     - target: {fileID: 1747092849511402, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
       propertyPath: m_Name
       value: SM_Env_Hell_Bone_Skull_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747092849511402, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4291255729478990, guid: c019f103b6f942a4eb241ad17009d1f0, type: 3}
       propertyPath: m_RootOrder
@@ -2887,6 +2947,10 @@ PrefabInstance:
     - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_Name
       value: SM_Prop_StoneWall_03 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4204474577979000, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_RootOrder
@@ -3143,6 +3207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_StoneWall_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4339720627652856, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3217,6 +3285,10 @@ PrefabInstance:
     - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_Name
       value: SM_Prop_StoneWall_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4339720627652856, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_RootOrder
@@ -3293,6 +3365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_StoneWall_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4339720627652856, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -3367,6 +3443,10 @@ PrefabInstance:
     - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_Name
       value: SM_Prop_StoneWall_03 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4204474577979000, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_RootOrder
@@ -3443,6 +3523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Rock_Pile_04 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1955666037651256, guid: d5c8b482981a2af429dd7551de6af107, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4505691806356784, guid: d5c8b482981a2af429dd7551de6af107, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -3517,6 +3601,10 @@ PrefabInstance:
     - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_Name
       value: SM_Prop_StoneWall_03 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4204474577979000, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_RootOrder
@@ -3593,6 +3681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_StoneWall_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4339720627652856, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3667,6 +3759,10 @@ PrefabInstance:
     - target: {fileID: 1955666037651256, guid: d5c8b482981a2af429dd7551de6af107, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Pile_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955666037651256, guid: d5c8b482981a2af429dd7551de6af107, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4505691806356784, guid: d5c8b482981a2af429dd7551de6af107, type: 3}
       propertyPath: m_RootOrder
@@ -3743,6 +3839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_TorchStick_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1250922595661228, guid: 04116d893f2546248ac274d84a40eae9, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4171746013389360, guid: 04116d893f2546248ac274d84a40eae9, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -3817,6 +3917,10 @@ PrefabInstance:
     - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_Name
       value: SM_Prop_StoneWall_03 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932553094402948, guid: 33938ce237397e34e921bda724fb624b, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4204474577979000, guid: 33938ce237397e34e921bda724fb624b, type: 3}
       propertyPath: m_RootOrder
@@ -3893,6 +3997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_StoneWall_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4339720627652856, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3968,6 +4076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_StoneWall_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4339720627652856, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4042,6 +4154,10 @@ PrefabInstance:
     - target: {fileID: 1955666037651256, guid: d5c8b482981a2af429dd7551de6af107, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Pile_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955666037651256, guid: d5c8b482981a2af429dd7551de6af107, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4505691806356784, guid: d5c8b482981a2af429dd7551de6af107, type: 3}
       propertyPath: m_RootOrder
@@ -4218,6 +4334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_FX (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284412465784686, guid: b99ce17d2a62f164698110549e49b762, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4228211876280308, guid: b99ce17d2a62f164698110549e49b762, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -4286,6 +4406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_FX (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284412465784686, guid: b99ce17d2a62f164698110549e49b762, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4228211876280308, guid: b99ce17d2a62f164698110549e49b762, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -4353,6 +4477,10 @@ PrefabInstance:
     - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_Name
       value: SM_Prop_StoneWall_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4339720627652856, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_RootOrder
@@ -4429,6 +4557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_StoneWall_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1436398286074176, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4339720627652856, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -4503,6 +4635,10 @@ PrefabInstance:
     - target: {fileID: 1250922595661228, guid: 04116d893f2546248ac274d84a40eae9, type: 3}
       propertyPath: m_Name
       value: SM_Prop_TorchStick_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250922595661228, guid: 04116d893f2546248ac274d84a40eae9, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4171746013389360, guid: 04116d893f2546248ac274d84a40eae9, type: 3}
       propertyPath: m_RootOrder

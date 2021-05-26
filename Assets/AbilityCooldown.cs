@@ -15,7 +15,7 @@ public class AbilityCooldown : MonoBehaviour
     void Start()
     {
        fa= GetComponent<Image>();
-        fa.fillAmount = 0;
+       fa.fillAmount = 0;
     }
 
     // Update is called once per frame

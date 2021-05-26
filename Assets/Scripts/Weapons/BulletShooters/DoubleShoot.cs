@@ -9,7 +9,7 @@ public class DoubleShoot : MonoBehaviour, IWeapon
     [SerializeField]
     private Vector3 directionShoot;
     private string hitted;
-
+    public string bulletName;
     public GameObject positionShoot;
     List<GameObject> positions = new List<GameObject>();
 
@@ -30,14 +30,12 @@ public class DoubleShoot : MonoBehaviour, IWeapon
     public void Bullet(Vector3 bulletPosition)
     {
         GameObject bala = Instantiate(bullet);
-
         bala.AddComponent(GetComponent<IShootable>().GetType());
-        bala.AddComponent<WeaponDirectionManager>();
-        bala.GetComponent<WeaponDirectionManager>().SetDamage(GetComponentInParent<Stats>().Strength);
-        bala.GetComponent<WeaponDirectionManager>().SetAttackSpeed(GetComponentInParent<Stats>().AttackSpeed);
-        bala.GetComponent<WeaponDirectionManager>().Range = GetComponentInParent<Stats>().Range;
-        bala.name = "Diente";
-        bala.GetComponent<WeaponDirectionManager>().SetHitted(hitted);
+        bala.GetComponent<Bullet>().SetDamage(GetComponentInParent<Stats>().Strength);
+        bala.GetComponent<Bullet>().SetAttackSpeed(GetComponentInParent<Stats>().AttackSpeed);
+        bala.GetComponent<Bullet>().Range = GetComponentInParent<Stats>().Range;
+        bala.name = bulletName;
+        bala.GetComponent<Bullet>().SetHitted(hitted);
 
         bala.GetComponent<IShootable>().SetAccuracy(GetComponentInParent<Stats>().Accuracy);
         bala.transform.position = bulletPosition;

@@ -13,7 +13,7 @@ public class ModifyStats : MonoBehaviour, IItem
     public void Item(GameObject player)
     {
        
-                player.gameObject.GetComponent<Stats>().boostStat(stat, value);
+        player.gameObject.GetComponent<Stats>().boostStat(stat, value);
         Destroy(this.gameObject);
     }
 

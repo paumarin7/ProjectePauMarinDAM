@@ -109,4 +109,10 @@ public class Bullet : MonoBehaviour, IShootable
         }
 
     }
+
+
+    public void Destroy()
+    {
+        Destroy(this);
+    }
 }

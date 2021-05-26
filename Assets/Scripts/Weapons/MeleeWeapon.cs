@@ -48,6 +48,10 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
     void Start()
     {
        
+        if(meleWeapon == null)
+        {
+            meleWeapon = "MeleePala";
+        }
         playerAttack = GetComponent<PlayerAttack>();
         playerAttack.isMeleeWeapon = true;
         weapon =  Resources.Load<GameObject>(meleWeapon);
