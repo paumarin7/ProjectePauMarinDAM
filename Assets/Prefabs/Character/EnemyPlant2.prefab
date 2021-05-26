@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTransform: {x: 0, y: 0, z: 0}
+  create: 0
 --- !u!114 &486646265327711508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5201452381ff9d44ad085c0e1c7347f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletName: Diente
   directionShoot: {x: 0, y: 0, z: 0}
+  positionShoot: {fileID: 0}
 --- !u!114 &486646265327711511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +367,7 @@ GameObject:
   - component: {fileID: 3341680968065837072}
   - component: {fileID: 3341680968065837075}
   - component: {fileID: 3341680968065837074}
+  - component: {fileID: 6566180604951142063}
   m_Layer: 0
   m_Name: EnemyPlant2
   m_TagString: Enemy
@@ -491,6 +495,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82452e4ac9d274641ad10581240f037b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &6566180604951142063
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341680968065837070}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &3440697333321722041
 GameObject:
   m_ObjectHideFlags: 0

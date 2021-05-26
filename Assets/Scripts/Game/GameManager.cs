@@ -11,6 +11,13 @@ public class GameManager : MonoBehaviour
     public bool eventAdded = false;
     public  List<GameObject> poolOfEnemies = new List<GameObject>();
     public  List<GameObject> poolOfBosses = new List<GameObject>();
+
+    public float cooldownTime;
+
+    public void setCooldownTime(float cooldownTime)
+    {
+        this.cooldownTime = cooldownTime;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -53,4 +60,7 @@ public class GameManager : MonoBehaviour
     {
         player.GetComponentInChildren<IAbility>().Ability();
     }
+
+
+
 }

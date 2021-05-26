@@ -16,6 +16,7 @@ TagManager:
   - Chain
   - Boss
   - Item
+  - AbilityButton
   layers:
   - Default
   - TransparentFX

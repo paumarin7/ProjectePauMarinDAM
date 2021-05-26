@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CreatePlayer : MonoBehaviour
 {
-
+    public Camera minimap;
     public GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,7 @@ public class CreatePlayer : MonoBehaviour
 
         Debug.Log("HUIHGUODGFHOFDGJOFHI");
         Instantiate(player , transform.position, Quaternion.identity);
+        Instantiate(minimap , minimap.transform.position, minimap.transform.rotation);
         
     }
 }

@@ -351,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d41ea4a5e660849b06dc423c0ad850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minimap: {fileID: 4189564122914247317, guid: f954c4781a0474745b5c70e321740a89, type: 3}
   player: {fileID: 1821462223196480517, guid: 993b15db57d434d4b85c543000363ebd, type: 3}
 --- !u!1001 &234587220725134640
 PrefabInstance:

@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 2345490294293079422}
   - component: {fileID: 385543593653393309}
   - component: {fileID: 4786922800210146887}
+  - component: {fileID: 743118831555843865}
   m_Layer: 0
   m_Name: HumanoidTop
   m_TagString: Enemy
@@ -476,9 +477,11 @@ MonoBehaviour:
   attackSpeed: 4
   fireRate: 2
   accuracy: 3
+  range: 0
   gravity: 2
   distance: 2
   isAlive: 0
+  isActive: 0
 --- !u!114 &102584467002878061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,6 +544,22 @@ MonoBehaviour:
   moleMovement: {fileID: 0}
   player: {fileID: 0}
   isAttacking: 0
+--- !u!54 &743118831555843865
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7766284706471129920}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8299547062406094701
 GameObject:
   m_ObjectHideFlags: 0

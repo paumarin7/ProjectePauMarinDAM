@@ -45,7 +45,7 @@ public class OwlAttack : MonoBehaviour
                 var direction = focus.transform.position - this.gameObject.transform.position;
             Debug.Log(direction.magnitude);
                 ch.Move(direction * Time.deltaTime * speed);
-            if(direction.magnitude < 1.5)
+            if(direction.magnitude < 2f)
             {
                 Collider[] hitColliders = Physics.OverlapSphere(transform.position, 7);
                 foreach (var hitCollider in hitColliders)
@@ -57,11 +57,15 @@ public class OwlAttack : MonoBehaviour
                     }
                     else
                     {
-                        hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(100);
+                        
+                        hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(5);
+                        
                     }
-
-                    Destroy(this.gameObject);
+              
                 }
+                Instantiate(Resources.Load<GameObject>("Particles/ArtilleryExplosion"), this.transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+
             }
         }
     }
@@ -71,7 +75,7 @@ public class OwlAttack : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 20);
         foreach (var hitCollider in hitColliders)
         {
-            Debug.Log(hitCollider.transform.gameObject.name);
+
             if (hitCollider.transform.gameObject.CompareTag("Enemy"))
             {
                 enemies.Add(hitCollider.transform.gameObject);

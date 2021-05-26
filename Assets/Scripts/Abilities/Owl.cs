@@ -9,13 +9,19 @@ public class Owl : MonoBehaviour , IAbility
 
     public bool usingAbility { get => isCreated; set => isCreated = usingAbility; }
 
+    private AbilityCooldown ab;
+
     GameObject owl;
+
+    public float time = 3;
 
     public void Ability()
     {
         if (isCreated)
         {
             StartCoroutine(Enforced());
+            ab.SetFillAmount(1);
+            ab.SetAmountTime(time + time);
             isCreated = false;
         }
 
@@ -25,7 +31,7 @@ public class Owl : MonoBehaviour , IAbility
     {
 
         Instantiate(owl, new Vector3(transform.position.x, transform.position.y + 10, transform.position.z), Quaternion.identity);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(time);
         StartCoroutine(wait());
     }
 
@@ -33,13 +39,14 @@ public class Owl : MonoBehaviour , IAbility
 
     private IEnumerator wait()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(time);
         isCreated = true;
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        ab = GameObject.FindGameObjectWithTag("AbilityButton").GetComponent<AbilityCooldown>();
         playerManager = GetComponent<PlayerManager>();
         owl = Resources.Load<GameObject>("Owl");
     }

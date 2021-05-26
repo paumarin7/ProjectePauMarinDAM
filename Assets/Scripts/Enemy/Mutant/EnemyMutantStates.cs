@@ -83,7 +83,37 @@ public class EnemyMutantStates : MonoBehaviour
     }
 
 
+    public void JumpAttack()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 7);
+        foreach (var hitCollider in hitColliders)
+        {
+            Debug.Log(hitCollider.transform.gameObject.name);
+            if (hitCollider.transform.gameObject.GetComponent<IDamageable>() == null)
+            {
 
+            }
+            else
+            {
+                if (hitCollider.transform.gameObject.CompareTag("Enemy"))
+                {
+
+                }
+                else
+                {
+                   
+                    hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(5);
+                }
+       
+
+            }
+            
+
+
+
+        }
+        Instantiate(Resources.Load<GameObject>("Particles/ArtilleryExplosion"), this.transform.position, Quaternion.identity);
+    }
 
     public void Destroy()
     {

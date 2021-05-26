@@ -27,7 +27,7 @@ public class Minimap : MonoBehaviour
         if (other.transform.gameObject.CompareTag("Player"))
         {
 
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 30, 1 << 10);
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 60, 1 << 10);
             foreach (var hitCollider in hitColliders)
             {
                 Debug.Log(hitCollider.transform.gameObject.name);
