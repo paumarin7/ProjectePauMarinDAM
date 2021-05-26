@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9481fa55bb3d8bd4e94f5ba781224305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visited: {fileID: 2100000, guid: 40c02210d66f4a844832ee82aa6bb442, type: 2}
+  visited: {fileID: 2100000, guid: 25daa43c75af51e44987cb9e987c041f, type: 2}
   NoVisited: {fileID: 2100000, guid: 41e5c06645064a9489644eed750a0486, type: 2}
 --- !u!65 &5605695295845988382
 BoxCollider:
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9481fa55bb3d8bd4e94f5ba781224305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visited: {fileID: 2100000, guid: 40c02210d66f4a844832ee82aa6bb442, type: 2}
+  visited: {fileID: 2100000, guid: 25daa43c75af51e44987cb9e987c041f, type: 2}
   NoVisited: {fileID: 2100000, guid: 41e5c06645064a9489644eed750a0486, type: 2}
 --- !u!1 &7160654534510406513
 GameObject:
