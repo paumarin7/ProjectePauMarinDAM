@@ -10,7 +10,11 @@ public class Minimap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (gameObject.name.Equals("TeleportSpawn"))
+        {
+            GetComponent<MeshRenderer>().material = visited;
+            gameObject.layer = 8;
+        }
     }
 
     // Update is called once per frame
@@ -41,4 +45,6 @@ public class Minimap : MonoBehaviour
             gameObject.layer = 8;
         }
     }
+
+
 }

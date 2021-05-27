@@ -18,6 +18,7 @@ TagManager:
   - Item
   - AbilityButton
   - Teleport
+  - MinimapCamera
   layers:
   - Default
   - TransparentFX

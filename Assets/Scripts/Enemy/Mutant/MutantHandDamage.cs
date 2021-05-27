@@ -36,7 +36,7 @@ public class MutantHandDamage : MonoBehaviour
             //    else
             //    {
 
-            Debug.Log("Hitted" + damage);
+
             if (other.transform.gameObject.GetComponent<IDamageable>() != null)
             {
                 other.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);

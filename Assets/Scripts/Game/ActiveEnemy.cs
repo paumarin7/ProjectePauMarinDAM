@@ -41,7 +41,7 @@ public class ActiveEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.transform.gameObject.name);
+
         if (other.transform.gameObject.CompareTag( "Player"))
         {
 

@@ -88,7 +88,7 @@ public class EnemyMutantStates : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 7);
         foreach (var hitCollider in hitColliders)
         {
-            Debug.Log(hitCollider.transform.gameObject.name);
+
             if (hitCollider.transform.gameObject.GetComponent<IDamageable>() == null)
             {
 
