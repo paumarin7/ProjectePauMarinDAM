@@ -31,8 +31,8 @@ public class TorchLight : MonoBehaviour
 
     public IEnumerator Light()
     {
-        light.intensity = Random.Range(30, 50);
-        yield return new WaitForSeconds(0.08f);
+        light.intensity = Random.Range(35, 40);
+        yield return new WaitForSeconds(0.12f);
         luz = true;
 
     }
