@@ -31,8 +31,8 @@ public class EnemyPlantStates : MonoBehaviour
         var attack = new PlantAttack(this);
 
         plantStateMachine.AddAnyTransition(death, () => !stats.IsAlive);
-        plantStateMachine.AddAnyTransition(wait, () => !isAttacking);
-        plantStateMachine.AddAnyTransition(attack, () => stats.IsActive && isAttacking);
+        plantStateMachine.AddAnyTransition(wait, () => !isAttacking );
+        plantStateMachine.AddAnyTransition(attack, () => isAttacking);
 
         void At(IState to, IState from, Func<bool> condition) => plantStateMachine.AddTransition(to, from, condition);
 
@@ -42,11 +42,15 @@ public class EnemyPlantStates : MonoBehaviour
     void Update()
     {
 
+       
         if(stats.IsActive){
             plantAnimation.Attacking = isAttacking;
             Player = GameManager.player;
+            plantAnimation.Alive = stats.IsAlive;
             plantStateMachine.Tick();
         }
+
+
 
  
  

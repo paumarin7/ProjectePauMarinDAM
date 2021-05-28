@@ -57,8 +57,8 @@ public class Teleport : MonoBehaviour
             if (walked == true)
             {
 
-                minimap.transform.localPosition = new Vector3(+100, 0, 0);
-                minimap.transform.localScale = new Vector3(7, 10, 10);
+                minimap.transform.localPosition = new Vector3(0, 0, 0);
+                minimap.transform.localScale = new Vector3(10, 7, 10);
                 minimap.GetComponent<MiniMapClick>().enabled = true;
 
             }
@@ -72,7 +72,7 @@ public class Teleport : MonoBehaviour
 
         if (other.transform.gameObject.CompareTag("Player"))
         {
-            minimap.transform.localPosition = new Vector3(916.0002f, 416, 0);
+            minimap.transform.localPosition = new Vector3(889.9999f, 267, 0);
             minimap.transform.localScale = new Vector3(4f, 4f, 4f);
             minimap.GetComponent<MiniMapClick>().enabled = false;
         }

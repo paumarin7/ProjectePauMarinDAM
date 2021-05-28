@@ -51,7 +51,7 @@ public class LaserShoot : Bullet
     }
     public override IEnumerator rangeDistance()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(4f);
 
         Destroy(this.gameObject);
     }

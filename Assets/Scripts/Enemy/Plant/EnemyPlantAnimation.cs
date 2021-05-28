@@ -26,8 +26,6 @@ public class EnemyPlantAnimation : MonoBehaviour
     {
         animator.SetBool("alive", alive);
         animator.SetBool("attacking", attacking);
-
-
     }
 
 

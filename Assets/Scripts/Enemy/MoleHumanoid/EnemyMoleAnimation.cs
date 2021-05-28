@@ -23,12 +23,11 @@ public class EnemyMoleAnimation : MonoBehaviour
     void Update()
     {
         animator.SetBool("alive", alive);
-        if (enemyMoleStates.Stats.IsAlive && enemyMoleStates.Stats.IsActive)
-        {
+
             alive = enemyMoleStates.Stats.IsAlive;
             animator.SetBool("attacking", attacking);
          
-        }
+        
       
     }
 

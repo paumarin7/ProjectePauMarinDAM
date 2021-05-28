@@ -57,7 +57,8 @@ public class ActiveEnemy : MonoBehaviour
 
     public IEnumerator startFight()
     {
-        yield return new WaitForSeconds(1);
+        Destroy(this.GetComponent<BoxCollider>());
+        yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < enemy.Count; i++)
         {
             enemy[i].IsActive = true;
@@ -76,7 +77,7 @@ public class ActiveEnemy : MonoBehaviour
             }
 
         }
-        Destroy(this.GetComponent<BoxCollider>());
+      
     }
 
  

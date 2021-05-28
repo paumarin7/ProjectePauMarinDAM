@@ -31,7 +31,8 @@ public class OwlAttack : MonoBehaviour
                 var direction =  new Vector3(GameManager.player.transform.position.x - transform.position.x,0, GameManager.player.transform.position.z - transform.position.z);
                
                 transform.LookAt(new Vector3(GameManager.player.transform.position.x, transform.position.y , GameManager.player.transform.position.z));
-                ch.Move(direction * Time.deltaTime * speed);
+                //  ch.Move(direction * Time.deltaTime * speed);
+                transform.Translate(direction * Time.deltaTime * speed);
             }
             else
             {
@@ -44,8 +45,9 @@ public class OwlAttack : MonoBehaviour
             transform.LookAt(focus.transform);
                 var direction = focus.transform.position - this.gameObject.transform.position;
             Debug.Log(direction.magnitude);
-                ch.Move(direction * Time.deltaTime * speed);
-            if(direction.magnitude < 1f)
+            transform.Translate(direction * Time.deltaTime * speed);
+            //  ch.Move(new Vector3(direction.x,direction.y -10,direction.z) * Time.deltaTime * speed);
+            if (direction.magnitude < 1f)
             {
                 Collider[] hitColliders = Physics.OverlapSphere(transform.position, 7);
                 foreach (var hitCollider in hitColliders)

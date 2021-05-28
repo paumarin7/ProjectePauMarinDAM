@@ -28,16 +28,13 @@ public class EnemyChamanAnimations : MonoBehaviour
     void Update()
     {
         animator.SetBool("alive", alive);
-        if (chamanStates.stats.IsActive)
-        {
-            if (chamanStates.stats.IsAlive)
-            {
+  
+        
                 alive = chamanStates.stats.IsAlive;
                 animator.SetBool("attacking", attacking);
                 
                 animator.SetBool("createEnemy", createEnemy);
-            }
-        }
+           
 
     }
 

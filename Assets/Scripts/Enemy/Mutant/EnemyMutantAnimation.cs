@@ -27,16 +27,14 @@ public class EnemyMutantAnimation : MonoBehaviour
     void Update()
     {
         animator.SetBool("alive", alive);
-        if (mutantStates.stats.IsActive)
-        {
-            if (mutantStates.stats.IsAlive)
-            {
+
+          
                 alive = mutantStates.stats.IsAlive;
                 animator.SetBool("attacking", attacking);
                
                 animator.SetBool("jumping", jumping);
-            }
-        }
+            
+        
 
     }
 
