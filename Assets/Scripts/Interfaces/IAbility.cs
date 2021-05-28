@@ -7,4 +7,8 @@ public interface IAbility
     void Ability();
 
     bool usingAbility { get ; set; }
+
+
+    void Destroy();
+  
 }

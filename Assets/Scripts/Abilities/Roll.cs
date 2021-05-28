@@ -11,11 +11,17 @@ public class Roll : MonoBehaviour, IAbility
 
     public bool usingAbility { get => isRolling; set => isRolling = usingAbility; }
 
+
+    public float time = 2;
+    private AbilityCooldown ab;
+
     public void Ability()
     {
         if (isRolling)
         {
             StartCoroutine(Rolling());
+            ab.SetFillAmount(1);
+            ab.SetAmountTime(time + time);
             isRolling = false;
         }
         
@@ -30,11 +36,18 @@ public class Roll : MonoBehaviour, IAbility
         playerManager.playerMovementManager.setVectorMovement(direction);
         
         playerManager.playerAnimations.Rolling = true;
-        yield return new WaitForSeconds(2);
-        playerManager.playerMovementManager.controller.detectCollisions = false;
-        isRolling = true;
+        yield return new WaitForSeconds(time);
+        playerManager.playerAnimations.Rolling = false;
+        playerManager.playerMovementManager.controller.detectCollisions = true;
+        StartCoroutine(wait());
     }
 
+
+    private IEnumerator wait()
+    {
+        yield return new WaitForSeconds(time);
+        isRolling = true;
+    }
 
     private void stopRoll()
     {
@@ -45,6 +58,8 @@ public class Roll : MonoBehaviour, IAbility
     // Start is called before the first frame update
     void Start()
     {
+
+        ab = GameObject.FindGameObjectWithTag("AbilityButton").GetComponent<AbilityCooldown>();
         playerManager = GetComponent<PlayerManager>();
     }
 
@@ -52,5 +67,11 @@ public class Roll : MonoBehaviour, IAbility
     void Update()
     {
        
+    }
+
+
+    public void Destroy()
+    {
+        Destroy(this);
     }
 }

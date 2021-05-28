@@ -56,4 +56,10 @@ public class Owl : MonoBehaviour , IAbility
     {
 
     }
+
+
+    public void Destroy()
+    {
+        Destroy(this);
+    }
 }

@@ -11,7 +11,7 @@ public class MeleeDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        hitted = "Player";
     }
 
     // Update is called once per frame
@@ -52,7 +52,11 @@ public class MeleeDamage : MonoBehaviour
             
             if (other.transform.gameObject.GetComponent<IDamageable>() != null)
             {
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/ShovelAttack1");
+                Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
                 other.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage * 2);
+
             }
 
             //    }

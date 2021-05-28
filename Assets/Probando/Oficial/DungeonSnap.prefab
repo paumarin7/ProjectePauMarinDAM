@@ -1,0 +1,1384 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &675413749425799739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 675413749426071451}
+  - component: {fileID: 675413749416076137}
+  - component: {fileID: 393201531807892628}
+  - component: {fileID: 675413749416318033}
+  - component: {fileID: 675413749416071959}
+  - component: {fileID: 675413749416144679}
+  - component: {fileID: 3956208199770871231}
+  m_Layer: 0
+  m_Name: DungeonSnap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &675413749426071451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675413749425799739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &675413749416076137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675413749425799739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65b74248fe594982b0d9bfde7d96c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dungeonThemes: []
+  debugDraw: 0
+--- !u!114 &393201531807892628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675413749425799739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0abe472f19a42d4e8f6efec44ea3dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Seed: 1
+  Modules:
+  - module: {fileID: 6245971687214361906, guid: ad47b65a6f84c5040b8e2c0f8d4d1ed8,
+      type: 3}
+    category: Room
+  - module: {fileID: 6104489477890588490, guid: 377e2b80f6ee9ed43a6604e61bcab0f3,
+      type: 3}
+    category: Room
+  - module: {fileID: 1937478749502983789, guid: 94bb987c501617d4982bbc7f66558e87,
+      type: 3}
+    category: Room
+  - module: {fileID: 7683839032371899822, guid: f5a5f871f55ad634490a6abaa90122f7,
+      type: 3}
+    category: Corridor
+  - module: {fileID: 7523040163194703251, guid: 2e71254d6424cb846ba2e25e7d4479dd,
+      type: 3}
+    category: Teleporter
+  - module: {fileID: 252169882971934289, guid: dd3f8c439f03c8441b9c53c213fdd4c1, type: 3}
+    category: Shop
+  - module: {fileID: 4016275571677700052, guid: 86ed14ca19e45e54c9b6a5249b263c63,
+      type: 3}
+    category: Key
+  - module: {fileID: 4016275571677700052, guid: 6bfb59d882be14c4cb76494730901609,
+      type: 3}
+    category: Lock
+  - module: {fileID: 5233029675166482538, guid: 1473fa27f7a08034a89520625401bf1d,
+      type: 3}
+    category: Treasure
+  - module: {fileID: 6767772473561781419, guid: 050e836e1e7dcf04ba29374803b67817,
+      type: 3}
+    category: MiniBoss
+  - module: {fileID: 7634907203176348578, guid: 06a7766e62683ef4aa1f51efa8543a63,
+      type: 3}
+    category: Boss
+  - module: {fileID: 2988432709812330360, guid: a743764a9d4ed5a4ea737e99f68dd0b9,
+      type: 3}
+    category: Exit
+  - module: {fileID: 756272646456017166, guid: 580c165607b236548b1b0cf84b14ab14, type: 3}
+    category: SpawnRoom
+  - module: {fileID: 7160654534527122528, guid: befa8ae7c50fe334fb08ee561b217b41,
+      type: 3}
+    category: Corridor
+  snapFlow: {fileID: 11400000, guid: d167d08ba5b31c245a0dbdd6da15aca1, type: 2}
+  runGraphGenerationScripts: 0
+  RotateModulesToFit: 1
+  CollisionTestContraction: 6
+  MaxProcessingPower: 1000000
+--- !u!114 &675413749416318033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675413749425799739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35068207f521e094c9c0a172876b2fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asyncBuild: 0
+  maxBuildTimePerFrame: 32
+  asyncBuildStartPosition: {fileID: 0}
+--- !u!114 &675413749416071959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675413749425799739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb7ca94bb2e6e140bdc9938b596d66a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modules: []
+  connections: []
+--- !u!114 &675413749416144679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675413749425799739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0ef9172759d43928c6f1131063f690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemParent: {fileID: 0}
+--- !u!114 &3956208199770871231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675413749425799739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f137194ce2e2ab2448b5f482deeca829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modules:
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-00bb7d5c-51ea-4f54-b974-5b1bfaef4904
+      WorldTransform:
+        e00: -1
+        e01: 0
+        e02: -0.0000017881395
+        e03: -200.90016
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0.0000017881395
+        e21: 0
+        e22: -1
+        e23: -35.059715
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -200.63016, y: 2.8509629, z: -35.424713}
+        m_Extent: {x: 20.340645, y: 5.235126, z: 20.395653}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-ea010e87-5350-4a6e-af4d-7e6639cc21be
+      WorldTransform:
+        e00: -1.0000005
+        e01: 0
+        e02: -0.0000015172868
+        e03: -160.90015
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0.0000015172868
+        e21: 0
+        e22: -1.0000005
+        e23: -35.05978
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -160.59485, y: 2.8509629, z: -35.424778}
+        m_Extent: {x: 20.305359, y: 5.235126, z: 20.39566}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-a1f04e74-4a09-4bb2-83a7-f91a7941f3d5
+      WorldTransform:
+        e00: 0.0000015497208
+        e01: -0
+        e02: -1.0000001
+        e03: -180.90009
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 1.0000001
+        e21: 0
+        e22: 0.0000015497208
+        e23: 4.9402637
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -180.81274, y: 10.5777445, z: 4.043192}
+        m_Extent: {x: 41.429565, y: 13.297, z: 22.129337}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-f4112368-bd50-4500-ad61-db5f685a9b6e
+      WorldTransform:
+        e00: 1
+        e01: 0
+        e02: 0.0000019073484
+        e03: -161.00003
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -0.0000019073484
+        e21: 0
+        e22: 1
+        e23: 36.940235
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -153.60693, y: 0.64162683, z: 36.588387}
+        m_Extent: {x: 14.340614, y: 7.444463, z: 12.351868}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-18d02056-0218-47b1-a954-59eb922c35e1
+      WorldTransform:
+        e00: -0.0000017881393
+        e01: 0
+        e02: 1.0000001
+        e03: -100.00003
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -1.0000001
+        e21: 0
+        e22: -0.0000017881393
+        e23: 40.000122
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -100.08737, y: 10.5777445, z: 40.897198}
+        m_Extent: {x: 41.42958, y: 13.297, z: 22.129345}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-165d9c41-f77f-4cde-95a5-4c1632e091b3
+      WorldTransform:
+        e00: -0.0000013113022
+        e01: 0
+        e02: 1.0000001
+        e03: -79.99997
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -1.0000001
+        e21: 0
+        e22: -0.0000013113022
+        e23: 80.00009
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -79.777596, y: 3.7930446, z: 79.93509}
+        m_Extent: {x: 11.072273, y: 4.2930446, z: 20.89869}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-fc9edd50-de45-43e2-922c-9bba2d1fa965
+      WorldTransform:
+        e00: -1.0000005
+        e01: 0
+        e02: -0.0000010115245
+        e03: -59.999893
+        e10: -0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0.0000010115245
+        e21: 0
+        e22: -1.0000005
+        e23: 140.00009
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -57.118786, y: 14.215961, z: 147.34235}
+        m_Extent: {x: 43.64178, y: 22.355442, z: 48.102936}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-ab44cf6f-1639-4b55-b626-731818c4a37b
+      WorldTransform:
+        e00: -0.0000009536743
+        e01: 0
+        e02: 0.99999994
+        e03: -39.999943
+        e10: -0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -0.99999994
+        e21: -0
+        e22: -0.0000009536743
+        e23: 80.000046
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -39.77757, y: 3.7930446, z: 79.93504}
+        m_Extent: {x: 11.072262, y: 4.2930446, z: 20.898682}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-41f0f8f9-91fe-4c49-9609-301cfa0d69ae
+      WorldTransform:
+        e00: -1
+        e01: 0
+        e02: -0.0000009536742
+        e03: -40
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0.0000009536742
+        e21: 0
+        e22: -1
+        e23: 20.000046
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -39.102924, y: 10.5777445, z: 20.087383}
+        m_Extent: {x: 22.129307, y: 13.297, z: 41.429558}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-392f4b8f-d272-4c01-8c05-5fcdaa9a8adf
+      WorldTransform:
+        e00: -1
+        e01: 0
+        e02: -0.0000005960465
+        e03: 0.000017166138
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0.0000005960465
+        e21: 0
+        e22: -1
+        e23: 40.000015
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -0.06498337, y: 3.7930446, z: 39.77764}
+        m_Extent: {x: 20.898682, y: 4.2930446, z: 11.072258}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-5fdd817e-9667-4bb4-9f72-1d99427537be
+      WorldTransform:
+        e00: 0.0000015497208
+        e01: 0
+        e02: -1.0000001
+        e03: 45.84028
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 1.0000001
+        e21: 0
+        e22: 0.0000015497208
+        e23: 312.96
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 45.47528, y: 2.8509629, z: 312.65466}
+        m_Extent: {x: 20.395653, y: 5.235126, z: 20.305359}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-909e27ea-3a4c-4d42-ad7a-d795552488e2
+      WorldTransform:
+        e00: 0.0000015497208
+        e01: -0
+        e02: -0.99999994
+        e03: 85.84028
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 0.99999994
+        e21: 0
+        e22: 0.0000015497208
+        e23: 312.95993
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 85.47528, y: 2.8509629, z: 312.68994}
+        m_Extent: {x: 20.395645, y: 5.235126, z: 20.340652}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-f507238e-b2a1-4c68-b399-357d44fac968
+      WorldTransform:
+        e00: -1
+        e01: 0
+        e02: -0.0000011801119
+        e03: 127.04024
+        e10: -0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0.0000011801119
+        e21: 0
+        e22: -1
+        e23: 288.0199
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 127.93732, y: 10.5777445, z: 288.10724}
+        m_Extent: {x: 22.129318, y: 13.297, z: 41.429565}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-18196a33-a1bd-4ad9-86d4-972dd96a0b23
+      WorldTransform:
+        e00: -1
+        e01: -0
+        e02: -0.0000010728837
+        e03: 126.84018
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 0.0000010728837
+        e21: 0
+        e22: -1
+        e23: 236.01988
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 119.44709, y: 0.64162683, z: 236.37172}
+        m_Extent: {x: 14.340599, y: 7.444463, z: 12.351852}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-19eb9618-c3ae-419d-826b-ae980c7f7a56
+      WorldTransform:
+        e00: -1
+        e01: -0
+        e02: -0.0000012516974
+        e03: 85.840195
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 0.0000012516974
+        e21: 0
+        e22: -1
+        e23: 252.95993
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 86.73727, y: 10.5777445, z: 253.04727}
+        m_Extent: {x: 22.129326, y: 13.297, z: 41.429565}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-990dcf17-b742-4567-ac78-0c6bf17f0a44
+      WorldTransform:
+        e00: 1
+        e01: 0
+        e02: 0.0000011801119
+        e03: 44.840168
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -0.0000011801119
+        e21: 0
+        e22: 1
+        e23: 230.89998
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 52.233253, y: 0.64162683, z: 230.54813}
+        m_Extent: {x: 14.340599, y: 7.444463, z: 12.351868}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-9a046bf2-5514-4cad-a04c-96f411a04a30
+      WorldTransform:
+        e00: -0.0000011920929
+        e01: 0
+        e02: 0.99999994
+        e03: 24.940134
+        e10: -0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -0.99999994
+        e21: -0
+        e22: -0.0000011920929
+        e23: 198.90001
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 24.852797, y: 10.5777445, z: 199.79709}
+        m_Extent: {x: 41.429558, y: 13.297, z: 22.129333}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-a925c1b8-b370-440a-9241-c31cff661b28
+      WorldTransform:
+        e00: 0.0000010728836
+        e01: 0
+        e02: -1.0000001
+        e03: 8.00009
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 1.0000001
+        e21: 0
+        e22: 0.0000010728836
+        e23: 157.90004
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 8.351934, y: 0.64162683, z: 165.29312}
+        m_Extent: {x: 12.351854, y: 7.444463, z: 14.340607}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-bc0bd06c-64de-4b75-8f84-b3f0679c7cd1
+      WorldTransform:
+        e00: -1
+        e01: 0
+        e02: -0.0000009536742
+        e03: 40.000072
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0.0000009536742
+        e21: 0
+        e22: -1
+        e23: 138.00002
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 40.89715, y: 10.5777445, z: 138.08736}
+        m_Extent: {x: 22.12931, y: 13.297, z: 41.42955}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-4c761be3-2018-409b-a2a1-483004c0c1b7
+      WorldTransform:
+        e00: -1
+        e01: 0
+        e02: -0.0000004768372
+        e03: 80.00005
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0.0000004768372
+        e21: 0
+        e22: -1
+        e23: 117.999985
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 79.93505, y: 3.7930446, z: 117.77761}
+        m_Extent: {x: 20.898682, y: 4.2930446, z: 11.072258}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-2e515855-148c-4f01-9a55-f15256c20151
+      WorldTransform:
+        e00: -1
+        e01: -0
+        e02: -0.00000023841858
+        e03: 120.000046
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 0.00000023841858
+        e21: 0
+        e22: -1
+        e23: 97.99997
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 120.89712, y: 10.5777445, z: 98.08731}
+        m_Extent: {x: 22.12928, y: 13.297, z: 41.429535}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-315ef286-057b-41ca-adec-82be9cb2cce5
+      WorldTransform:
+        e00: -1
+        e01: -0
+        e02: -0.00000041723246
+        e03: 80.00004
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 0.00000041723246
+        e21: 0
+        e22: -1
+        e23: 78.99998
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 79.935036, y: 3.7930446, z: 78.7776}
+        m_Extent: {x: 20.898682, y: 4.2930446, z: 11.07225}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-a5bbec9e-a324-48d3-a937-9290bfb58f43
+      WorldTransform:
+        e00: 1
+        e01: 0
+        e02: 0.0000005057622
+        e03: 40.000027
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -0.0000005057622
+        e21: 0
+        e22: 1
+        e23: 59.999992
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 39.102955, y: 10.5777445, z: 59.912655}
+        m_Extent: {x: 22.129292, y: 13.297, z: 41.429546}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-40a39061-a89e-4a4b-8d16-21b8211a66b1
+      WorldTransform:
+        e00: 0.00000035762787
+        e01: -0
+        e02: -1.0000001
+        e03: 119.69991
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 1.0000001
+        e21: 0
+        e22: 0.00000035762787
+        e23: -161.00008
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 119.334915, y: 2.8509629, z: -161.30539}
+        m_Extent: {x: 20.39563, y: 5.235126, z: 20.305328}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-96073cb4-89c6-4163-9cad-db4410797721
+      WorldTransform:
+        e00: 0.00000071525574
+        e01: -0
+        e02: -1.0000001
+        e03: 119.699936
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 1.0000001
+        e21: 0
+        e22: 0.00000071525574
+        e23: -121.00008
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 119.33494, y: 2.8509629, z: -121.27008}
+        m_Extent: {x: 20.395638, y: 5.235126, z: 20.340637}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-ef01bc84-937d-481f-9dda-f7e485ec751e
+      WorldTransform:
+        e00: 1
+        e01: 0
+        e02: 0.0000010132791
+        e03: 119.69999
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -0.0000010132791
+        e21: 0
+        e22: 1
+        e23: -61.000076
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 118.80292, y: 10.5777445, z: -61.08741}
+        m_Extent: {x: 22.129307, y: 13.297, z: 41.429558}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-ab5833e2-658f-4791-bd16-933f2b3d7d39
+      WorldTransform:
+        e00: 1
+        e01: 0
+        e02: 0.00000065565104
+        e03: 79.69997
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -0.00000065565104
+        e21: 0
+        e22: 1
+        e23: -81.00004
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 79.76497, y: 3.7930446, z: -80.777664}
+        m_Extent: {x: 20.898682, y: 4.2930446, z: 11.072258}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-50de8d90-6c31-4c33-84a2-c60a9dfdcbcc
+      WorldTransform:
+        e00: -1.0000005
+        e01: 0
+        e02: -0.0000010115245
+        e03: -39.300262
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0.0000010115245
+        e21: 0
+        e22: -1.0000005
+        e23: -319.7
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -38.994953, y: 3.7930446, z: -320.065}
+        m_Extent: {x: 20.30534, y: 4.2930446, z: 20.39563}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-a7c7d290-b033-46a0-8920-fd1b2cf96907
+      WorldTransform:
+        e00: -1.0000005
+        e01: 0
+        e02: -0.0000010115245
+        e03: -25.300215
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0.0000010115245
+        e21: 0
+        e22: -1.0000005
+        e23: -279.7
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -24.815216, y: 5.0453916, z: -280.21002}
+        m_Extent: {x: 31.569809, y: 5.8082275, z: 21.244812}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-cc19cf08-94b8-4821-8acb-954f5819f914
+      WorldTransform:
+        e00: 0.0000010728836
+        e01: 0
+        e02: -1.0000001
+        e03: -40.30018
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 1.0000001
+        e21: 0
+        e22: 0.0000010728836
+        e23: -239.69997
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -40.665176, y: 2.8509629, z: -240.00528}
+        m_Extent: {x: 20.395645, y: 5.235126, z: 20.305328}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-eaa870fc-1705-4702-b752-db928b2be7cf
+      WorldTransform:
+        e00: 0.0000010728836
+        e01: -0
+        e02: -0.99999994
+        e03: 19.699823
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 0.99999994
+        e21: 0
+        e22: 0.0000010728836
+        e23: -240.00003
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 19.78716, y: 10.5777445, z: -240.89711}
+        m_Extent: {x: 41.429558, y: 13.297, z: 22.129318}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-3a6b90d7-ff99-4b32-b309-77e072e9144c
+      WorldTransform:
+        e00: 0.0000011920929
+        e01: -0
+        e02: -0.99999994
+        e03: 39.699867
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 0.99999994
+        e21: 0
+        e22: 0.0000011920929
+        e23: -200.00006
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 39.477493, y: 3.7930446, z: -199.93506}
+        m_Extent: {x: 11.072267, y: 4.2930446, z: 20.898682}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-0af2ce10-1c44-4796-bbad-1f43cd6f16ac
+      WorldTransform:
+        e00: 1
+        e01: 0
+        e02: 0.0000013113023
+        e03: 39.699917
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -0.0000013113023
+        e21: 0
+        e22: 1
+        e23: -160.00006
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 40.735752, y: 11.504333, z: -159.98927}
+        m_Extent: {x: 23.823177, y: 14.794331, z: 21.060486}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-79e12c01-c101-4abd-b352-398570f6e925
+      WorldTransform:
+        e00: -1
+        e01: -0
+        e02: -0.0000010728837
+        e03: -0.30008316
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 0.0000010728837
+        e21: 0
+        e22: -1
+        e23: -160.00002
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -0.3650837, y: 3.7930446, z: -160.22241}
+        m_Extent: {x: 20.898685, y: 4.2930446, z: 11.072266}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-ba6a77cd-4d58-4de5-bdd2-b714e0d4e36f
+      WorldTransform:
+        e00: -0.0000009536743
+        e01: 0
+        e02: 1.0000001
+        e03: -60.300068
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -1.0000001
+        e21: 0
+        e22: -0.0000009536743
+        e23: -139.99995
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -67.64232, y: 14.215961, z: -137.11885}
+        m_Extent: {x: 48.10292, y: 22.355442, z: 43.64177}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-359a0f88-9957-4fc4-8295-487ccf724706
+      WorldTransform:
+        e00: -1
+        e01: 0
+        e02: -0.0000004768372
+        e03: -0.300045
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0.0000004768372
+        e21: 0
+        e22: -1
+        e23: -120
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -0.36504555, y: 3.7930446, z: -120.22238}
+        m_Extent: {x: 20.89868, y: 4.2930446, z: 11.07225}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-50acb3e8-6d33-40bd-80cd-e93a4b852c09
+      WorldTransform:
+        e00: 1
+        e01: 0
+        e02: 0.0000003371748
+        e03: 39.699963
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -0.0000003371748
+        e21: 0
+        e22: 1
+        e23: -100.000015
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 38.80289, y: 10.5777445, z: -100.08735}
+        m_Extent: {x: 22.129284, y: 13.297, z: 41.429543}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-06438542-8ad3-4252-a443-f51ef7eff27b
+      WorldTransform:
+        e00: 0.00000035762787
+        e01: -0
+        e02: -1.0000001
+        e03: 39.999985
+        e10: 0
+        e11: 1
+        e12: -0
+        e13: 0
+        e20: 1.0000001
+        e21: 0
+        e22: 0.00000035762787
+        e23: -40.000015
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 39.77761, y: 3.7930446, z: -39.935017}
+        m_Extent: {x: 11.072251, y: 4.2930446, z: 20.898678}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-79ddcbf9-cfdf-4419-8b22-9f63cce98262
+      WorldTransform:
+        e00: -0.00000047683716
+        e01: 0
+        e02: 1.0000001
+        e03: 40
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: -1.0000001
+        e21: 0
+        e22: -0.00000047683716
+        e23: -0.000009536743
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: 40.010788, y: 11.504333, z: -1.0358448}
+        m_Extent: {x: 21.060463, y: 14.794331, z: 23.823164}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+  - instanceInfo:
+      InstanceID: NODE-SNAPMOD-1f1fe90a-7f29-4976-b42a-363c9f2e9cec
+      WorldTransform:
+        e00: 1
+        e01: 0
+        e02: 0
+        e03: 0
+        e10: 0
+        e11: 1
+        e12: 0
+        e13: 0
+        e20: 0
+        e21: 0
+        e22: 1
+        e23: 0
+        e30: 0
+        e31: 0
+        e32: 0
+        e33: 1
+      WorldBounds:
+        m_Center: {x: -0.3053112, y: 3.6616266, z: 0.36499786}
+        m_Extent: {x: 20.30531, y: 4.4244623, z: 20.395618}
+    moduleGameObject: {fileID: 0}
+    connections:
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 1
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0
+    - connectionGameObject: {fileID: 0}
+      isDoor: 0

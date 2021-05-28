@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 2528204655521042283}
   - component: {fileID: 2528204655521042324}
   - component: {fileID: 2528204655521042326}
+  - component: {fileID: 2143460698071369740}
   m_Layer: 0
   m_Name: DamageUp
   m_TagString: Untagged
@@ -137,3 +138,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2f7023448a8614f92607e03ec69522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2143460698071369740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528204655521042327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676c12a9b5a34634b8130c234ca1ea83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: bullet
+      Entry: 7
+      Data: 0|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: DamageUp, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 

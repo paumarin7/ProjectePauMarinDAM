@@ -8,6 +8,8 @@ public class Inmunity : MonoBehaviour , IAbility
     PlayerManager playerManager;
     public bool isInmune = true;
 
+    private AbilityCooldown ab;
+    public float time = 3;
     public bool usingAbility { get => isInmune; set => isInmune = usingAbility; }
 
     public void Ability()
@@ -15,6 +17,8 @@ public class Inmunity : MonoBehaviour , IAbility
         if (isInmune)
         {
             StartCoroutine(Inmune());
+            ab.SetFillAmount(1);
+            ab.SetAmountTime(time + time);
             isInmune = false;
         }
 
@@ -29,7 +33,7 @@ public class Inmunity : MonoBehaviour , IAbility
         playerManager.playerMovementManager.setVectorMovement(direction);
 
         playerManager.playerAnimations.Inmune = true;
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(time);
         playerManager.playerMovementManager.controller.detectCollisions = true;
         playerManager.playerAnimations.Inmune = false;
         
@@ -40,13 +44,14 @@ public class Inmunity : MonoBehaviour , IAbility
 
     private IEnumerator wait()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(time);
         isInmune = true;
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        ab = GameObject.FindGameObjectWithTag("AbilityButton").GetComponent<AbilityCooldown>();
         playerManager = GetComponent<PlayerManager>();
     }
 
@@ -54,5 +59,11 @@ public class Inmunity : MonoBehaviour , IAbility
     void Update()
     {
 
+    }
+
+
+    public void Destroy()
+    {
+        Destroy(this);
     }
 }

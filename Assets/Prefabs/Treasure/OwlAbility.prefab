@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 116866295138758553}
   - component: {fileID: 116866295138758502}
   - component: {fileID: 116866295138758500}
+  - component: {fileID: 3555991450964811898}
   m_Layer: 0
   m_Name: OwlAbility
   m_TagString: Untagged
@@ -107,6 +108,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2f7023448a8614f92607e03ec69522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3555991450964811898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116866295138758501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676c12a9b5a34634b8130c234ca1ea83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: bullet
+      Entry: 7
+      Data: 0|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: Owl, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!143 &6245450620519994533
 CharacterController:
   m_ObjectHideFlags: 0
