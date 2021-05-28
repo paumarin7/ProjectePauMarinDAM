@@ -72,7 +72,7 @@ public class QuartHeart : MonoBehaviour
         {
             HeartHealthSystem.Heart heart = heartList[i];
             CreateHeartImage(heartAnchoredPosition).SetHeartFragments(heart.GetFragmentAmount());
-            heartAnchoredPosition += new Vector2(220, 0);
+            heartAnchoredPosition += new Vector2(170, 0);
 
         }
         heartHealthSystem.onDamaged += HeartHealthSystem_onDamaged;

@@ -72,8 +72,8 @@ public class Teleport : MonoBehaviour
 
         if (other.transform.gameObject.CompareTag("Player"))
         {
-            minimap.transform.localPosition = new Vector3(889.9999f, 267, 0);
-            minimap.transform.localScale = new Vector3(4f, 4f, 4f);
+            minimap.transform.localPosition = new Vector3(797f, 305, 0);
+            minimap.transform.localScale = new Vector3(6f, 6f, 6f);
             minimap.GetComponent<MiniMapClick>().enabled = false;
         }
 

@@ -116,8 +116,8 @@ public class EnemyChamanStates : MonoBehaviour
     public void Destroy()
     {
 
-      //  ActiveEnemy activ = GetComponentInParent<ActiveEnemy>();
-      //  activ.enemy.Remove(this.stats);
+        ActiveEnemy activ = GetComponentInParent<ActiveEnemy>();
+        activ.enemy.Remove(this.stats);
         Destroy(this.gameObject);
     }
 }

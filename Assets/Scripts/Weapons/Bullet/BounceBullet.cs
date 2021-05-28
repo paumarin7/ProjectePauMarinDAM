@@ -29,7 +29,7 @@ public class BounceBullet : Bullet
         {
             if (movingAlong)
             {
-                rb.velocity = shootDirection * Time.deltaTime * attackSpeed * 1200;
+                rb.velocity = shootDirection * Time.deltaTime * attackSpeed * 200;
                 movingAlong = false;
                 //      rb.AddForce(enemyTransform * Time.deltaTime * attackSpeed, ForceMode.Impulse);
                 //   rb.velocity = shootDirection * Time.deltaTime * attackSpeed * 10;
@@ -61,12 +61,16 @@ public class BounceBullet : Bullet
            
                 if (other.transform.gameObject.GetComponent<IDamageable>() == null)
                 {
-
-                }
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = (Resources.Load<AudioClip>("Sounds/StoneHit"));
+                Instantiate(n, this.transform.position, Quaternion.identity);
+            }
                 else
                 {
-                   
-                }
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/BodyHit");
+                Instantiate(n, this.transform.position, Quaternion.identity);
+            }
 
           //      Destroy(this.gameObject);
             

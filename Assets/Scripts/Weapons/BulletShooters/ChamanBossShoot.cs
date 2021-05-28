@@ -10,6 +10,12 @@ public class ChamanBossShoot : MonoBehaviour, IWeapon
     [SerializeField]
     private Vector3 directionShoot;
     private string hitted;
+    public string bulletName;
+
+
+    public GameObject positionShoot;
+
+    List<GameObject> positions = new List<GameObject>();
 
     public void Destroy()
     {
@@ -18,26 +24,22 @@ public class ChamanBossShoot : MonoBehaviour, IWeapon
 
     public void Attack()
     {
-        Bullet(new Vector3(transform.position.x+3, transform.position.y, transform.position.z));
-        Bullet(new Vector3(transform.position.x, transform.position.y, transform.position.z+3));
-        Bullet(new Vector3(transform.position.x-3, transform.position.y, transform.position.z));
-        Bullet(new Vector3(transform.position.x, transform.position.y, transform.position.z-3));
-        Bullet(new Vector3(transform.position.x, transform.position.y, transform.position.z));
-        Bullet(new Vector3(transform.position.x +5, transform.position.y, transform.position.z-2));
-        Bullet(new Vector3(transform.position.x -5, transform.position.y, transform.position.z-2));
+        Bullet(positions[0].transform.position);
+        Bullet(positions[1].transform.position);
+        Bullet(positions[2].transform.position);
     }
 
     public void Bullet(Vector3 bulletPosition)
     {
         GameObject bala = Instantiate(bullet);
 
+        bala.transform.rotation = this.transform.rotation;
         bala.AddComponent(GetComponent<IShootable>().GetType());
-        bala.AddComponent<WeaponDirectionManager>();
-        bala.GetComponent<WeaponDirectionManager>().SetDamage(GetComponentInParent<Stats>().Strength);
-        bala.GetComponent<WeaponDirectionManager>().SetAttackSpeed(GetComponentInParent<Stats>().AttackSpeed);
-        bala.GetComponent<WeaponDirectionManager>().Range = GetComponentInParent<Stats>().Range;
-        bala.name = "Diente";
-        bala.GetComponent<WeaponDirectionManager>().SetHitted(hitted);
+        bala.GetComponent<Bullet>().SetDamage(GetComponentInParent<Stats>().Strength);
+        bala.GetComponent<Bullet>().SetAttackSpeed(GetComponentInParent<Stats>().AttackSpeed);
+        bala.GetComponent<Bullet>().Range = GetComponentInParent<Stats>().Range;
+        bala.name = bulletName;
+        bala.GetComponent<Bullet>().SetHitted(hitted);
 
         bala.GetComponent<IShootable>().SetAccuracy(GetComponentInParent<Stats>().Accuracy);
         bala.transform.position = bulletPosition;
@@ -63,7 +65,20 @@ public class ChamanBossShoot : MonoBehaviour, IWeapon
     // Start is called before the first frame update
     void Start()
     {
-        bullet = Resources.Load<GameObject>("Diente");
+        bullet = Resources.Load<GameObject>(bulletName);
+
+        positionShoot = Resources.Load<GameObject>("CenterShoot");
+        positions.Add(Instantiate(positionShoot, transform, false));
+        positions.Add(Instantiate(positionShoot, transform, false));
+        positions.Add(Instantiate(positionShoot, transform, false));
+
+
+        // positions[0].transform.position = new Vector3(positions[0].transform.position.x + 1, positions[0].transform.position.y, positions[0].transform.position.z);
+        positions[0].transform.localPosition = new Vector3(-1, 0, 0);
+        positions[1].transform.localPosition = new Vector3(+1, 0, 0);
+        positions[2].transform.localPosition = new Vector3(0, 1, 0);
+
+
     }
 
     // Update is called once per frame

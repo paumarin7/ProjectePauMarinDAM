@@ -38,15 +38,20 @@ public class KnockbackBullet : Bullet
 
             if (other.transform.gameObject.GetComponent<IDamageable>() == null)
             {
-
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = (Resources.Load<AudioClip>("Sounds/StoneHit"));
+                Instantiate(n, this.transform.position, Quaternion.identity);
             }
             else
             {
                 var direction =  other.transform.position-this.transform.position;
                 other.transform.gameObject.GetComponent<CharacterController>().Move( new Vector3(direction.x, 0, direction.z));
-              
+
                 // consumes the impact energy each cycle:
-               
+
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/BodyHit");
+                Instantiate(n, this.transform.position, Quaternion.identity);
                 other.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
             }
 

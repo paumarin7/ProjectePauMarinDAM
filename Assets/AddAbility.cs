@@ -12,13 +12,18 @@ public class AddAbility : SerializedMonoBehaviour, IItem
     public void Item(GameObject player)
     {
 
-
-
-            
-               player.GetComponent<IAbility>().Destroy();
-               player.AddComponent(bullet);
-            
-        
+        if(player.GetComponent<IAbility>() != null)
+        {
+            player.GetComponent<IAbility>().Destroy();
+            player.AddComponent(bullet);
+        }
+        else
+        {
+            player.AddComponent(bullet);
+        }
+              
+             
+           
         Destroy(this.gameObject);
 
 

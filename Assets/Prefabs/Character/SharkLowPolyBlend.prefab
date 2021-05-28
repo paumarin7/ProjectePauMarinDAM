@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 93724038}
   - component: {fileID: 93724037}
   - component: {fileID: 4616471397770752276}
-  - component: {fileID: 736827252559870588}
+  - component: {fileID: 3836758302432807451}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -176,7 +176,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &736827252559870588
+--- !u!114 &3836758302432807451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,13 +185,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 93724034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ed079b8e14bb62479a56e4d22ea28d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 12b0af24b7300b744a940bbe10ccc01e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTransform: {x: 0, y: 0, z: 0}
   create: 0
-  mov: {x: 0, y: 0, z: 0}
-  movingAlong: 1
 --- !u!1 &116165845240702736
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +485,6 @@ GameObject:
   - component: {fileID: 1821462223196480519}
   - component: {fileID: 1821462223196480523}
   - component: {fileID: 1821462223196480522}
-  - component: {fileID: 755665715448267029}
   - component: {fileID: 4106684483278352458}
   m_Layer: 0
   m_Name: SharkLowPolyBlend
@@ -629,20 +626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26101498abc80049bb09e293a2dddfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &755665715448267029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821462223196480517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ddc67f64b652dc41985f9256c94cc45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCreated: 1
-  time: 3
 --- !u!54 &4106684483278352458
 Rigidbody:
   m_ObjectHideFlags: 0

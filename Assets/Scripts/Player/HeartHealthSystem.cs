@@ -86,6 +86,11 @@ public class HeartHealthSystem: MonoBehaviour
                 break;
             }
         }
+        if(!GameManager.player.GetComponent<Stats>().IsAlive)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        }
+   
 
         if (onDamaged != null) onDamaged(this, EventArgs.Empty);
     }

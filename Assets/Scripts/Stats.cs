@@ -58,6 +58,7 @@ public class Stats : MonoBehaviour, IDamageable
           
            
             GameObject.Find("Hearts").GetComponent<QuartHeart>().heartHealthSystem.Damage((int)damage);
+            health -= damage;
         }
         else
         {
@@ -127,6 +128,8 @@ public class Stats : MonoBehaviour, IDamageable
     {
         if (health <= 0)
         {
+
+       
             IsAlive = false;
         }
         else
@@ -138,8 +141,17 @@ public class Stats : MonoBehaviour, IDamageable
         {
 
 
-           
             lastHealth = health;
+        }
+
+
+        if (this.gameObject.CompareTag("Player"))
+        {
+            if(!isAlive)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            }
+       
         }
     }
 
@@ -158,5 +170,21 @@ public class Stats : MonoBehaviour, IDamageable
             
 
         }
+    }
+
+
+    public float GetStatByString(string stat)
+    {
+        switch (stat)
+        {
+            case "Strength":
+                return strength; break;
+            case "Speed": return speed; break;
+            case "AttackSpeed": return attackSpeed; break;
+            case "FireRate": return fireRate * 10; break;
+            case "Range": return range *10; break;
+            case "Health": return maxHealth; break;
+        }
+        return 0.777777f;
     }
 }

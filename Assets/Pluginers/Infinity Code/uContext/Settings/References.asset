@@ -23,7 +23,7 @@ MonoBehaviour:
     type: 1
     visibleRules: 0
     icon: 0
-    iconSettings: Assets\Plugins\Infinity Code\uContext/Icons/Save.png
+    iconSettings: Assets\Pluginers\Infinity Code\uContext/Icons/Save.png
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
   - expanded: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
     type: 0
     visibleRules: 1
     icon: 0
-    iconSettings: Assets\Plugins\Infinity Code\uContext/Icons/Hierarchy2.png
+    iconSettings: Assets\Pluginers\Infinity Code\uContext/Icons/Hierarchy2.png
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
   - expanded: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
     type: 0
     visibleRules: 1
     icon: 0
-    iconSettings: Assets\Plugins\Infinity Code\uContext/Icons/Project.png
+    iconSettings: Assets\Pluginers\Infinity Code\uContext/Icons/Project.png
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
   - expanded: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
     type: 0
     visibleRules: 1
     icon: 0
-    iconSettings: Assets\Plugins\Infinity Code\uContext/Icons/Inspector.png
+    iconSettings: Assets\Pluginers\Infinity Code\uContext/Icons/Inspector.png
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
   - expanded: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
     type: 0
     visibleRules: 0
     icon: 0
-    iconSettings: Assets\Plugins\Infinity Code\uContext/Icons/Star-White.png
+    iconSettings: Assets\Pluginers\Infinity Code\uContext/Icons/Star-White.png
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
   - expanded: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
     type: 0
     visibleRules: 0
     icon: 0
-    iconSettings: Assets\Plugins\Infinity Code\uContext/Icons/Rule.png
+    iconSettings: Assets\Pluginers\Infinity Code\uContext/Icons/Rule.png
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
   - expanded: 1
@@ -132,13 +132,9 @@ MonoBehaviour:
     useCustomWindowSize: 0
     customWindowSize: {x: 400, y: 300}
   _sceneHistory:
-  - name: Tutorial
-    path: Assets/Scenes/Tutorial.unity
-  - name: MainScene
-    path: Assets/Scenes/MainScene.unity
   - name: SampleScene
     path: Assets/Scenes/SampleScene.unity
-  - name: Demo_IsaacBuilder
-    path: Assets/Imports/CodeRespawn/DungeonArchitect_Samples/DemoBuilder_Isaac/Scenes/Demo_IsaacBuilder.unity
-  - name: Demo_IsaacBuilder_RoomCenterEmitter
-    path: Assets/Imports/CodeRespawn/DungeonArchitect_Samples/DemoBuilder_Isaac/Scenes/Demo_IsaacBuilder_RoomCenterEmitter.unity
+  - name: MainScene
+    path: Assets/Scenes/MainScene.unity
+  - name: Tutorial
+    path: Assets/Scenes/Tutorial.unity

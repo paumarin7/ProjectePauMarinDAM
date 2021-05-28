@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1738524367}
-  - component: {fileID: 1738524370}
   - component: {fileID: 1738524368}
   - component: {fileID: 3658485740171530768}
+  - component: {fileID: 7694927645580934497}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -27,26 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738524366}
   m_LocalRotation: {x: 0.005943044, y: -0.7583149, z: -0.6518368, w: 0.00566655}
-  m_LocalPosition: {x: 0.116, y: -0.057, z: -0.026}
+  m_LocalPosition: {x: 0.1211, y: -0.0282, z: -0.0304}
   m_LocalScale: {x: 0.026313236, y: 0.027957821, z: 0.027957816}
   m_Children: []
   m_Father: {fileID: 3941240762811724256}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1738524370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738524366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12b0af24b7300b744a940bbe10ccc01e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyTransform: {x: 0, y: 0, z: 0}
-  create: 0
 --- !u!114 &1738524368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +58,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionShoot: {x: 0, y: 0, z: 0}
+  bulletName: ChamanShoot
+  positionShoot: {fileID: 0}
+--- !u!114 &7694927645580934497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738524366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419956bae9c8d8c469deef87167e54fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTransform: {x: 0, y: 0, z: 0}
+  create: 0
+  mov: {x: 0, y: 0, z: 0}
+  movingAlong: 1
 --- !u!1 &1848035704
 GameObject:
   m_ObjectHideFlags: 0

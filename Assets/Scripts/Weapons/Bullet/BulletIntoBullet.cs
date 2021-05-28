@@ -39,11 +39,16 @@ public class BulletIntoBullet : Bullet
 
             if (other.transform.gameObject.GetComponent<IDamageable>() == null)
             {
-
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/StoneHit");
+                Instantiate(n, this.transform.position, Quaternion.identity);
             }
             else
             {
                 other.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/BodyHit");
+                Instantiate(n, this.transform.position, Quaternion.identity);
             }
 
             Destroy(this.gameObject);
