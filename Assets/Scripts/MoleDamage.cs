@@ -39,6 +39,9 @@ public class MoleDamage : MonoBehaviour
             Debug.Log("Hitted" + damage);
             if (other.transform.gameObject.GetComponent<IDamageable>() != null)
             {
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/ShovelAttack1");
+                Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
                 other.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
             }
 

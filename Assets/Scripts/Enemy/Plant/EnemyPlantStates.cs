@@ -18,19 +18,21 @@ public class EnemyPlantStates : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         stats = GetComponent<Stats>();
         Player = GameManager.player;
         plantAnimation = GetComponent<EnemyPlantAnimation>();
         plantMovement = GetComponent<EnemyPlantMovement>();
         plantStateMachine = new StateMachine();
+        
 
-        var death = new PlantDeath(this);
+       var death = new PlantDeath(this);
         var wait = new PlantWait(this);
         var attack = new PlantAttack(this);
 
         plantStateMachine.AddAnyTransition(death, () => !stats.IsAlive);
         plantStateMachine.AddAnyTransition(wait, () => !isAttacking);
-        plantStateMachine.AddAnyTransition(attack, () => isAttacking);
+        plantStateMachine.AddAnyTransition(attack, () => stats.IsActive && isAttacking);
 
         void At(IState to, IState from, Func<bool> condition) => plantStateMachine.AddTransition(to, from, condition);
 
@@ -45,6 +47,8 @@ public class EnemyPlantStates : MonoBehaviour
             Player = GameManager.player;
             plantStateMachine.Tick();
         }
+
+ 
  
     }
 

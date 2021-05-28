@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeartHealthSystem
+public class HeartHealthSystem: MonoBehaviour
 {
 
     public static int maxFragmentAmount;
@@ -86,6 +86,7 @@ public class HeartHealthSystem
                 break;
             }
         }
+
         if (onDamaged != null) onDamaged(this, EventArgs.Empty);
     }
 

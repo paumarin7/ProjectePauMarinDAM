@@ -39,7 +39,7 @@ public class MutantHandDamage : MonoBehaviour
 
             if (other.transform.gameObject.GetComponent<IDamageable>() != null)
             {
-                other.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
+                
             }
 
             //    }

@@ -30,6 +30,8 @@ public class BasicShoot : MonoBehaviour, IWeapon
     public void Bullet(Vector3 bulletPosition)
     {
         GameObject bala = Instantiate(bullet);
+
+        bala.transform.rotation = this.transform.rotation;
         bala.AddComponent(GetComponent<IShootable>().GetType());
         bala.GetComponent<Bullet>().SetDamage(GetComponentInParent<Stats>().Strength);
         bala.GetComponent<Bullet>().SetAttackSpeed(GetComponentInParent<Stats>().AttackSpeed);

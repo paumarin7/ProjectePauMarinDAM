@@ -10,7 +10,7 @@ public class BossHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bossHealth = GetComponent<Image>();
+        bossHealth = GameObject.FindGameObjectWithTag("Respawn").GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -21,9 +21,13 @@ public class BossHealth : MonoBehaviour
             boss = GameObject.FindGameObjectWithTag("Boss");
         }
 
-        var currentValue = Map(boss.GetComponent<Stats>().Health, 0, boss.GetComponent<Stats>().MaxHealth, 0, 1);
-        Debug.Log(boss.GetComponent<Stats>().Health);
-        bossHealth.fillAmount = Mathf.Lerp(bossHealth.fillAmount, currentValue, Time.deltaTime);
+        if (boss.GetComponent<Stats>().IsActive)
+        {
+            var currentValue = Map(boss.GetComponent<Stats>().Health, 0, boss.GetComponent<Stats>().MaxHealth, 0, 1);
+            Debug.Log(boss.GetComponent<Stats>().Health);
+            bossHealth.fillAmount = Mathf.Lerp(bossHealth.fillAmount, currentValue, Time.deltaTime);
+        }
+   
     }
 
 

@@ -72,14 +72,24 @@ public class ExplodeBullet : Bullet
                     Debug.Log(hitCollider.transform.gameObject.name);
                     if(hitCollider.transform.gameObject.GetComponent<IDamageable>() == null)
                     {
+                    GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                    n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/explodeBullet");
+                    n.GetComponent<AudioSource>().volume = 0.6f;
+                    
+                    Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
                     Instantiate(Resources.Load<GameObject>("Particles/Explosion"), this.transform.position, Quaternion.identity);
                 }
                     else
                     {
+                    GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                    n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/explodeBullet");
+                    Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
+                    n.GetComponent<AudioSource>().volume = 0.6f;
                     Instantiate(Resources.Load<GameObject>("Particles/Explosion"), this.transform.position, Quaternion.identity);
                     hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(damage);
+                    
 
-                    }
+                }
                
                     Destroy(this.gameObject);
                 }

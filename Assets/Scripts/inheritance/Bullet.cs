@@ -56,7 +56,10 @@ public class Bullet : MonoBehaviour, IShootable
     public virtual IEnumerator rangeDistance()
     {
         yield return new WaitForSeconds(range);
-
+        GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+        n.GetComponent<AudioSource>().clip = (Resources.Load<AudioClip>("Sounds/StoneHit"));
+        Instantiate(n, this.transform.position, Quaternion.identity);
+      
         Destroy(this.gameObject);
     }
     public virtual void Start()

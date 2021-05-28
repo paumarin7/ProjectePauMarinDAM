@@ -33,12 +33,16 @@ public class Teleport : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        if(walked == false)
+
+        if (other.transform.gameObject.CompareTag("Player"))
         {
-            gm.Teleport(this.transform);
-            walked = true;
+            if (walked == false)
+            {
+                gm.Teleport(this.transform);
+                walked = true;
+            }
         }
+
 
         
 
@@ -47,22 +51,32 @@ public class Teleport : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(walked == true)
+
+        if (other.transform.gameObject.CompareTag("Player"))
         {
+            if (walked == true)
+            {
 
-            minimap.transform.localPosition = new Vector3(+100, 0, 0);
-            minimap.transform.localScale = new Vector3(7,10,10);
-            minimap.GetComponent<MiniMapClick>().enabled = true;
+                minimap.transform.localPosition = new Vector3(+100, 0, 0);
+                minimap.transform.localScale = new Vector3(7, 10, 10);
+                minimap.GetComponent<MiniMapClick>().enabled = true;
 
+            }
         }
+
     }
 
 
     private void OnTriggerExit(Collider other)
     {
-        minimap.transform.localPosition = new Vector3(916.0002f, 416, 0);
-        minimap.transform.localScale = new Vector3(4f, 4f, 4f);
-        minimap.GetComponent<MiniMapClick>().enabled = false;
+
+        if (other.transform.gameObject.CompareTag("Player"))
+        {
+            minimap.transform.localPosition = new Vector3(916.0002f, 416, 0);
+            minimap.transform.localScale = new Vector3(4f, 4f, 4f);
+            minimap.GetComponent<MiniMapClick>().enabled = false;
+        }
+
     }
 
 

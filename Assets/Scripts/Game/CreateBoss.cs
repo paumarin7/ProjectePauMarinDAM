@@ -10,7 +10,9 @@ public class CreateBoss : MonoBehaviour
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        var enemy = Instantiate(gm.poolOfBosses[Random.Range(0, gm.poolOfBosses.Count)], transform.position, Quaternion.identity);
+        int randomNumber = Random.Range(0, gm.poolOfEnemies.Count);
+        var enemy = Instantiate(gm.poolOfBosses[0], transform.position, gm.poolOfBosses[0].transform.rotation);
+        enemy.name = gm.poolOfBosses[0].name;
         enemy.transform.SetParent(GetComponentInParent<ActiveEnemy>().transform);
 
     }

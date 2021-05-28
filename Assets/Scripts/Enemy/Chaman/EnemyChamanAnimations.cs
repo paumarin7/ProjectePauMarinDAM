@@ -18,6 +18,7 @@ public class EnemyChamanAnimations : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        alive = true;
         chamanStates = GetComponent<EnemyChamanStates>();
         animator = GetComponent<Animator>();
 
@@ -26,10 +27,18 @@ public class EnemyChamanAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        alive = chamanStates.stats.IsAlive;
-        animator.SetBool("attacking", attacking);
         animator.SetBool("alive", alive);
-        animator.SetBool("createEnemy", createEnemy);
+        if (chamanStates.stats.IsActive)
+        {
+            if (chamanStates.stats.IsAlive)
+            {
+                alive = chamanStates.stats.IsAlive;
+                animator.SetBool("attacking", attacking);
+                
+                animator.SetBool("createEnemy", createEnemy);
+            }
+        }
+
     }
 
     public void FinishAttack()

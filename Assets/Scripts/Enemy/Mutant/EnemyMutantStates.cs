@@ -121,4 +121,19 @@ public class EnemyMutantStates : MonoBehaviour
         activ.enemy.Remove(this.stats);
         Destroy(this.gameObject);
     }
+
+
+
+    public void soundAttack1()
+    {
+        GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+        n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/MutantAttack");
+        Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
+    } 
+    public void soundAttack2()
+    {
+        GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+        n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/MutantAttack2");
+        Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
+    }
 }

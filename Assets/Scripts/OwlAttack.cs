@@ -15,6 +15,7 @@ public class OwlAttack : MonoBehaviour
     void Start()
     {
         ch = GetComponent<CharacterController>();
+        ch.detectCollisions = false;
         StartCoroutine(searchingEnemies());
 
 
@@ -40,12 +41,11 @@ public class OwlAttack : MonoBehaviour
         }
         else
         {
-
             transform.LookAt(focus.transform);
                 var direction = focus.transform.position - this.gameObject.transform.position;
             Debug.Log(direction.magnitude);
                 ch.Move(direction * Time.deltaTime * speed);
-            if(direction.magnitude < 2f)
+            if(direction.magnitude < 1f)
             {
                 Collider[] hitColliders = Physics.OverlapSphere(transform.position, 7);
                 foreach (var hitCollider in hitColliders)
@@ -59,7 +59,10 @@ public class OwlAttack : MonoBehaviour
                     {
                         
                         hitCollider.transform.gameObject.GetComponent<IDamageable>().TakeHealth(5);
-                        
+                        GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                        n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/chickenExplode");
+                        Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
+
                     }
               
                 }

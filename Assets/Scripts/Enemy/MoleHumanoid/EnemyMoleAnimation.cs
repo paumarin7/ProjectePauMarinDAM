@@ -14,6 +14,7 @@ public class EnemyMoleAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        alive = true;
         enemyMoleStates = GetComponent<EnemyMoleStates>();
         animator = GetComponent<Animator>();
     }
@@ -21,9 +22,14 @@ public class EnemyMoleAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        alive = enemyMoleStates.Stats.IsAlive;
-        animator.SetBool("attacking", attacking);
         animator.SetBool("alive", alive);
+        if (enemyMoleStates.Stats.IsAlive && enemyMoleStates.Stats.IsActive)
+        {
+            alive = enemyMoleStates.Stats.IsAlive;
+            animator.SetBool("attacking", attacking);
+         
+        }
+      
     }
 
     public void FinishAttack()

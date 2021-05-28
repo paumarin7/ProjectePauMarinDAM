@@ -51,12 +51,58 @@ public class Stats : MonoBehaviour, IDamageable
 
         if (this.gameObject.CompareTag("Player"))
         {
-            Debug.Log("PlayerDamage");
+            Instantiate(Resources.Load<GameObject>("Particles/Blood"), new Vector3(GameManager.player.transform.position.x, GameManager.player.transform.position.y + 3, GameManager.player.transform.position.z), Quaternion.identity);
+            GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+            n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/PlayerHurt");
+            Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
+          
+           
             GameObject.Find("Hearts").GetComponent<QuartHeart>().heartHealthSystem.Damage((int)damage);
         }
         else
         {
+            Instantiate(blood, new Vector3(transform.position.x, transform.position.y + 3, transform.position.z), Quaternion.identity);
             health -= damage;
+
+           
+            if (gameObject.name.Equals("Mutant"))
+            {
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/MutantHurt");
+                Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
+               
+            }
+            else if (gameObject.name.Equals("MoleHumanoid"))
+            {
+                Debug.Log(gameObject.name);
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/EnemyPlant");
+                Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
+            
+            }
+            else if (gameObject.name.Equals("Indigen"))
+            {
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/IndigenHurt");
+                Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
+           
+            }
+            else if (gameObject.name.Equals("EnemyPlant"))
+            {
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/MoleHurt");
+                Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
+            
+            }
+            else if (gameObject.name.Equals("Chaman"))
+            {
+                GameObject n = Resources.Load<GameObject>("Sounds/Audio");
+                n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/PlayerHurt");
+                Instantiate(n, GameManager.player.transform.position, Quaternion.identity);
+                
+            }
+        
+        
         }
        
 
@@ -92,7 +138,7 @@ public class Stats : MonoBehaviour, IDamageable
         {
 
 
-            Instantiate(blood, new Vector3(transform.position.x,transform.position.y+3,transform.position.z), Quaternion.identity);
+           
             lastHealth = health;
         }
     }

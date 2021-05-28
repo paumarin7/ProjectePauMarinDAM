@@ -18,6 +18,7 @@ public class EnemyMutantAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        alive = true;
         mutantStates = GetComponent<EnemyMutantStates>();
         animator = GetComponent<Animator>();
     }
@@ -25,10 +26,18 @@ public class EnemyMutantAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        alive = mutantStates.stats.IsAlive;
-        animator.SetBool("attacking", attacking);
         animator.SetBool("alive", alive);
-        animator.SetBool("jumping", jumping);
+        if (mutantStates.stats.IsActive)
+        {
+            if (mutantStates.stats.IsAlive)
+            {
+                alive = mutantStates.stats.IsAlive;
+                animator.SetBool("attacking", attacking);
+               
+                animator.SetBool("jumping", jumping);
+            }
+        }
+
     }
 
     public void FinishAttack()

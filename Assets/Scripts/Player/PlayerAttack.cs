@@ -15,6 +15,11 @@ public class PlayerAttack : MonoBehaviour
     float verticalMove = 0f;
     Joystick shootButton;
 
+     public List<AudioClip> shoots = new List<AudioClip>();
+
+
+    AudioSource audioSource;
+
     public bool isMeleeWeapon = false;
 
 
@@ -27,6 +32,7 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         playerManager = GetComponentInParent<PlayerManager>();
         shootButton = GameObject.Find("ShooterJoystick").GetComponent<Joystick>();
 
@@ -49,6 +55,7 @@ public class PlayerAttack : MonoBehaviour
         //{
         //   playerManager.playerAnimations.FocusedOnEnemy = true;                   Aqui esta
 
+        
         horizontalMove = shootButton.Horizontal;
         verticalMove = shootButton.Vertical;  
         
@@ -81,16 +88,17 @@ public class PlayerAttack : MonoBehaviour
         //}
         //else
         //{
-        
+
+        SoundEffect();
 
         GetComponent<IWeapon>().SetDirectionShoot(new Vector3(horizontalMove, 0, verticalMove).normalized);
 
 
         IWeapon weapon = GetComponent<IWeapon>();
-            weapon.SetHitted("Player");
+        weapon.SetHitted("Player");
+        
+        weapon.Attack();
             
-            weapon.Attack();
-
 
        // }
         canShoot = false;
@@ -102,6 +110,14 @@ public class PlayerAttack : MonoBehaviour
     public void SetFireRate(float fireRate)
     {
         this.fireRate = fireRate;
+    }
+
+
+    public void SoundEffect()
+    {
+        audioSource.clip = shoots[Random.Range(0, shoots.Count)];
+        audioSource.Play();
+   
     }
 
 

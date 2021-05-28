@@ -15,6 +15,8 @@ public class EnemyPlantAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        alive = true;
+        attacking = false;
         plantStates = GetComponent<EnemyPlantStates>();
         animator = GetComponent<Animator>();
     }
@@ -22,9 +24,10 @@ public class EnemyPlantAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        alive = plantStates.stats.IsAlive;
-        animator.SetBool("attacking", attacking);
         animator.SetBool("alive", alive);
+        animator.SetBool("attacking", attacking);
+
+
     }
 
 

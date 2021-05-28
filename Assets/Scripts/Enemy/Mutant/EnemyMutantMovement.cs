@@ -43,7 +43,7 @@ public class EnemyMutantMovement : MonoBehaviour
                 }
 
 
-                playerDirection = new Vector3(enemyMutantStates.Player.transform.position.x - transform.position.x, enemyMutantStates.Player.transform.position.y, enemyMutantStates.Player.transform.position.z - transform.position.z);
+                playerDirection = new Vector3(enemyMutantStates.Player.transform.position.x - transform.position.x, 0, enemyMutantStates.Player.transform.position.z - transform.position.z);
 
             }
         }

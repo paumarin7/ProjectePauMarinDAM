@@ -24,8 +24,8 @@ public class EnemyMoleMovement : MonoBehaviour
         {
             transform.LookAt(moleStates.Player.transform.position);
 
-            playerDirection = new Vector3(moleStates.Player.transform.position.x - moleStates.transform.position.x, moleStates.transform.position.y, moleStates.Player.transform.position.z - moleStates.transform.position.z);
-
+            playerDirection = new Vector3(moleStates.Player.transform.position.x - moleStates.transform.position.x, 0, moleStates.Player.transform.position.z - moleStates.transform.position.z);
         }
+
     }
 }

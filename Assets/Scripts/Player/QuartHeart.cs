@@ -82,6 +82,7 @@ public class QuartHeart : MonoBehaviour
 
     private void HeartHealthSystem_onHealed(object sender, System.EventArgs e)
     {
+
         //Hearts health system was healed
         RefreshAllHearts();
     }
@@ -89,7 +90,10 @@ public class QuartHeart : MonoBehaviour
     private void HeartHealthSystem_onDamaged(object sender, System.EventArgs e)
     {
         //Hearts health system was damaged
-        Instantiate(Resources.Load<GameObject>("Particles/Blood"), new Vector3(playerStats.transform.position.x, playerStats.transform.position.y+3, playerStats.transform.position.z) , Quaternion.identity);
+        //Instantiate(Resources.Load<GameObject>("Particles/Blood"), new Vector3(playerStats.transform.position.x, playerStats.transform.position.y+3, playerStats.transform.position.z) , Quaternion.identity);
+        //GameObject n = Resources.Load<GameObject>("Sounds/Audio") ;
+        //Instantiate(n, this.transform.position, Quaternion.identity);
+        //n.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/PlayerHurt");
         RefreshAllHearts();
 
     }

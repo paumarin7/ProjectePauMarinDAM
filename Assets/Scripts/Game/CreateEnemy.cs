@@ -9,7 +9,9 @@ public class CreateEnemy : MonoBehaviour
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        var enemy =  Instantiate(gm.poolOfEnemies[Random.Range(0, gm.poolOfEnemies.Count)] , transform.position , Quaternion.identity);
+        int randomNumber = Random.Range(0, gm.poolOfEnemies.Count);
+        var enemy =  Instantiate(gm.poolOfEnemies[randomNumber] , transform.position , gm.poolOfEnemies[randomNumber].transform.rotation);
+        enemy.name = gm.poolOfEnemies[randomNumber].name;
         enemy.transform.SetParent(GetComponentInParent<ActiveEnemy>().transform);
     }
 
